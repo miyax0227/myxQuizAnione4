@@ -1,0 +1,59 @@
+[
+    {
+        "title": "",
+        "timer": 30,
+        "maxRankDisplay": 2,
+        "openRankArray": null,
+        "tweetCupTitle": ""
+    },
+    {
+        "right": {
+            "x": 1.5,
+            "y": 0.5,
+            "zoom": 0.1,
+            "invisible":true
+        },
+        "left": {
+            "x": -0.5,
+            "y": 0.5,
+            "zoom": 0.1,
+            "invisible":true
+        },
+        "rev1": {
+            "x": 0.08,
+            "top": 0.2,
+            "bottom" : 0.8,
+            "zoom": 1
+        },
+        "rev2": {
+            "x": 0.25,
+            "top": 0.2,
+            "bottom" : 0.8,
+            "zoom": 1
+        },
+        "rev3": {
+            "x": 0.42,
+            "top": 0.2,
+            "bottom" : 0.8,
+            "zoom": 1
+        },
+        "rev4": {
+            "x": 0.58,
+            "top": 0.2,
+            "bottom" : 0.8,
+            "zoom": 1
+        },
+        "rev5": {
+            "x": 0.75,
+            "top": 0.2,
+            "bottom" : 0.8,
+            "zoom": 1
+        },
+        "rev6": {
+            "x": 0.92,
+            "top": 0.2,
+            "bottom" : 0.8,
+            "zoom": 1
+        }
+    }
+]

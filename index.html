@@ -1,0 +1,146 @@
+<!doctype html>
+<html ng-app="myxQuizIndex">
+
+<head>
+  <title>myxQuizIndex</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <script src="js/libs/jquery.min.js" onload="window.$ = window.jQuery = module.exports;"></script>
+  <script src="js/libs/jquery-ui.min.js"></script>
+  <script src="js/libs/angular.min.js"></script>
+  <script src="js/libs/ngStorage.min.js"></script>
+  <script src="js/libs/ui-bootstrap-tpls.js"></script>
+  <script src="js/libs/angular-animate.min.js"></script>
+  <script src="js/libs/angular-resource.min.js"></script>
+  <script src="js/libs/ng-twitter-api.js"></script>
+  <script src="js/libs/sha1.js"></script>
+  <script src="js/libs/sortable.js"></script>
+
+  <script src="js/controller/index.js"></script>
+  <script src="js/factory/qfile.js"></script>
+
+  <style>
+    ul.dropdown-menu {
+      max-height: 150px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      padding-right: 20px;
+    }
+  </style>
+</head>
+
+<body ng-controller="index" ng-cloak>
+  <a href="tool/timer/board.html" target="_blank" class="btn">
+    <span class="glyphicon glyphicon-time"></span> Timer/Question</a>
+  <a href="#" ng-click="twitterWindowOpen()" class="btn">
+    <span class="glyphicon glyphicon-retweet"></span> Twitter</a>
+  <a href="#" ng-click="openFolder()" class="btn">
+    <span class="glyphicon glyphicon glyphicon-folder-open"></span> Folder</a>
+  <a href="editor.html" target="_blank" class="btn">
+    <span class="glyphicon glyphicon-edit"></span> Editor</a>
+  <br>
+
+  <a href="#" ng-click="openQuestion()" class="btn btn-default">
+    <span class="glyphicon glyphicon-question-sign"></span> Question</a>
+  <a href="#" ng-click="openNameList()" class="btn btn-default">
+    <span class="glyphicon glyphicon glyphicon-user"></span> Name List</a>
+  <a href="#" ng-click="initialize()" class="btn btn-danger">
+    <span class="glyphicon glyphicon glyphicon-remove"></span> Initialize</a>
+  <a href="./five-bomber.html" target="_blank" class="btn btn-primary">
+    Five Bomber</a>
+
+  <hr>
+
+  <table class="table table-condensed">
+    <tr>
+      <th>#</th>
+      <th> Up </th>
+      <th> Call </th>
+      <th>
+        <span class="glyphicon glyphicon glyphicon-user"></span>
+      </th>
+      <th> Round </th>
+      <th> Set </th>
+      <th>
+        <span class="glyphicon glyphicon-question-sign"></span>
+      </th>
+      <th> Init </th>
+      <th> DL </th>
+    </tr>
+    <tr ng-repeat="round in rounds">
+      <td> {{rounds.indexOf(round)}} </td>
+      <td>
+        <a href="#" ng-click="round.upload()" ng-if="round.callable">
+          Up
+        </a>
+      </td>
+      <td>
+        <a href="#" ng-click="round.callUp()" ng-if="round.callable">
+          Call
+        </a>
+      </td>
+      <td> {{round.pCount}} </td>
+
+      <td ng-if="round.startable">
+        <a ng-click="round.click()" href="#">{{round.name}}</a>
+      </td>
+      <td ng-if="! round.startable">{{round.name}}</td>
+
+      <td> {{round.nowLot}} </td>
+      <td> {{round.qCount}} </td>
+
+      <td>
+        <a href="#" ng-click="round.initialize()" ng-if="round.initializable">Init</a>
+      </td>
+      <td>
+        <a href="#" ng-click="round.download()" ng-if="round.download">DL</a>
+      </td>
+    </tr>
+  </table>
+
+  <div class="text-center">
+    <div class="btn-toolbar">
+      <button class="btn btn-info btn" ng-click="saveJsonFile()" ng-if="tableTitle != null">
+        保存
+      </button>
+      <button class="btn btn-danger btn" ng-click="cancelJsonFile()" ng-if="tableTitle != null">
+        キャンセル
+      </button>
+      <div ng-if="tableTitle != null">
+        {{tableFilename}}
+      </div>
+    </div>
+  </div>
+  <table class="table table-condensed">
+    <tr>
+      <th></th>
+      <th ng-repeat="head in tableHead"> {{head}} </th>
+    </tr>
+    <tbody ui-sortable="{'axis':'y'}" ng-model="tableContent">
+      <tr ng-repeat="content in tableContent">
+        <td>
+          <span uib-dropdown>
+            <a href id="content-menu" uib-dropdown-toggle>
+              <span class="caret"></span>
+            </a>
+            <ul class="dropdown-menu" uib-dropdown-menu aria-labelledby="content-menu">
+              <li>
+                <a href="#" ng-click="addContent($index, tableContent)">Add</a>
+                <a href="#" ng-click="deleteContent($index, tableContent)">Delete</a>
+              </li>
+            </ul>
+          </span>
+        </td>
+        <td ng-repeat="head in tableHead" ng-class="{'has-success':isProfile(head) && content.autocompleted}">
+          <input ng-if="! isProfile(head)" type="text" ng-model="content[head]" class="form-control">
+          <input ng-if="isProfile(head)" type="text" ng-model="content[head]" class="form-control"
+            uib-typeahead="item[head] as typeaheadLabel(item, head) for item in nameList | filter : $viewValue"
+            typeahead-on-select="onSelect(content, $item)">
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+</body>
+
+</html>

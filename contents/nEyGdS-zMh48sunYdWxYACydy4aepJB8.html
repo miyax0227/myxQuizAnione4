@@ -1,0 +1,135 @@
+<!doctype html>
+<html ng-app="frkteamIndex">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport"
+    content="width=device-width, maximum-scale=5.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
+  <title>FRK Team Portal</title>
+  <base href="/contents/index.html">
+
+  <!-- angularjs-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+  <!-- boot strap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <!-- 独自スクリプト test-->
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<script type="text/javascript">
+  var appName = "frkteamIndex";
+  var app = angular.module(appName, []);
+
+  app.controller('main', ['$scope',
+    function ($scope) {
+      $scope.roundListQual = [
+        { "id": "01_1R", "name": "1R: 問題数限定クイズ" },
+        { "id": "02_PO", "name": "PO: 問題数限定クイズreverse" },
+        { "id": "03_2R", "name": "2R: 変則一斉早押しクイズ" }
+      ];
+      $scope.roundListTorn = [
+        { "id": "04_QF", "name": "QF" },
+        { "id": "05_SF", "name": "SF" },
+        { "id": "06_F", "name": "F" }
+      ]
+      $scope.shiftQual = [
+        { "room": "A部屋", "Shikai": "小塩", "Toiyomi": "加瀬", "Tokuten": "加登", "Denrei": "田岡" },
+        { "room": "B部屋", "Shikai": "松田(学)", "Toiyomi": "川崎", "Tokuten": "蒔田", "Denrei": "中田" },
+        { "room": "C部屋", "Shikai": "神山", "Toiyomi": "黒島", "Tokuten": "佐野", "Denrei": "奥山" },
+        { "room": "D部屋", "Shikai": "安西", "Toiyomi": "大畑", "Tokuten": "若宮", "Denrei": "井上" },
+        { "room": "E部屋", "Shikai": "萩原", "Toiyomi": "後藤", "Tokuten": "松田(健)", "Denrei": "宮石" },
+        { "room": "F部屋", "Shikai": "小澤", "Toiyomi": "伊藤", "Tokuten": "島袋", "Denrei": "林" }
+      ];
+      $scope.roomList = ["A", "B", "C", "D", "E", "F"]
+      $scope.shiftTorn = { "Shikai": "鶴崎", "Toiyomi": "小林", "Tokuten": "宮本" };
+      $scope.key = "IntJPKDO1h4WI4ykU0mnu8Vk0wE5CF9i90BhCRi4";
+      $scope.autoreloadend = "2020-12-28";
+    }
+  ]);
+</script>
+
+<body ontouchstart="" ng-controller="main">
+  <div class="container">
+    <h2>シフト表</h2>
+    <table class="table table-condensed">
+      <tr>
+        <th>ラウンド</th>
+        <th>部屋</th>
+        <th>司会</th>
+        <th>問読・正誤</th>
+        <th>得点表示</th>
+        <th>伝令</th>
+      </tr>
+      <tr ng-repeat="item in shiftQual">
+        <td rowspan="6" ng-if="$first">予選(1R, PO, 2R)</td>
+        <td>{{item.room}}</td>
+        <td>{{item.Shikai}}</td>
+        <td>{{item.Toiyomi}}</td>
+        <td>{{item.Tokuten}}</td>
+        <td>{{item.Denrei}}</td>
+      </tr>
+      <tr>
+        <td colspan="2">QF以降</td>
+        <td>{{shiftTorn.Shikai}}</td>
+        <td>{{shiftTorn.Toiyomi}}</td>
+        <td>{{shiftTorn.Tokuten}}</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <table ng-repeat="round in roundListQual" class="table table-condensed">
+      <caption class="h3">{{round.name}}</caption>
+      <tr>
+        <th>部屋名</th>
+        <th>得点表示担当者</th>
+        <th>操作盤</th>
+        <th>履歴</th>
+        <th>参加者用画面</th>
+      </tr>
+      <tr ng-repeat="r in roomList">
+        <td>{{r}}部屋</td>
+        <td>{{shiftQual[$index].Tokuten}}</td>
+        <td><a ng-href="../round/{{round.id}}-{{r}}/board.html?browser=true&key={{key}}" target="_blank">操作盤
+            <i class="fas fa-external-link-alt"></i></a></td>
+        <td><a ng-href="./history_rNiYhdnWcAgs7VrjRdcVhLsVmEK_588-.html?history=20&round={{round.id}}-{{r}}&key={{key}}"
+            target="_blank">履歴
+            <i class="fas fa-external-link-alt"></i></a></td>
+        <td><a ng-href="../round/{{round.id}}-{{r}}/board.html?browser=true&autoreloadend={{autoreloadend}}"
+            target="_blank">参加者用画面
+            <i class="fas fa-external-link-alt"></i></a></td>
+      </tr>
+    </table>
+
+    <table class="table table-condensed">
+      <caption class="h3">QF以降</caption>
+      <tr>
+        <th>ラウンド名</th>
+        <th>得点表示担当者</th>
+        <th>操作盤</th>
+        <th>履歴</th>
+        <th>参加者用画面</th>
+      </tr>
+      <tr ng-repeat="round in roundListTorn">
+        <td>{{round.name}}</td>
+        <td>{{shiftTorn.Tokuten}}</td>
+        <td><a href="../round/{{round.id}}/board.html?browser=true&key={{key}}" target="_blank">操作盤
+            <i class="fas fa-external-link-alt"></i></a></td>
+        <td><a href="./history_rNiYhdnWcAgs7VrjRdcVhLsVmEK_588-.html?history=20&round={{round.id}}&key={{key}}"
+            target="_blank">履歴
+            <i class="fas fa-external-link-alt"></i></a></td>
+        <td><a href="../round/{{round.id}}/board.html?browser=true&autoreloadend={{autoreloadend}}"
+            target="_blank">参加者用画面
+            <i class="fas fa-external-link-alt"></i></a></td>
+      </tr>
+    </table>
+  </div>
+
+</body>
+
+</html>

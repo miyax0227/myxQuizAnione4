@@ -1,0 +1,66 @@
+<div class="global_actions container" ng-if="! viewMode && ! anonymous && globalActionVisible && ! capturing"
+  ng-style="{zoom:windowSize.buttonZoom}">
+  <div>
+    
+    <div style="display:inline-block;">
+      <span class="label label-primary">Basic</span>
+      <br>
+      <span class="btn-group">
+        <button ng-repeat="action in global_actions | group: 'basic'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+          ng-disabled="! func_scope(action.enable) || !pushable">
+          {{action.name}}
+        </button> </span>
+    </div>
+    
+    <div style="display:inline-block;">
+      <span class="label label-default">操作</span>
+      <br>
+      <span class="btn-group">
+        <button ng-repeat="action in global_actions | group: 'rule'" ng-if="! action.hasOwnProperty('indexes')"
+          ng-class="action.button_css" ng-click="func_scope(action.action)"
+          ng-disabled="! func_scope(action.enable) || !pushable"
+          tooltip-placement="top" ng-attr-uib-tooltip="{{action.tooltip}}">
+          {{action.name}}
+        </button> <span ng-repeat="action in global_actions | group: 'rule'" ng-if="action.hasOwnProperty('indexes')">
+          <button ng-repeat="index in func_scope(action.indexes)" ng-class="action.button_css"
+            ng-click="func_index_scope( action.action , index)"
+            ng-disabled="! func_index_scope(action.enable, index) || !pushable"
+            tooltip-placement="top" ng-attr-uib-tooltip="{{action.tooltip}}">
+            {{action.name}}{{index}}
+          </button> </span> </span>
+    </div>
+  </div>
+  <div>
+    <div style="display:inline-block;">
+      <span class="label label-info">表示</span>
+      <br>
+      <div class="btn-group" role="group">
+        <button type="button" ng-repeat="action in global_actions | group: 'view'" ng-class="action.button_css"
+          ng-click="func_scope(action.action)" ng-disabled="! func_scope(action.enable) || !pushable"
+          tooltip-placement="top" ng-attr-uib-tooltip="{{action.tooltip}}">
+          {{action.name}}
+        </button>
+      </div>
+    </div>
+    <div style="display:inline-block;">
+      <span class="label label-danger">履歴</span>
+      <br>
+      <span class="btn-group">
+        <button ng-repeat="action in global_actions | group: 'history'" ng-class="action.button_css"
+          ng-click="func_scope(action.action)" ng-disabled="! func_scope(action.enable) || !pushable"
+          tooltip-placement="top" ng-attr-uib-tooltip="{{action.tooltip}}">
+          {{action.name}}
+        </button> </span>
+    </div>
+    <div style="display:inline-block;">
+      <span class="label label-warning">プレーオフ</span>
+      <br>
+      <span class="btn-group">
+        <button ng-repeat="action in global_actions | group: 'playoff'" ng-class="action.button_css"
+          ng-click="func_scope(action.action)" ng-disabled="! func_scope(action.enable) || !pushable"
+          tooltip-placement="top" ng-attr-uib-tooltip="{{action.tooltip}}">
+          {{action.name}}
+        </button> </span>
+    </div>
+  </div>
+</div>

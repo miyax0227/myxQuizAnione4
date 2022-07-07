@@ -1,0 +1,131 @@
+[{
+		"key": "entryNo",
+		"style": "number",
+		"value": 999,
+		"profile": true
+	},
+	{
+		"key": "name",
+		"style": "string",
+		"value": "○○　○○",
+		"profile": true,
+		"anonymous": false,
+		"css": "name",
+		"vtrans": 3.7
+	},
+	{
+		"key": "nameLat",
+		"style": "string",
+		"profile": false,
+		"anonymous": false,
+		"css": "nameLat",
+		"htrans": 5
+	},
+	{
+		"key": "handleName",
+		"style": "string",
+		"profile": true,
+		"anonymous": true,
+		"css": "name",
+		"vtrans": 3.7
+	},
+	{
+		"key": "handleNameLat",
+		"style": "string",
+		"profile": false,
+		"anonymous": true,
+		"css": "nameLat",
+		"htrans": 5
+	},
+	{
+		"key": "pref",
+		"style": "string",
+		"value": "",
+		"profile": true,
+		"css": "pref"
+	},
+	{
+		"key": "paperRank",
+		"style": "number",
+		"value": 999,
+		"profile": true,
+		"suffix": "位",
+		"css": "paperRank",
+		"close-css": "paperRank",
+		"dnq": 101
+	},
+	{
+		"key": "motion",
+		"style": "string",
+		"css_img": "motion",
+		"css_img_file": {
+			"o": "o.png",
+			"x": "x.png"
+		}
+	},
+	{
+		"key": "motion2",
+		"style": "string",
+		"css_img": "motion",
+		"css_img_file": {
+			"o": "o.png",
+			"x": "x.png"
+		}
+	},
+	{
+		"key": "status",
+		"value": "normal",
+		"style": "select",
+		"option": [
+			"normal",
+			"win",
+			"lose",
+			"absent",
+			"wait"
+		],
+		"css_img": "status",
+		"css_img_file": {
+			"win": "win.png",
+			"lose": "lose.png",
+			"wait": "wait.png",
+			"absent": "absent.png",
+			"selected": "transparent.png"
+		}
+	},
+	{
+		"key": "rank",
+		"value": 0,
+		"style": "number",
+		"css_img": "rank",
+		"css_img_file": {
+			"1": "1st.png",
+			"2": "2nd.png",
+			"3": "3rd.png",
+			"4": "4th.png",
+			"5": "5th.png",
+			"6": "6th.png",
+			"7": "7th.png",
+			"8": "8th.png",
+			"9": "9th.png",
+			"10": "10th.png",
+			"11": "11th.png",
+			"12": "12th.png"
+		}
+	},
+	{
+		"key": "absent",
+		"value": 0,
+		"style": "number",
+		"css": "absent",
+		"repeatChar": "●\n"
+	},
+	{
+		"key": "close",
+		"value": true,
+		"style": "boolean"
+	},
+	{
+		"key": "position",
+		"order": []
+	}
+]

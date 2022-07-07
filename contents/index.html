@@ -1,0 +1,113 @@
+<!doctype html>
+<html ng-app="union">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Cache-Control" content="no-cache">
+  <meta name="viewport"
+    content="width=device-width, maximum-scale=5.0, minimum-scale=0.5,user-scalable=yes,initial-scale=1.0" />
+  <title>FRK Team Portal</title>
+  <base href="/contents/index.html">
+
+  <!-- boot strap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+  <!-- font awesome-->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
+  <!-- angularjs-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-animate.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.7.5/angular-resource.min.js"></script>
+  <!-- lightbox -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/js/lightbox.min.js"
+    type="text/javascript"></script>
+  <!-- clipboard -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js"></script>
+  <!-- 独自スクリプト test-->
+  <link href="./style.css" rel="stylesheet">
+  <script src="./index.js"></script>
+</head>
+
+<body ng-controller="main" ng-class="{mobile: mobile}" ng-cloak ontouchstart="">
+  <div class="message" ng-if="message">
+    <h1 class="text-center">
+      {{message}}
+    </h1>
+  </div>
+
+  <div class="container">
+    <h2>1R:問題数限定クイズ</h2>
+    <div class="row">
+      <div class="team col-xs-6 col-md-4" ng-repeat="round in round1r" ng-if="data[round]">
+        <a ng-href="../round/{{data[round].round}}/board.html?browser=true&autoreloadend={{autoreloadend}}"
+          target="_blank">
+          <h3>
+            {{data[round].item.hist.header.nowLot}}部屋&nbsp;&nbsp;{{data[round].item.hist.header.nowMember}}人目&nbsp;&nbsp;
+            <i class="fas fa-chevron-right"></i>
+          </h3>
+          <table class="table table-condensed">
+            <tr ng-repeat="player in data[round].item.hist.players" ng-class="{'selected':player.status=='win'}">
+              <td><strong>{{player.name}}</strong></td>
+              <td>{{player.o}}</td>
+              <td style="white-space:nowrap"> {{repeatChar("×",player.x)}}</td>
+            </tr>
+          </table>
+        </a>
+      </div>
+    </div>
+    <h2>PO:問題数限定クイズReverse</h2>
+    <div class="row">
+      <div class="team col-xs-6 col-md-4" ng-repeat="round in roundpo" ng-if="data[round]">
+        <a ng-href="../round/{{data[round].round}}/board.html?browser=true&autoreloadend={{autoreloadend}}"
+          target="_blank">
+          <h3>
+            {{data[round].item.hist.header.nowLot}}部屋&nbsp;&nbsp;{{data[round].item.hist.header.nowMember}}人目&nbsp;&nbsp;
+            <i class="fas fa-chevron-right"></i>
+          </h3>
+          <table class="table table-condensed">
+            <tr ng-repeat="player in data[round].item.hist.players" ng-class="{'selected':player.status=='win'}">
+              <td><strong>{{player.name}}</strong></td>
+              <td>{{player.o}}</td>
+              <td style="white-space:nowrap"> {{repeatChar("×",player.x)}}</td>
+            </tr>
+          </table>
+        </a>
+      </div>
+    </div>
+    <h2>2R: 変則一斉早押しクイズ</h2>
+    <div class="row">
+      <div class="team col-xs-6 col-md-4" ng-repeat="round in round2r" ng-if="data[round]">
+        <a ng-href="../round/{{round}}/board.html?browser=true&autoreloadend={{autoreloadend}}" target="_blank">
+          <h3>
+            {{data[round].item.hist.header.nowLot}}部屋&nbsp;&nbsp;
+            <i class="fas fa-chevron-right"></i>
+          </h3>
+          <table class="table table-condensed">
+            <tr ng-repeat="player in data[round].item.hist.players" ng-class="{'selected':player.status=='win'}">
+              <td><strong>{{player.name}}</strong></td>
+              <td>{{player.o}}</td>
+              <td style="white-space:nowrap"> {{repeatChar("×",player.x)}}</td>
+            </tr>
+          </table>
+        </a>
+      </div>
+    </div>
+    <h2>QF以降</h2>
+    <div class="team">
+      <a ng-href="../round/04_QF/board.html?browser=true&autoreloadend={{autoreloadend}}" target="_blank">
+        <h3> Quarterfinal　リレークイズ <i class="fas fa-chevron-right"></i></h3>
+      </a>
+      <a ng-href="../round/05_SF/board.html?browser=true&autoreloadend={{autoreloadend}}" target="_blank">
+        <h3> Semifinal　通過クイズ <i class="fas fa-chevron-right"></i></h3>
+      </a>
+      <a ng-href="../round/06_F/board.html?browser=true&autoreloadend={{autoreloadend}}" target="_blank">
+        <h3> Final　アップダウン式リレークイズ <i class="fas fa-chevron-right"></i></h3>
+      </a>
+    </div>
+  </div>
+</body>
+
+</html>

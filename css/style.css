@@ -1,0 +1,318 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+@font-face {
+  font-family: "MigMix 1M";
+  src: url("../fonts/migmix-1m-regular.ttf");
+  src: url("../fonts/migmix-1m-bold.ttf");
+}
+
+@font-face {
+  font-family: "HGSｺﾞｼｯｸE";
+}
+
+body {
+  overflow: hidden;
+  background-color: black;
+  color: white;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+}
+
+.number {
+  text-align: right;
+}
+
+div.modal {
+  width: 100%;
+  margin-left: 0%;
+  margin-right: 0%;
+  color: black;
+}
+
+table.players th {
+  text-align: center;
+}
+
+table.players td.index {
+  text-align: center;
+}
+
+table.players td.profile {
+  text-align: center;
+  width: 150px;
+}
+
+table.players td#status {
+  width: 100px;
+}
+
+table.players td#add, table.players td#del, table.players td#index {
+  width: 20px;
+}
+
+table.players tr.ng-enter {
+  -webkit-transition: 0.2s linear all;
+  opacity: 0;
+}
+
+table.players tr.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+table.players tr.ng-leave {
+  -webkit-transition: 0.2s linear all;
+  opacity: 1;
+}
+
+table.players tr.ng-leave.ng-leave-active {
+  opacity: 0;
+}
+
+div.scoreboard img.logo {
+  position: absolute;
+  width: 0px;
+  height: 80px;
+  left: 2%;
+  top: 10px;
+}
+
+div.scoreboard div.title {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  top: 0px;
+  margin-left: calc(2% + 0px);
+}
+
+div.scoreboard div.timer {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  top: 0px;
+  width: 96%;
+  margin-left: 2%;
+  text-align: right;
+}
+
+div.scoreboard div.timerEnabled {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  top: 80px;
+  width: 10%;
+  margin-left: 53%;
+  text-align: center;
+  font-size: 32px;
+  display: none;
+}
+
+div.scoreboard div.qCount {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  top: 45px;
+  margin-left: calc(2% + 0px);
+}
+
+div.scoreboard hr.hr0 {
+  position: absolute;
+  top: 30px;
+  width: calc(96% - 80px);
+  margin-left: calc(2% + 0px);
+  margin-right: 2%;
+  border: 0;
+  height: 2px;
+  background-image: -webkit-linear-gradient(left, white, rgba(255, 255, 255, 0.5));
+}
+
+div.scoreboard div.victory {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  color: black;
+}
+
+div.scoreboard div.victory.ng-enter {
+  -webkit-transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 3s;
+  opacity: 0;
+  -webkit-filter: blur(30px);
+}
+
+div.scoreboard div.victory.ng-enter-active {
+  opacity: 1;
+  -webkit-filter: blur(0px);
+}
+
+div.scoreboard div.victory h1 {
+  width: 100%;
+  text-align: center;
+}
+
+div.scoreboard div.victory h1.cupTitle {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 100px;
+  -webkit-user-select: none;
+  margin-top: 10%;
+}
+
+div.scoreboard div.victory h1.first {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 100px;
+  -webkit-user-select: none;
+  margin-top: 20%;
+}
+
+div.scoreboard div.victory h1.name {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 100px;
+  -webkit-user-select: none;
+  margin-top: 30%;
+}
+
+div.scoreboard div.victory h1.member {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  margin-top: 40%;
+}
+
+div.scoreboard div.victory h1.member span {
+  white-space: nowrap;
+}
+
+div.player {
+  width: 1000px;
+  height: 1000px;
+  transition: 1s;
+  transform-origin: 0px 0px;
+}
+
+div.player.ng-enter, div.player.ng-leave {
+  transition: 0s;
+}
+
+div.player div.open {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  transform-origin: 0px 0px;
+}
+
+div.player div.open.ng-enter {
+  transition: all cubic-bezier(0.6, 0, 0.6, 0) 0.5s;
+  transform: rotateX(-90deg);
+  opacity: 0;
+}
+
+div.player div.open.ng-enter.ng-enter-active {
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+div.player div.closed {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  transform-origin: 0px 0px;
+}
+
+div.player div.closed.ng-leave {
+  transition: all cubic-bezier(0.4, 1, 0.4, 1) 0.5s;
+  transform: rotateX(0deg);
+  opacity: 1;
+}
+
+div.player div.closed.ng-leave.ng-leave-active {
+  transform: rotateX(90deg);
+  opacity: 0;
+}
+
+div.player div.closed div.overRectBlind {
+  position: absolute;
+  width: 60px;
+  height: 250px;
+  left: -30px;
+  top: -125px;
+  background-color: #7f7f7f;
+}
+
+div.global_actions {
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+  z-index: 100;
+}
+
+div.timer_actions {
+  position: absolute;
+  right: 2%;
+  top: 15px;
+  z-index: 100;
+}
+
+div.explain {
+  position: absolute;
+  left: 0%;
+  width: 100%;
+  top: 100px;
+  height: calc(100% - 100px);
+  background-color: black;
+  overflow-y: scroll;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-size: 36px;
+  z-index: 1000;
+}
+
+div.explain.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.explain.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.explain p.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.explain p.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+.modal-dialog {
+  width: 1200px;
+}
+
+.container {
+  width: 750px;
+}

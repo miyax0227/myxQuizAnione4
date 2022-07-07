@@ -1,0 +1,101 @@
+@import "_rule.scss";
+@import "_union-common.scss";
+
+div.player {
+  hr.hr1 {
+    @include player-hr(-200, -140, 400, 2);  
+  }
+  hr.hr2 {
+    @include player-hr(-200, -40, 400, 2);  
+  }
+  div.name {
+  	display: none;
+  }
+  div.nameLat {
+  }
+  div.x {
+  	display: none;
+  }
+  
+  $mem_opacity: 1, 1, 1, 1, 1;
+  @for $i from 1 through 5 {
+    div.name#{$i} {
+      @include player-item(-95, -80+80*$i, 0, 60);
+      transform-origin: 0px 0px;
+      transform: translate(30px, -5px);
+      opacity: nth($mem_opacity, $i);
+    }
+    div.torii#{$i} {
+      display: none;
+      @include player-item(-100, 100+80*$i, 200, 28, "STU XVIII");
+      opacity: nth($mem_opacity, $i);
+    }
+    div.oo#{$i} {
+      @include player-item(-50, -80+80*$i, 100, 64);
+      &.right{
+      	transform: translate(-250px ,0px);
+      }
+      &.left{
+      	transform: translate(250px ,0px);
+      }
+      &.chance#{$i} {
+        color: $chance-color;
+        -webkit-text-stroke: 1px white;
+      }
+      &.win#{$i} {
+      	color: $win-color;
+      }
+      &.lose#{$i} {
+      	color: $lose-color;
+      }
+    }
+    div.sl#{$i} img {
+      display: none;
+      @include player-img(-120, -75+80*$i, 240, 75);
+      @include fadein(0.5){
+      }
+    }
+    
+	  div.status img {
+	    &.win {
+	      @include player-img(-30*2, -75, 60*2, 166*2);
+	    }
+	    &.lose {
+	      @include player-img(-37*2, -80, 75*2, 182*2);
+	    }
+	  }
+	  
+  }
+  div.action_o {
+    @include player-button(-22, -100);
+  }
+  div.action_x {
+    @include player-button(-22, 60-200);
+  }
+  div.action_win {
+    @include player-button(-30, 110-200);
+  }
+  div.action_lose {
+    @include player-button(-10, 110-200);
+  }
+  div.action_wait {
+    @include player-button(10, 110-200);
+  }
+  @for $i from 1 through 5 {
+    div.action_sl#{$i} {
+      @include player-button(-22, -75+80*$i);
+    }
+  }
+}
+
+div.scoreboard{
+  @for $i from 1 through 5 {
+  	div.vs#{$i} {
+      @include score-div(64px);
+      left: calc(633px);
+  	  width: 100px;
+  	  text-align: center;
+  	  top: calc(315px + #{-80+80*$i}px);
+  	}
+  }
+}

@@ -1,0 +1,154 @@
+<!doctype html>
+<html ng-app="myxQuizMain">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Timer</title>
+
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+
+	<script src="../../js/libs/angular.js"></script>
+	<script src="../../js/libs/ngStorage.min.js"></script>
+	<script src="../../js/libs/angular-animate.min.js"></script>
+	<script src="../../js/libs/angular-resource.min.js"></script>
+	<script src="../../js/libs/ui-bootstrap-tpls.js"></script>
+	<script src="../../js/libs/angular-sanitize.min.js"></script>
+
+	<script src="main.js"></script>
+	<script src="qcommon.js"></script>
+	<script src="round.js"></script>
+</head>
+
+<body ng-controller="main" ng-keydown="keyDown($event)" ng-class="{'view':viewMode}">
+	<div class="scoreboard" ng-cloak ng-show="initialAnimation">
+		<!-- 説明文表示 -->
+		<div id="explain" class="explain" ng-if="getExplainCount()>0">
+			<p ng-repeat="exp in explain" ng-if="$index < getExplainCount()" ng-bind-html="exp">
+			</p>
+			<p>
+				<br>
+				<br>
+			</p>
+		</div>
+
+		<!-- タイマー表示 -->
+		<div class="timer">
+			{{timerDisplay}}
+		</div>
+
+		<!-- 問題・答え表示-->
+		<div class="question-show" ng-class="{'control':! viewMode}" ng-if="current.header.question">
+			<span style="font-weight:bold">問題</span>
+			<br> {{current.header.question}}
+		</div>
+		<div class="answer-show" ng-class="{'control':! viewMode}" ng-if="current.header.answer">
+			<span style="font-weight:bold">正解</span>
+			<br> {{current.header.answer}}
+		</div>
+
+		<div class="question-selected" ng-if="! viewMode">
+			<table class="table table-condensed question-selected">
+				<tr>
+					<th class="tag">tag</th>
+					<th class="question">question</th>
+					<th class="answer">answer</th>
+				</tr>
+				<tr>
+					<td>{{question[nowQuestion].tag}}</td>
+					<td>{{question[nowQuestion].question}}</td>
+					<td>{{question[nowQuestion].answer}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div class="question-table" ng-if="! viewMode">
+			<table class="table table-condensed question-table">
+				<tr>
+					<th class="tag">tag</th>
+					<th class="question">question</th>
+					<th class="answer">answer</th>
+				</tr>
+				<tr ng-repeat="q in question" ng-click="setNowQuestion($index)" ng-class="{'nowQuestion' :$index==nowQuestion}">
+					<td>{{q.tag}}
+						<a name="{{'Question_'+$index}}"></a>
+					</td>
+					<td>{{q.question}}</td>
+					<td>{{q.answer}}</td>
+				</tr>
+			</table>
+		</div>
+
+		<!-- 全体操作ボタン表示 -->
+		<div class="global_actions container" ng-if="! viewMode && globalActionVisible" ng-style="{zoom:windowSize.buttonZoom}">
+			<div class="row">
+				<div class="col-xs-2">
+					<span class="label label-primary">Basic</span>
+					<br>
+					<span class="btn-group">
+						<button ng-repeat="action in global_actions | group: 'basic'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+						  ng-disabled="! func_scope(action.enable) || !pushable">
+							{{action.name}}
+						</button>
+					</span>
+				</div>
+				<div class="col-xs-2">
+					<span class="label label-info">View</span>
+					<br>
+					<div class="btn-group" role="group">
+						<button type="button" ng-repeat="action in global_actions | group: 'view'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+						  ng-disabled="! func_scope(action.enable) || !pushable">
+							{{action.name}}
+						</button>
+					</div>
+				</div>
+				<div class="col-xs-3">
+					<span class="label label-danger">History</span>
+					<br>
+					<span class="btn-group">
+						<button ng-repeat="action in global_actions | group: 'history'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+						  ng-disabled="! func_scope(action.enable) || !pushable">
+							{{action.name}}
+						</button>
+					</span>
+				</div>
+				<div class="col-xs-5">
+					<span class="label label-warning">Playoff</span>
+					<br>
+					<span class="btn-group">
+						<button ng-repeat="action in global_actions | group: 'playoff'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+						  ng-disabled="! func_scope(action.enable) || !pushable">
+							{{action.name}}
+						</button>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- タイマー操作ボタン表示 -->
+		<div class="timer_actions" ng-if="! viewMode && globalActionVisible" ng-style="{zoom:windowSize.buttonZoom}">
+			<span class="label label-success">Timer</span>
+			<br>
+			<span class="btn-group">
+				<button ng-repeat="action in global_actions | group: 'timer'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+				  ng-disabled="! func_scope(action.enable) || !pushable">
+					{{action.name}}
+				</button>
+			</span>
+		</div>
+
+		<!-- 問題操作ボタン表示 -->
+		<div class="question_actions" ng-if="! viewMode && globalActionVisible" ng-style="{zoom:windowSize.buttonZoom}">
+			<span class="label label-primary">Question</span>
+			<br>
+			<span class="btn-group">
+				<button ng-repeat="action in global_actions | group: 'question'" ng-class="action.button_css" ng-click="func_scope(action.action)"
+				  ng-disabled="! func_scope(action.enable) || !pushable">
+					{{action.name}}
+				</button>
+			</span>
+		</div>
+	</div>
+</body>
+
+</html>

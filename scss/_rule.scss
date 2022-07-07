@@ -1,0 +1,128 @@
+$font-family-default: -apple-system,
+BlinkMacSystemFont,
+"Helvetica Neue",
+"Segoe UI",
+"Noto Sans Japanese",
+"ヒラギノ角ゴ ProN W3",
+Meiryo,
+sans-serif;
+
+@font-face {
+	font-family: 'NationalizeAlp';
+	src: url('../fonts/NATIONALYZEALP.TTF');
+}
+
+@mixin score-div($fontsize:40px) {
+  font-family: $font-family-default;
+  font-weight: bold;
+  position: absolute;
+  font-size: $fontsize;
+  -webkit-user-select: none;
+}
+
+@mixin player-item($left:0, $top:0, $width:0, $font-size:56, $font-family:$font-family-default) {
+  position: absolute;
+  left: #{$left}px;
+  top: #{$top}px;
+  @if ($width > 0) {
+    width: #{$width}px;
+  }
+  font-size: #{$font-size}px;
+  font-family: $font-family;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+@mixin player-img($left:0, $top:0, $width:0, $height:0) {
+  position: absolute;
+  left: #{$left}px;
+  top: #{$top}px;
+  @if ($width > 0) {
+    width: #{$width}px;
+  }
+  @if ($height > 0) {
+    height: #{$height}px;
+  }
+  -webkit-user-select: none;
+}
+
+@mixin player-button($left:0, $top:0) {
+  position: absolute;
+  left: #{$left}px;
+  top: #{$top}px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+@mixin player-hr($left:0, $top:0, $width:0, $height:0) {
+  position: absolute;
+  top: #{$top}px;
+  left: #{$left}px;
+  width: #{$width}px;
+  border: 0;
+  height: #{$height}px;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.5));
+}
+
+@mixin fadein($time: 1, $opacity: 1) {
+  &.ng-enter {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) #{$time}s;
+    opacity: 0;
+    @content;
+    &.ng-enter-active {
+      opacity: $opacity;
+      -webkit-transform: rotateX(0deg);
+      transform: translate(0px, 0px);
+      transform: scale(1, 1);
+    }
+  }
+}
+
+@mixin fadeout($time: 1, $opacity: 1) {
+  opacity: 0;
+  &.ng-enter {
+    transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) #{$time}s;
+    -webkit-transform: rotateX(0deg);
+    transform: translate(0px, 0px);
+    transform: scale(1, 1);
+    opacity: $opacity;
+    &.ng-enter-active {
+      opacity: 0;
+      @content;
+    }
+  }
+}
+
+@mixin bordered($stroke-width:1, $stroke-color:#000000, $fill-color:#FFFFFF) {
+  -webkit-text-stroke-color: $stroke-color;
+  -webkit-text-stroke-width: #{$stroke-width}px;
+  -webkit-text-fill-color: $fill-color;
+}
+
+@mixin bordered-twotone($stroke-width:1, $stroke-color:#000000, $fill-color1:#FFFFFF, $fill-color2:#FFFFFF) {
+  -webkit-text-stroke-color: $stroke-color;
+  -webkit-text-stroke-width: #{$stroke-width}px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient($fill-color1 50%, $fill-color2 50%);
+
+}
+
+@mixin value-range($min, $max) {
+  @for $value from $min through $max {
+    &[value="#{$value}"] {
+      @content;
+    }
+  }
+}
+
+@mixin img-show($filename, $width, $height) {
+  color: rgba(0, 0, 0, 0);
+  &[value="true"] {
+    background: url("../img/#{$filename}");
+    background-size: $width $height;
+    background-position: 0px 0px;
+    background-repeat: no-repeat;
+  }
+}

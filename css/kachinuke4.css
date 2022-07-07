@@ -1,0 +1,4526 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+div.player div.open div.name {
+  display: none;
+  -webkit-writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #FFFFFF;
+  font-family: "Migmix 1M";
+  letter-spacing: -24px;
+  transform-origin: 0px 12px;
+}
+
+div.player div.open div.nameLat {
+  position: absolute;
+  left: -180px;
+  top: -42px;
+  font-size: 56px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  width: 280px;
+  height: 64px;
+}
+
+div.player div.open div.paperRank {
+  position: absolute;
+  left: -320px;
+  top: -18px;
+  width: 120px;
+  font-size: 36px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 50px;
+  background-color: black;
+  border: solid 2px white;
+}
+
+div.player div.open div.pref {
+  position: absolute;
+  left: 120px;
+  top: 2px;
+  width: 120px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  background-color: black;
+  border: solid 2px white;
+  border-radius: 50px;
+}
+
+div.player div.open div.o {
+  position: absolute;
+  left: -100px;
+  top: -230px;
+  width: 200px;
+  font-size: 72px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.open div.o.chance {
+  color: lightblue;
+}
+
+div.player div.open div.o.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.x {
+  position: absolute;
+  left: -100px;
+  top: 130px;
+  width: 200px;
+  font-size: 72px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.open div.x[value="0"] {
+  display: none;
+}
+
+div.player div.open div.x.pinch {
+  color: lightpink;
+}
+
+div.player div.open div.x.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.absent {
+  position: absolute;
+  left: -35px;
+  top: -95px;
+  width: 70px;
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #FFFF22;
+  line-height: 80%;
+  z-index: 1;
+}
+
+div.player div.open div.combo {
+  position: absolute;
+  left: -50px;
+  top: -100px;
+  width: 100px;
+  font-size: 200px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  font-size: 0px;
+}
+
+div.player div.open div.combo[value="1"] {
+  height: 210px;
+  background-color: gold;
+  z-index: -100;
+}
+
+div.player div.open div.select {
+  position: absolute;
+  left: -50px;
+  top: -100px;
+  width: 100px;
+  font-size: 200px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  font-size: 0px;
+}
+
+div.player div.open div.select.selected {
+  height: 210px;
+  background-color: gold;
+  z-index: -100;
+}
+
+div.player div.open div.x2 {
+  position: absolute;
+  left: -50px;
+  top: 202px;
+  width: 100px;
+  font-size: 48px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.open div.x2[value="0"] {
+  display: none;
+}
+
+div.player div.open div.x2.pinch {
+  color: lightpink;
+}
+
+div.player div.open div.x2.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o2 {
+  position: absolute;
+  left: -50px;
+  top: -278px;
+  width: 100px;
+  font-size: 48px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.open div.o2.chance {
+  color: lightblue;
+}
+
+div.player div.open div.o2.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.paperPts {
+  position: absolute;
+  left: 120px;
+  top: -22px;
+  width: 120px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.closed div.paperRank {
+  position: absolute;
+  left: -320px;
+  top: -18px;
+  width: 560px;
+  font-size: 36px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 50px;
+  background-color: black;
+  border: solid 2px white;
+}
+
+div.player div.rank img {
+  position: absolute;
+  left: -40px;
+  top: -210px;
+  width: 90px;
+  height: 60px;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.player div.rank img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+  opacity: 0;
+  -webkit-transform: rotateX(180deg);
+}
+
+div.player div.rank img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -30px;
+  top: -75px;
+  width: 60px;
+  height: 166px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.win.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.status img.win.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -37px;
+  top: -80px;
+  width: 75px;
+  height: 182px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5) rotate(30deg);
+}
+
+div.player div.status img.lose.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.wait {
+  position: absolute;
+  left: -30px;
+  top: -62px;
+  width: 60px;
+  height: 146px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.wait.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.status img.wait.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.absent {
+  position: absolute;
+  left: -30px;
+  top: -100px;
+  width: 60px;
+  height: 200px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.absent.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.2, 1.2);
+}
+
+div.player div.status img.absent.ng-enter.ng-enter-active {
+  opacity: 0.3;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.motion img.o {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+div.player div.motion img.o.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+div.player div.motion img.o.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.motion img.x {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+div.player div.motion img.x.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+div.player div.motion img.x.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player hr.hr1 {
+  display: none;
+  display: none;
+}
+
+div.player hr.hr2 {
+  display: none;
+}
+
+div.player div.action_o {
+  position: absolute;
+  left: -22px;
+  top: -100px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_x {
+  position: absolute;
+  left: -22px;
+  top: 60px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_win {
+  position: absolute;
+  left: -30px;
+  top: 110px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+  display: none;
+}
+
+div.player div.action_lose {
+  position: absolute;
+  left: -10px;
+  top: 110px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+  display: none;
+}
+
+div.player div.action_wait {
+  position: absolute;
+  left: 10px;
+  top: 110px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+  display: none;
+}
+
+div.player div.action_s {
+  position: absolute;
+  left: -22px;
+  top: -20px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.open div.o {
+  display: none;
+  font-size: 0px;
+}
+
+div.player div.open div.o[value="1"] {
+  height: 210px;
+  background-color: gold;
+  z-index: -100;
+}
+
+div.player div.open div.x {
+  display: none;
+}
+
+div.player div.open div.x[value="0"] {
+  display: none;
+}
+
+div.player div.open div.x[value="1"] {
+  display: none;
+}
+
+div.player div.open div.x[value="2"] {
+  display: none;
+}
+
+div.player div.open div.x[value="3"] {
+  display: none;
+}
+
+div.player div.open div.x[value="4"] {
+  display: none;
+}
+
+div.player div.open div.x[value="5"] {
+  display: none;
+}
+
+div.player div.open div.x[value="6"] {
+  display: none;
+}
+
+div.player div.open div.x[value="7"] {
+  display: none;
+}
+
+div.player div.open div.x[value="8"] {
+  display: none;
+}
+
+div.player div.open div.x[value="9"] {
+  display: none;
+}
+
+div.player div.open div.x[value="10"] {
+  display: none;
+}
+
+div.player div.open div.x[value="11"] {
+  display: none;
+}
+
+div.player div.open div.x[value="12"] {
+  display: none;
+}
+
+div.player div.open div.x[value="13"] {
+  display: none;
+}
+
+div.player div.open div.x[value="14"] {
+  display: none;
+}
+
+div.player div.open div.x[value="15"] {
+  display: none;
+}
+
+div.player div.open div.x[value="16"] {
+  display: none;
+}
+
+div.player div.open div.x[value="17"] {
+  display: none;
+}
+
+div.player div.open div.x[value="18"] {
+  display: none;
+}
+
+div.player div.open div.x[value="19"] {
+  display: none;
+}
+
+div.player div.open div.x[value="20"] {
+  display: none;
+}
+
+div.player div.open div.x[value="21"] {
+  display: none;
+}
+
+div.player div.open div.x[value="22"] {
+  display: none;
+}
+
+div.player div.open div.x[value="23"] {
+  display: none;
+}
+
+div.player div.open div.x[value="24"] {
+  display: none;
+}
+
+div.player div.open div.x[value="25"] {
+  display: none;
+}
+
+div.player div.open div.x[value="26"] {
+  display: none;
+}
+
+div.player div.open div.x[value="27"] {
+  display: none;
+}
+
+div.player div.open div.x[value="28"] {
+  display: none;
+}
+
+div.player div.open div.x[value="29"] {
+  display: none;
+}
+
+div.player div.open div.x[value="30"] {
+  display: none;
+}
+
+div.player div.open div.x[value="31"] {
+  display: none;
+}
+
+div.player div.open div.x[value="32"] {
+  display: none;
+}
+
+div.player div.open div.x[value="33"] {
+  display: none;
+}
+
+div.player div.open div.x[value="34"] {
+  display: none;
+}
+
+div.player div.open div.x[value="35"] {
+  display: none;
+}
+
+div.player div.open div.x[value="36"] {
+  display: none;
+}
+
+div.player div.open div.x[value="37"] {
+  display: none;
+}
+
+div.player div.open div.x[value="38"] {
+  display: none;
+}
+
+div.player div.open div.x[value="39"] {
+  display: none;
+}
+
+div.player div.open div.x[value="40"] {
+  display: none;
+}
+
+div.player div.open div.x[value="41"] {
+  display: none;
+}
+
+div.player div.open div.x[value="42"] {
+  display: none;
+}
+
+div.player div.open div.x[value="43"] {
+  display: none;
+}
+
+div.player div.open div.x[value="44"] {
+  display: none;
+}
+
+div.player div.open div.x[value="45"] {
+  display: none;
+}
+
+div.player div.open div.x[value="46"] {
+  display: none;
+}
+
+div.player div.open div.x[value="47"] {
+  display: none;
+}
+
+div.player div.open div.x[value="48"] {
+  display: none;
+}
+
+div.player div.open div.x[value="49"] {
+  display: none;
+}
+
+div.player div.open div.x[value="50"] {
+  display: none;
+}
+
+div.player div.open div.x[value="51"] {
+  display: none;
+}
+
+div.player div.open div.x[value="52"] {
+  display: none;
+}
+
+div.player div.open div.x[value="53"] {
+  display: none;
+}
+
+div.player div.open div.x[value="54"] {
+  display: none;
+}
+
+div.player div.open div.x[value="55"] {
+  display: none;
+}
+
+div.player div.open div.x[value="56"] {
+  display: none;
+}
+
+div.player div.open div.x[value="57"] {
+  display: none;
+}
+
+div.player div.open div.x[value="58"] {
+  display: none;
+}
+
+div.player div.open div.x[value="59"] {
+  display: none;
+}
+
+div.player div.open div.x[value="60"] {
+  display: none;
+}
+
+div.player div.open div.x[value="61"] {
+  display: none;
+}
+
+div.player div.open div.x[value="62"] {
+  display: none;
+}
+
+div.player div.open div.x[value="63"] {
+  display: none;
+}
+
+div.player div.open div.x[value="64"] {
+  display: none;
+}
+
+div.player div.open div.x[value="65"] {
+  display: none;
+}
+
+div.player div.open div.x[value="66"] {
+  display: none;
+}
+
+div.player div.open div.x[value="67"] {
+  display: none;
+}
+
+div.player div.open div.x[value="68"] {
+  display: none;
+}
+
+div.player div.open div.x[value="69"] {
+  display: none;
+}
+
+div.player div.open div.x[value="70"] {
+  display: none;
+}
+
+div.player div.open div.x[value="71"] {
+  display: none;
+}
+
+div.player div.open div.x[value="72"] {
+  display: none;
+}
+
+div.player div.open div.x[value="73"] {
+  display: none;
+}
+
+div.player div.open div.x[value="74"] {
+  display: none;
+}
+
+div.player div.open div.x[value="75"] {
+  display: none;
+}
+
+div.player div.open div.x[value="76"] {
+  display: none;
+}
+
+div.player div.open div.x[value="77"] {
+  display: none;
+}
+
+div.player div.open div.x[value="78"] {
+  display: none;
+}
+
+div.player div.open div.x[value="79"] {
+  display: none;
+}
+
+div.player div.open div.x[value="80"] {
+  display: none;
+}
+
+div.player div.open div.x[value="81"] {
+  display: none;
+}
+
+div.player div.open div.x[value="82"] {
+  display: none;
+}
+
+div.player div.open div.x[value="83"] {
+  display: none;
+}
+
+div.player div.open div.x[value="84"] {
+  display: none;
+}
+
+div.player div.open div.x[value="85"] {
+  display: none;
+}
+
+div.player div.open div.x[value="86"] {
+  display: none;
+}
+
+div.player div.open div.x[value="87"] {
+  display: none;
+}
+
+div.player div.open div.x[value="88"] {
+  display: none;
+}
+
+div.player div.open div.x[value="89"] {
+  display: none;
+}
+
+div.player div.open div.x[value="90"] {
+  display: none;
+}
+
+div.player div.open div.x[value="91"] {
+  display: none;
+}
+
+div.player div.open div.x[value="92"] {
+  display: none;
+}
+
+div.player div.open div.x[value="93"] {
+  display: none;
+}
+
+div.player div.open div.x[value="94"] {
+  display: none;
+}
+
+div.player div.open div.x[value="95"] {
+  display: none;
+}
+
+div.player div.open div.x[value="96"] {
+  display: none;
+}
+
+div.player div.open div.x[value="97"] {
+  display: none;
+}
+
+div.player div.open div.x[value="98"] {
+  display: none;
+}
+
+div.player div.open div.x[value="99"] {
+  display: none;
+}
+
+div.player div.open div.x[value="100"] {
+  display: none;
+}
+
+div.player div.open div.x[value="101"] {
+  display: none;
+}
+
+div.player div.open div.x[value="102"] {
+  display: none;
+}
+
+div.player div.open div.x[value="103"] {
+  display: none;
+}
+
+div.player div.open div.x[value="104"] {
+  display: none;
+}
+
+div.player div.open div.x[value="105"] {
+  display: none;
+}
+
+div.player div.open div.x[value="106"] {
+  display: none;
+}
+
+div.player div.open div.x[value="107"] {
+  display: none;
+}
+
+div.player div.open div.x[value="108"] {
+  display: none;
+}
+
+div.player div.open div.x[value="109"] {
+  display: none;
+}
+
+div.player div.open div.x[value="110"] {
+  display: none;
+}
+
+div.player div.open div.x[value="111"] {
+  display: none;
+}
+
+div.player div.open div.x[value="112"] {
+  display: none;
+}
+
+div.player div.open div.x[value="113"] {
+  display: none;
+}
+
+div.player div.open div.x[value="114"] {
+  display: none;
+}
+
+div.player div.open div.x[value="115"] {
+  display: none;
+}
+
+div.player div.open div.x[value="116"] {
+  display: none;
+}
+
+div.player div.open div.x[value="117"] {
+  display: none;
+}
+
+div.player div.open div.x[value="118"] {
+  display: none;
+}
+
+div.player div.open div.x[value="119"] {
+  display: none;
+}
+
+div.player div.open div.x[value="120"] {
+  display: none;
+}
+
+div.player div.open div.x[value="121"] {
+  display: none;
+}
+
+div.player div.open div.x[value="122"] {
+  display: none;
+}
+
+div.player div.open div.x[value="123"] {
+  display: none;
+}
+
+div.player div.open div.x[value="124"] {
+  display: none;
+}
+
+div.player div.open div.x[value="125"] {
+  display: none;
+}
+
+div.player div.open div.x[value="126"] {
+  display: none;
+}
+
+div.player div.open div.x[value="127"] {
+  display: none;
+}
+
+div.player div.open div.x[value="128"] {
+  display: none;
+}
+
+div.player div.open div.x[value="129"] {
+  display: none;
+}
+
+div.player div.open div.x[value="130"] {
+  display: none;
+}
+
+div.player div.open div.x[value="131"] {
+  display: none;
+}
+
+div.player div.open div.x[value="132"] {
+  display: none;
+}
+
+div.player div.open div.x[value="133"] {
+  display: none;
+}
+
+div.player div.open div.x[value="134"] {
+  display: none;
+}
+
+div.player div.open div.x[value="135"] {
+  display: none;
+}
+
+div.player div.open div.x[value="136"] {
+  display: none;
+}
+
+div.player div.open div.x[value="137"] {
+  display: none;
+}
+
+div.player div.open div.x[value="138"] {
+  display: none;
+}
+
+div.player div.open div.x[value="139"] {
+  display: none;
+}
+
+div.player div.open div.x[value="140"] {
+  display: none;
+}
+
+div.player div.open div.x[value="141"] {
+  display: none;
+}
+
+div.player div.open div.x[value="142"] {
+  display: none;
+}
+
+div.player div.open div.x[value="143"] {
+  display: none;
+}
+
+div.player div.open div.x[value="144"] {
+  display: none;
+}
+
+div.player div.open div.x[value="145"] {
+  display: none;
+}
+
+div.player div.open div.x[value="146"] {
+  display: none;
+}
+
+div.player div.open div.x[value="147"] {
+  display: none;
+}
+
+div.player div.open div.x[value="148"] {
+  display: none;
+}
+
+div.player div.open div.x[value="149"] {
+  display: none;
+}
+
+div.player div.open div.x[value="150"] {
+  display: none;
+}
+
+div.player div.open div.x[value="151"] {
+  display: none;
+}
+
+div.player div.open div.x[value="152"] {
+  display: none;
+}
+
+div.player div.open div.x[value="153"] {
+  display: none;
+}
+
+div.player div.open div.x[value="154"] {
+  display: none;
+}
+
+div.player div.open div.x[value="155"] {
+  display: none;
+}
+
+div.player div.open div.x[value="156"] {
+  display: none;
+}
+
+div.player div.open div.x[value="157"] {
+  display: none;
+}
+
+div.player div.open div.x[value="158"] {
+  display: none;
+}
+
+div.player div.open div.x[value="159"] {
+  display: none;
+}
+
+div.player div.open div.x[value="160"] {
+  display: none;
+}
+
+div.player div.open div.x[value="161"] {
+  display: none;
+}
+
+div.player div.open div.x[value="162"] {
+  display: none;
+}
+
+div.player div.open div.x[value="163"] {
+  display: none;
+}
+
+div.player div.open div.x[value="164"] {
+  display: none;
+}
+
+div.player div.open div.x[value="165"] {
+  display: none;
+}
+
+div.player div.open div.x[value="166"] {
+  display: none;
+}
+
+div.player div.open div.x[value="167"] {
+  display: none;
+}
+
+div.player div.open div.x[value="168"] {
+  display: none;
+}
+
+div.player div.open div.x[value="169"] {
+  display: none;
+}
+
+div.player div.open div.x[value="170"] {
+  display: none;
+}
+
+div.player div.open div.x[value="171"] {
+  display: none;
+}
+
+div.player div.open div.x[value="172"] {
+  display: none;
+}
+
+div.player div.open div.x[value="173"] {
+  display: none;
+}
+
+div.player div.open div.x[value="174"] {
+  display: none;
+}
+
+div.player div.open div.x[value="175"] {
+  display: none;
+}
+
+div.player div.open div.x[value="176"] {
+  display: none;
+}
+
+div.player div.open div.x[value="177"] {
+  display: none;
+}
+
+div.player div.open div.x[value="178"] {
+  display: none;
+}
+
+div.player div.open div.x[value="179"] {
+  display: none;
+}
+
+div.player div.open div.x[value="180"] {
+  display: none;
+}
+
+div.player div.open div.x[value="181"] {
+  display: none;
+}
+
+div.player div.open div.x[value="182"] {
+  display: none;
+}
+
+div.player div.open div.x[value="183"] {
+  display: none;
+}
+
+div.player div.open div.x[value="184"] {
+  display: none;
+}
+
+div.player div.open div.x[value="185"] {
+  display: none;
+}
+
+div.player div.open div.x[value="186"] {
+  display: none;
+}
+
+div.player div.open div.x[value="187"] {
+  display: none;
+}
+
+div.player div.open div.x[value="188"] {
+  display: none;
+}
+
+div.player div.open div.x[value="189"] {
+  display: none;
+}
+
+div.player div.open div.x[value="190"] {
+  display: none;
+}
+
+div.player div.open div.x[value="191"] {
+  display: none;
+}
+
+div.player div.open div.x[value="192"] {
+  display: none;
+}
+
+div.player div.open div.x[value="193"] {
+  display: none;
+}
+
+div.player div.open div.x[value="194"] {
+  display: none;
+}
+
+div.player div.open div.x[value="195"] {
+  display: none;
+}
+
+div.player div.open div.x[value="196"] {
+  display: none;
+}
+
+div.player div.open div.x[value="197"] {
+  display: none;
+}
+
+div.player div.open div.x[value="198"] {
+  display: none;
+}
+
+div.player div.open div.x[value="199"] {
+  display: none;
+}
+
+div.player div.open div.x[value="200"] {
+  display: none;
+}
+
+div.player div.open div.x[value="201"] {
+  display: none;
+}
+
+div.player div.open div.x[value="202"] {
+  display: none;
+}
+
+div.player div.open div.x[value="203"] {
+  display: none;
+}
+
+div.player div.open div.x[value="204"] {
+  display: none;
+}
+
+div.player div.open div.x[value="205"] {
+  display: none;
+}
+
+div.player div.open div.x[value="206"] {
+  display: none;
+}
+
+div.player div.open div.x[value="207"] {
+  display: none;
+}
+
+div.player div.open div.x[value="208"] {
+  display: none;
+}
+
+div.player div.open div.x[value="209"] {
+  display: none;
+}
+
+div.player div.open div.x[value="210"] {
+  display: none;
+}
+
+div.player div.open div.x[value="211"] {
+  display: none;
+}
+
+div.player div.open div.x[value="212"] {
+  display: none;
+}
+
+div.player div.open div.x[value="213"] {
+  display: none;
+}
+
+div.player div.open div.x[value="214"] {
+  display: none;
+}
+
+div.player div.open div.x[value="215"] {
+  display: none;
+}
+
+div.player div.open div.x[value="216"] {
+  display: none;
+}
+
+div.player div.open div.x[value="217"] {
+  display: none;
+}
+
+div.player div.open div.x[value="218"] {
+  display: none;
+}
+
+div.player div.open div.x[value="219"] {
+  display: none;
+}
+
+div.player div.open div.x[value="220"] {
+  display: none;
+}
+
+div.player div.open div.x[value="221"] {
+  display: none;
+}
+
+div.player div.open div.x[value="222"] {
+  display: none;
+}
+
+div.player div.open div.x[value="223"] {
+  display: none;
+}
+
+div.player div.open div.x[value="224"] {
+  display: none;
+}
+
+div.player div.open div.x[value="225"] {
+  display: none;
+}
+
+div.player div.open div.x[value="226"] {
+  display: none;
+}
+
+div.player div.open div.x[value="227"] {
+  display: none;
+}
+
+div.player div.open div.x[value="228"] {
+  display: none;
+}
+
+div.player div.open div.x[value="229"] {
+  display: none;
+}
+
+div.player div.open div.x[value="230"] {
+  display: none;
+}
+
+div.player div.open div.x[value="231"] {
+  display: none;
+}
+
+div.player div.open div.x[value="232"] {
+  display: none;
+}
+
+div.player div.open div.x[value="233"] {
+  display: none;
+}
+
+div.player div.open div.x[value="234"] {
+  display: none;
+}
+
+div.player div.open div.x[value="235"] {
+  display: none;
+}
+
+div.player div.open div.x[value="236"] {
+  display: none;
+}
+
+div.player div.open div.x[value="237"] {
+  display: none;
+}
+
+div.player div.open div.x[value="238"] {
+  display: none;
+}
+
+div.player div.open div.x[value="239"] {
+  display: none;
+}
+
+div.player div.open div.x[value="240"] {
+  display: none;
+}
+
+div.player div.open div.x[value="241"] {
+  display: none;
+}
+
+div.player div.open div.x[value="242"] {
+  display: none;
+}
+
+div.player div.open div.x[value="243"] {
+  display: none;
+}
+
+div.player div.open div.x[value="244"] {
+  display: none;
+}
+
+div.player div.open div.x[value="245"] {
+  display: none;
+}
+
+div.player div.open div.x[value="246"] {
+  display: none;
+}
+
+div.player div.open div.x[value="247"] {
+  display: none;
+}
+
+div.player div.open div.x[value="248"] {
+  display: none;
+}
+
+div.player div.open div.x[value="249"] {
+  display: none;
+}
+
+div.player div.open div.x[value="250"] {
+  display: none;
+}
+
+div.player div.open div.x[value="251"] {
+  display: none;
+}
+
+div.player div.open div.x[value="252"] {
+  display: none;
+}
+
+div.player div.open div.x[value="253"] {
+  display: none;
+}
+
+div.player div.open div.x[value="254"] {
+  display: none;
+}
+
+div.player div.open div.x[value="255"] {
+  display: none;
+}
+
+div.player div.open div.x[value="256"] {
+  display: none;
+}
+
+div.player div.open div.x[value="257"] {
+  display: none;
+}
+
+div.player div.open div.x[value="258"] {
+  display: none;
+}
+
+div.player div.open div.x[value="259"] {
+  display: none;
+}
+
+div.player div.open div.x[value="260"] {
+  display: none;
+}
+
+div.player div.open div.x[value="261"] {
+  display: none;
+}
+
+div.player div.open div.x[value="262"] {
+  display: none;
+}
+
+div.player div.open div.x[value="263"] {
+  display: none;
+}
+
+div.player div.open div.x[value="264"] {
+  display: none;
+}
+
+div.player div.open div.x[value="265"] {
+  display: none;
+}
+
+div.player div.open div.x[value="266"] {
+  display: none;
+}
+
+div.player div.open div.x[value="267"] {
+  display: none;
+}
+
+div.player div.open div.x[value="268"] {
+  display: none;
+}
+
+div.player div.open div.x[value="269"] {
+  display: none;
+}
+
+div.player div.open div.x[value="270"] {
+  display: none;
+}
+
+div.player div.open div.x[value="271"] {
+  display: none;
+}
+
+div.player div.open div.x[value="272"] {
+  display: none;
+}
+
+div.player div.open div.x[value="273"] {
+  display: none;
+}
+
+div.player div.open div.x[value="274"] {
+  display: none;
+}
+
+div.player div.open div.x[value="275"] {
+  display: none;
+}
+
+div.player div.open div.x[value="276"] {
+  display: none;
+}
+
+div.player div.open div.x[value="277"] {
+  display: none;
+}
+
+div.player div.open div.x[value="278"] {
+  display: none;
+}
+
+div.player div.open div.x[value="279"] {
+  display: none;
+}
+
+div.player div.open div.x[value="280"] {
+  display: none;
+}
+
+div.player div.open div.x[value="281"] {
+  display: none;
+}
+
+div.player div.open div.x[value="282"] {
+  display: none;
+}
+
+div.player div.open div.x[value="283"] {
+  display: none;
+}
+
+div.player div.open div.x[value="284"] {
+  display: none;
+}
+
+div.player div.open div.x[value="285"] {
+  display: none;
+}
+
+div.player div.open div.x[value="286"] {
+  display: none;
+}
+
+div.player div.open div.x[value="287"] {
+  display: none;
+}
+
+div.player div.open div.x[value="288"] {
+  display: none;
+}
+
+div.player div.open div.x[value="289"] {
+  display: none;
+}
+
+div.player div.open div.x[value="290"] {
+  display: none;
+}
+
+div.player div.open div.x[value="291"] {
+  display: none;
+}
+
+div.player div.open div.x[value="292"] {
+  display: none;
+}
+
+div.player div.open div.x[value="293"] {
+  display: none;
+}
+
+div.player div.open div.x[value="294"] {
+  display: none;
+}
+
+div.player div.open div.x[value="295"] {
+  display: none;
+}
+
+div.player div.open div.x[value="296"] {
+  display: none;
+}
+
+div.player div.open div.x[value="297"] {
+  display: none;
+}
+
+div.player div.open div.x[value="298"] {
+  display: none;
+}
+
+div.player div.open div.x[value="299"] {
+  display: none;
+}
+
+div.player div.open div.x[value="300"] {
+  display: none;
+}
+
+div.player div.open div.x[value="301"] {
+  display: none;
+}
+
+div.player div.open div.x[value="302"] {
+  display: none;
+}
+
+div.player div.open div.x[value="303"] {
+  display: none;
+}
+
+div.player div.open div.x[value="304"] {
+  display: none;
+}
+
+div.player div.open div.x[value="305"] {
+  display: none;
+}
+
+div.player div.open div.x[value="306"] {
+  display: none;
+}
+
+div.player div.open div.x[value="307"] {
+  display: none;
+}
+
+div.player div.open div.x[value="308"] {
+  display: none;
+}
+
+div.player div.open div.x[value="309"] {
+  display: none;
+}
+
+div.player div.open div.x[value="310"] {
+  display: none;
+}
+
+div.player div.open div.x[value="311"] {
+  display: none;
+}
+
+div.player div.open div.x[value="312"] {
+  display: none;
+}
+
+div.player div.open div.x[value="313"] {
+  display: none;
+}
+
+div.player div.open div.x[value="314"] {
+  display: none;
+}
+
+div.player div.open div.x[value="315"] {
+  display: none;
+}
+
+div.player div.open div.x[value="316"] {
+  display: none;
+}
+
+div.player div.open div.x[value="317"] {
+  display: none;
+}
+
+div.player div.open div.x[value="318"] {
+  display: none;
+}
+
+div.player div.open div.x[value="319"] {
+  display: none;
+}
+
+div.player div.open div.x[value="320"] {
+  display: none;
+}
+
+div.player div.open div.x[value="321"] {
+  display: none;
+}
+
+div.player div.open div.x[value="322"] {
+  display: none;
+}
+
+div.player div.open div.x[value="323"] {
+  display: none;
+}
+
+div.player div.open div.x[value="324"] {
+  display: none;
+}
+
+div.player div.open div.x[value="325"] {
+  display: none;
+}
+
+div.player div.open div.x[value="326"] {
+  display: none;
+}
+
+div.player div.open div.x[value="327"] {
+  display: none;
+}
+
+div.player div.open div.x[value="328"] {
+  display: none;
+}
+
+div.player div.open div.x[value="329"] {
+  display: none;
+}
+
+div.player div.open div.x[value="330"] {
+  display: none;
+}
+
+div.player div.open div.x[value="331"] {
+  display: none;
+}
+
+div.player div.open div.x[value="332"] {
+  display: none;
+}
+
+div.player div.open div.x[value="333"] {
+  display: none;
+}
+
+div.player div.open div.x[value="334"] {
+  display: none;
+}
+
+div.player div.open div.x[value="335"] {
+  display: none;
+}
+
+div.player div.open div.x[value="336"] {
+  display: none;
+}
+
+div.player div.open div.x[value="337"] {
+  display: none;
+}
+
+div.player div.open div.x[value="338"] {
+  display: none;
+}
+
+div.player div.open div.x[value="339"] {
+  display: none;
+}
+
+div.player div.open div.x[value="340"] {
+  display: none;
+}
+
+div.player div.open div.x[value="341"] {
+  display: none;
+}
+
+div.player div.open div.x[value="342"] {
+  display: none;
+}
+
+div.player div.open div.x[value="343"] {
+  display: none;
+}
+
+div.player div.open div.x[value="344"] {
+  display: none;
+}
+
+div.player div.open div.x[value="345"] {
+  display: none;
+}
+
+div.player div.open div.x[value="346"] {
+  display: none;
+}
+
+div.player div.open div.x[value="347"] {
+  display: none;
+}
+
+div.player div.open div.x[value="348"] {
+  display: none;
+}
+
+div.player div.open div.x[value="349"] {
+  display: none;
+}
+
+div.player div.open div.x[value="350"] {
+  display: none;
+}
+
+div.player div.open div.x[value="351"] {
+  display: none;
+}
+
+div.player div.open div.x[value="352"] {
+  display: none;
+}
+
+div.player div.open div.x[value="353"] {
+  display: none;
+}
+
+div.player div.open div.x[value="354"] {
+  display: none;
+}
+
+div.player div.open div.x[value="355"] {
+  display: none;
+}
+
+div.player div.open div.x[value="356"] {
+  display: none;
+}
+
+div.player div.open div.x[value="357"] {
+  display: none;
+}
+
+div.player div.open div.x[value="358"] {
+  display: none;
+}
+
+div.player div.open div.x[value="359"] {
+  display: none;
+}
+
+div.player div.open div.x[value="360"] {
+  display: none;
+}
+
+div.player div.open div.x[value="361"] {
+  display: none;
+}
+
+div.player div.open div.x[value="362"] {
+  display: none;
+}
+
+div.player div.open div.x[value="363"] {
+  display: none;
+}
+
+div.player div.open div.x[value="364"] {
+  display: none;
+}
+
+div.player div.open div.x[value="365"] {
+  display: none;
+}
+
+div.player div.open div.x[value="366"] {
+  display: none;
+}
+
+div.player div.open div.x[value="367"] {
+  display: none;
+}
+
+div.player div.open div.x[value="368"] {
+  display: none;
+}
+
+div.player div.open div.x[value="369"] {
+  display: none;
+}
+
+div.player div.open div.x[value="370"] {
+  display: none;
+}
+
+div.player div.open div.x[value="371"] {
+  display: none;
+}
+
+div.player div.open div.x[value="372"] {
+  display: none;
+}
+
+div.player div.open div.x[value="373"] {
+  display: none;
+}
+
+div.player div.open div.x[value="374"] {
+  display: none;
+}
+
+div.player div.open div.x[value="375"] {
+  display: none;
+}
+
+div.player div.open div.x[value="376"] {
+  display: none;
+}
+
+div.player div.open div.x[value="377"] {
+  display: none;
+}
+
+div.player div.open div.x[value="378"] {
+  display: none;
+}
+
+div.player div.open div.x[value="379"] {
+  display: none;
+}
+
+div.player div.open div.x[value="380"] {
+  display: none;
+}
+
+div.player div.open div.x[value="381"] {
+  display: none;
+}
+
+div.player div.open div.x[value="382"] {
+  display: none;
+}
+
+div.player div.open div.x[value="383"] {
+  display: none;
+}
+
+div.player div.open div.x[value="384"] {
+  display: none;
+}
+
+div.player div.open div.x[value="385"] {
+  display: none;
+}
+
+div.player div.open div.x[value="386"] {
+  display: none;
+}
+
+div.player div.open div.x[value="387"] {
+  display: none;
+}
+
+div.player div.open div.x[value="388"] {
+  display: none;
+}
+
+div.player div.open div.x[value="389"] {
+  display: none;
+}
+
+div.player div.open div.x[value="390"] {
+  display: none;
+}
+
+div.player div.open div.x[value="391"] {
+  display: none;
+}
+
+div.player div.open div.x[value="392"] {
+  display: none;
+}
+
+div.player div.open div.x[value="393"] {
+  display: none;
+}
+
+div.player div.open div.x[value="394"] {
+  display: none;
+}
+
+div.player div.open div.x[value="395"] {
+  display: none;
+}
+
+div.player div.open div.x[value="396"] {
+  display: none;
+}
+
+div.player div.open div.x[value="397"] {
+  display: none;
+}
+
+div.player div.open div.x[value="398"] {
+  display: none;
+}
+
+div.player div.open div.x[value="399"] {
+  display: none;
+}
+
+div.player div.open div.x[value="400"] {
+  display: none;
+}
+
+div.player div.open div.x[value="401"] {
+  display: none;
+}
+
+div.player div.open div.x[value="402"] {
+  display: none;
+}
+
+div.player div.open div.x[value="403"] {
+  display: none;
+}
+
+div.player div.open div.x[value="404"] {
+  display: none;
+}
+
+div.player div.open div.x[value="405"] {
+  display: none;
+}
+
+div.player div.open div.x[value="406"] {
+  display: none;
+}
+
+div.player div.open div.x[value="407"] {
+  display: none;
+}
+
+div.player div.open div.x[value="408"] {
+  display: none;
+}
+
+div.player div.open div.x[value="409"] {
+  display: none;
+}
+
+div.player div.open div.x[value="410"] {
+  display: none;
+}
+
+div.player div.open div.x[value="411"] {
+  display: none;
+}
+
+div.player div.open div.x[value="412"] {
+  display: none;
+}
+
+div.player div.open div.x[value="413"] {
+  display: none;
+}
+
+div.player div.open div.x[value="414"] {
+  display: none;
+}
+
+div.player div.open div.x[value="415"] {
+  display: none;
+}
+
+div.player div.open div.x[value="416"] {
+  display: none;
+}
+
+div.player div.open div.x[value="417"] {
+  display: none;
+}
+
+div.player div.open div.x[value="418"] {
+  display: none;
+}
+
+div.player div.open div.x[value="419"] {
+  display: none;
+}
+
+div.player div.open div.x[value="420"] {
+  display: none;
+}
+
+div.player div.open div.x[value="421"] {
+  display: none;
+}
+
+div.player div.open div.x[value="422"] {
+  display: none;
+}
+
+div.player div.open div.x[value="423"] {
+  display: none;
+}
+
+div.player div.open div.x[value="424"] {
+  display: none;
+}
+
+div.player div.open div.x[value="425"] {
+  display: none;
+}
+
+div.player div.open div.x[value="426"] {
+  display: none;
+}
+
+div.player div.open div.x[value="427"] {
+  display: none;
+}
+
+div.player div.open div.x[value="428"] {
+  display: none;
+}
+
+div.player div.open div.x[value="429"] {
+  display: none;
+}
+
+div.player div.open div.x[value="430"] {
+  display: none;
+}
+
+div.player div.open div.x[value="431"] {
+  display: none;
+}
+
+div.player div.open div.x[value="432"] {
+  display: none;
+}
+
+div.player div.open div.x[value="433"] {
+  display: none;
+}
+
+div.player div.open div.x[value="434"] {
+  display: none;
+}
+
+div.player div.open div.x[value="435"] {
+  display: none;
+}
+
+div.player div.open div.x[value="436"] {
+  display: none;
+}
+
+div.player div.open div.x[value="437"] {
+  display: none;
+}
+
+div.player div.open div.x[value="438"] {
+  display: none;
+}
+
+div.player div.open div.x[value="439"] {
+  display: none;
+}
+
+div.player div.open div.x[value="440"] {
+  display: none;
+}
+
+div.player div.open div.x[value="441"] {
+  display: none;
+}
+
+div.player div.open div.x[value="442"] {
+  display: none;
+}
+
+div.player div.open div.x[value="443"] {
+  display: none;
+}
+
+div.player div.open div.x[value="444"] {
+  display: none;
+}
+
+div.player div.open div.x[value="445"] {
+  display: none;
+}
+
+div.player div.open div.x[value="446"] {
+  display: none;
+}
+
+div.player div.open div.x[value="447"] {
+  display: none;
+}
+
+div.player div.open div.x[value="448"] {
+  display: none;
+}
+
+div.player div.open div.x[value="449"] {
+  display: none;
+}
+
+div.player div.open div.x[value="450"] {
+  display: none;
+}
+
+div.player div.open div.x[value="451"] {
+  display: none;
+}
+
+div.player div.open div.x[value="452"] {
+  display: none;
+}
+
+div.player div.open div.x[value="453"] {
+  display: none;
+}
+
+div.player div.open div.x[value="454"] {
+  display: none;
+}
+
+div.player div.open div.x[value="455"] {
+  display: none;
+}
+
+div.player div.open div.x[value="456"] {
+  display: none;
+}
+
+div.player div.open div.x[value="457"] {
+  display: none;
+}
+
+div.player div.open div.x[value="458"] {
+  display: none;
+}
+
+div.player div.open div.x[value="459"] {
+  display: none;
+}
+
+div.player div.open div.x[value="460"] {
+  display: none;
+}
+
+div.player div.open div.x[value="461"] {
+  display: none;
+}
+
+div.player div.open div.x[value="462"] {
+  display: none;
+}
+
+div.player div.open div.x[value="463"] {
+  display: none;
+}
+
+div.player div.open div.x[value="464"] {
+  display: none;
+}
+
+div.player div.open div.x[value="465"] {
+  display: none;
+}
+
+div.player div.open div.x[value="466"] {
+  display: none;
+}
+
+div.player div.open div.x[value="467"] {
+  display: none;
+}
+
+div.player div.open div.x[value="468"] {
+  display: none;
+}
+
+div.player div.open div.x[value="469"] {
+  display: none;
+}
+
+div.player div.open div.x[value="470"] {
+  display: none;
+}
+
+div.player div.open div.x[value="471"] {
+  display: none;
+}
+
+div.player div.open div.x[value="472"] {
+  display: none;
+}
+
+div.player div.open div.x[value="473"] {
+  display: none;
+}
+
+div.player div.open div.x[value="474"] {
+  display: none;
+}
+
+div.player div.open div.x[value="475"] {
+  display: none;
+}
+
+div.player div.open div.x[value="476"] {
+  display: none;
+}
+
+div.player div.open div.x[value="477"] {
+  display: none;
+}
+
+div.player div.open div.x[value="478"] {
+  display: none;
+}
+
+div.player div.open div.x[value="479"] {
+  display: none;
+}
+
+div.player div.open div.x[value="480"] {
+  display: none;
+}
+
+div.player div.open div.x[value="481"] {
+  display: none;
+}
+
+div.player div.open div.x[value="482"] {
+  display: none;
+}
+
+div.player div.open div.x[value="483"] {
+  display: none;
+}
+
+div.player div.open div.x[value="484"] {
+  display: none;
+}
+
+div.player div.open div.x[value="485"] {
+  display: none;
+}
+
+div.player div.open div.x[value="486"] {
+  display: none;
+}
+
+div.player div.open div.x[value="487"] {
+  display: none;
+}
+
+div.player div.open div.x[value="488"] {
+  display: none;
+}
+
+div.player div.open div.x[value="489"] {
+  display: none;
+}
+
+div.player div.open div.x[value="490"] {
+  display: none;
+}
+
+div.player div.open div.x[value="491"] {
+  display: none;
+}
+
+div.player div.open div.x[value="492"] {
+  display: none;
+}
+
+div.player div.open div.x[value="493"] {
+  display: none;
+}
+
+div.player div.open div.x[value="494"] {
+  display: none;
+}
+
+div.player div.open div.x[value="495"] {
+  display: none;
+}
+
+div.player div.open div.x[value="496"] {
+  display: none;
+}
+
+div.player div.open div.x[value="497"] {
+  display: none;
+}
+
+div.player div.open div.x[value="498"] {
+  display: none;
+}
+
+div.player div.open div.x[value="499"] {
+  display: none;
+}
+
+div.player div.open div.x[value="500"] {
+  display: none;
+}
+
+div.player div.open div.x[value="501"] {
+  display: none;
+}
+
+div.player div.open div.x[value="502"] {
+  display: none;
+}
+
+div.player div.open div.x[value="503"] {
+  display: none;
+}
+
+div.player div.open div.x[value="504"] {
+  display: none;
+}
+
+div.player div.open div.x[value="505"] {
+  display: none;
+}
+
+div.player div.open div.x[value="506"] {
+  display: none;
+}
+
+div.player div.open div.x[value="507"] {
+  display: none;
+}
+
+div.player div.open div.x[value="508"] {
+  display: none;
+}
+
+div.player div.open div.x[value="509"] {
+  display: none;
+}
+
+div.player div.open div.x[value="510"] {
+  display: none;
+}
+
+div.player div.open div.x[value="511"] {
+  display: none;
+}
+
+div.player div.open div.x[value="512"] {
+  display: none;
+}
+
+div.player div.open div.x[value="513"] {
+  display: none;
+}
+
+div.player div.open div.x[value="514"] {
+  display: none;
+}
+
+div.player div.open div.x[value="515"] {
+  display: none;
+}
+
+div.player div.open div.x[value="516"] {
+  display: none;
+}
+
+div.player div.open div.x[value="517"] {
+  display: none;
+}
+
+div.player div.open div.x[value="518"] {
+  display: none;
+}
+
+div.player div.open div.x[value="519"] {
+  display: none;
+}
+
+div.player div.open div.x[value="520"] {
+  display: none;
+}
+
+div.player div.open div.x[value="521"] {
+  display: none;
+}
+
+div.player div.open div.x[value="522"] {
+  display: none;
+}
+
+div.player div.open div.x[value="523"] {
+  display: none;
+}
+
+div.player div.open div.x[value="524"] {
+  display: none;
+}
+
+div.player div.open div.x[value="525"] {
+  display: none;
+}
+
+div.player div.open div.x[value="526"] {
+  display: none;
+}
+
+div.player div.open div.x[value="527"] {
+  display: none;
+}
+
+div.player div.open div.x[value="528"] {
+  display: none;
+}
+
+div.player div.open div.x[value="529"] {
+  display: none;
+}
+
+div.player div.open div.x[value="530"] {
+  display: none;
+}
+
+div.player div.open div.x[value="531"] {
+  display: none;
+}
+
+div.player div.open div.x[value="532"] {
+  display: none;
+}
+
+div.player div.open div.x[value="533"] {
+  display: none;
+}
+
+div.player div.open div.x[value="534"] {
+  display: none;
+}
+
+div.player div.open div.x[value="535"] {
+  display: none;
+}
+
+div.player div.open div.x[value="536"] {
+  display: none;
+}
+
+div.player div.open div.x[value="537"] {
+  display: none;
+}
+
+div.player div.open div.x[value="538"] {
+  display: none;
+}
+
+div.player div.open div.x[value="539"] {
+  display: none;
+}
+
+div.player div.open div.x[value="540"] {
+  display: none;
+}
+
+div.player div.open div.x[value="541"] {
+  display: none;
+}
+
+div.player div.open div.x[value="542"] {
+  display: none;
+}
+
+div.player div.open div.x[value="543"] {
+  display: none;
+}
+
+div.player div.open div.x[value="544"] {
+  display: none;
+}
+
+div.player div.open div.x[value="545"] {
+  display: none;
+}
+
+div.player div.open div.x[value="546"] {
+  display: none;
+}
+
+div.player div.open div.x[value="547"] {
+  display: none;
+}
+
+div.player div.open div.x[value="548"] {
+  display: none;
+}
+
+div.player div.open div.x[value="549"] {
+  display: none;
+}
+
+div.player div.open div.x[value="550"] {
+  display: none;
+}
+
+div.player div.open div.x[value="551"] {
+  display: none;
+}
+
+div.player div.open div.x[value="552"] {
+  display: none;
+}
+
+div.player div.open div.x[value="553"] {
+  display: none;
+}
+
+div.player div.open div.x[value="554"] {
+  display: none;
+}
+
+div.player div.open div.x[value="555"] {
+  display: none;
+}
+
+div.player div.open div.x[value="556"] {
+  display: none;
+}
+
+div.player div.open div.x[value="557"] {
+  display: none;
+}
+
+div.player div.open div.x[value="558"] {
+  display: none;
+}
+
+div.player div.open div.x[value="559"] {
+  display: none;
+}
+
+div.player div.open div.x[value="560"] {
+  display: none;
+}
+
+div.player div.open div.x[value="561"] {
+  display: none;
+}
+
+div.player div.open div.x[value="562"] {
+  display: none;
+}
+
+div.player div.open div.x[value="563"] {
+  display: none;
+}
+
+div.player div.open div.x[value="564"] {
+  display: none;
+}
+
+div.player div.open div.x[value="565"] {
+  display: none;
+}
+
+div.player div.open div.x[value="566"] {
+  display: none;
+}
+
+div.player div.open div.x[value="567"] {
+  display: none;
+}
+
+div.player div.open div.x[value="568"] {
+  display: none;
+}
+
+div.player div.open div.x[value="569"] {
+  display: none;
+}
+
+div.player div.open div.x[value="570"] {
+  display: none;
+}
+
+div.player div.open div.x[value="571"] {
+  display: none;
+}
+
+div.player div.open div.x[value="572"] {
+  display: none;
+}
+
+div.player div.open div.x[value="573"] {
+  display: none;
+}
+
+div.player div.open div.x[value="574"] {
+  display: none;
+}
+
+div.player div.open div.x[value="575"] {
+  display: none;
+}
+
+div.player div.open div.x[value="576"] {
+  display: none;
+}
+
+div.player div.open div.x[value="577"] {
+  display: none;
+}
+
+div.player div.open div.x[value="578"] {
+  display: none;
+}
+
+div.player div.open div.x[value="579"] {
+  display: none;
+}
+
+div.player div.open div.x[value="580"] {
+  display: none;
+}
+
+div.player div.open div.x[value="581"] {
+  display: none;
+}
+
+div.player div.open div.x[value="582"] {
+  display: none;
+}
+
+div.player div.open div.x[value="583"] {
+  display: none;
+}
+
+div.player div.open div.x[value="584"] {
+  display: none;
+}
+
+div.player div.open div.x[value="585"] {
+  display: none;
+}
+
+div.player div.open div.x[value="586"] {
+  display: none;
+}
+
+div.player div.open div.x[value="587"] {
+  display: none;
+}
+
+div.player div.open div.x[value="588"] {
+  display: none;
+}
+
+div.player div.open div.x[value="589"] {
+  display: none;
+}
+
+div.player div.open div.x[value="590"] {
+  display: none;
+}
+
+div.player div.open div.x[value="591"] {
+  display: none;
+}
+
+div.player div.open div.x[value="592"] {
+  display: none;
+}
+
+div.player div.open div.x[value="593"] {
+  display: none;
+}
+
+div.player div.open div.x[value="594"] {
+  display: none;
+}
+
+div.player div.open div.x[value="595"] {
+  display: none;
+}
+
+div.player div.open div.x[value="596"] {
+  display: none;
+}
+
+div.player div.open div.x[value="597"] {
+  display: none;
+}
+
+div.player div.open div.x[value="598"] {
+  display: none;
+}
+
+div.player div.open div.x[value="599"] {
+  display: none;
+}
+
+div.player div.open div.x[value="600"] {
+  display: none;
+}
+
+div.player div.open div.x[value="601"] {
+  display: none;
+}
+
+div.player div.open div.x[value="602"] {
+  display: none;
+}
+
+div.player div.open div.x[value="603"] {
+  display: none;
+}
+
+div.player div.open div.x[value="604"] {
+  display: none;
+}
+
+div.player div.open div.x[value="605"] {
+  display: none;
+}
+
+div.player div.open div.x[value="606"] {
+  display: none;
+}
+
+div.player div.open div.x[value="607"] {
+  display: none;
+}
+
+div.player div.open div.x[value="608"] {
+  display: none;
+}
+
+div.player div.open div.x[value="609"] {
+  display: none;
+}
+
+div.player div.open div.x[value="610"] {
+  display: none;
+}
+
+div.player div.open div.x[value="611"] {
+  display: none;
+}
+
+div.player div.open div.x[value="612"] {
+  display: none;
+}
+
+div.player div.open div.x[value="613"] {
+  display: none;
+}
+
+div.player div.open div.x[value="614"] {
+  display: none;
+}
+
+div.player div.open div.x[value="615"] {
+  display: none;
+}
+
+div.player div.open div.x[value="616"] {
+  display: none;
+}
+
+div.player div.open div.x[value="617"] {
+  display: none;
+}
+
+div.player div.open div.x[value="618"] {
+  display: none;
+}
+
+div.player div.open div.x[value="619"] {
+  display: none;
+}
+
+div.player div.open div.x[value="620"] {
+  display: none;
+}
+
+div.player div.open div.x[value="621"] {
+  display: none;
+}
+
+div.player div.open div.x[value="622"] {
+  display: none;
+}
+
+div.player div.open div.x[value="623"] {
+  display: none;
+}
+
+div.player div.open div.x[value="624"] {
+  display: none;
+}
+
+div.player div.open div.x[value="625"] {
+  display: none;
+}
+
+div.player div.open div.x[value="626"] {
+  display: none;
+}
+
+div.player div.open div.x[value="627"] {
+  display: none;
+}
+
+div.player div.open div.x[value="628"] {
+  display: none;
+}
+
+div.player div.open div.x[value="629"] {
+  display: none;
+}
+
+div.player div.open div.x[value="630"] {
+  display: none;
+}
+
+div.player div.open div.x[value="631"] {
+  display: none;
+}
+
+div.player div.open div.x[value="632"] {
+  display: none;
+}
+
+div.player div.open div.x[value="633"] {
+  display: none;
+}
+
+div.player div.open div.x[value="634"] {
+  display: none;
+}
+
+div.player div.open div.x[value="635"] {
+  display: none;
+}
+
+div.player div.open div.x[value="636"] {
+  display: none;
+}
+
+div.player div.open div.x[value="637"] {
+  display: none;
+}
+
+div.player div.open div.x[value="638"] {
+  display: none;
+}
+
+div.player div.open div.x[value="639"] {
+  display: none;
+}
+
+div.player div.open div.x[value="640"] {
+  display: none;
+}
+
+div.player div.open div.x[value="641"] {
+  display: none;
+}
+
+div.player div.open div.x[value="642"] {
+  display: none;
+}
+
+div.player div.open div.x[value="643"] {
+  display: none;
+}
+
+div.player div.open div.x[value="644"] {
+  display: none;
+}
+
+div.player div.open div.x[value="645"] {
+  display: none;
+}
+
+div.player div.open div.x[value="646"] {
+  display: none;
+}
+
+div.player div.open div.x[value="647"] {
+  display: none;
+}
+
+div.player div.open div.x[value="648"] {
+  display: none;
+}
+
+div.player div.open div.x[value="649"] {
+  display: none;
+}
+
+div.player div.open div.x[value="650"] {
+  display: none;
+}
+
+div.player div.open div.x[value="651"] {
+  display: none;
+}
+
+div.player div.open div.x[value="652"] {
+  display: none;
+}
+
+div.player div.open div.x[value="653"] {
+  display: none;
+}
+
+div.player div.open div.x[value="654"] {
+  display: none;
+}
+
+div.player div.open div.x[value="655"] {
+  display: none;
+}
+
+div.player div.open div.x[value="656"] {
+  display: none;
+}
+
+div.player div.open div.x[value="657"] {
+  display: none;
+}
+
+div.player div.open div.x[value="658"] {
+  display: none;
+}
+
+div.player div.open div.x[value="659"] {
+  display: none;
+}
+
+div.player div.open div.x[value="660"] {
+  display: none;
+}
+
+div.player div.open div.x[value="661"] {
+  display: none;
+}
+
+div.player div.open div.x[value="662"] {
+  display: none;
+}
+
+div.player div.open div.x[value="663"] {
+  display: none;
+}
+
+div.player div.open div.x[value="664"] {
+  display: none;
+}
+
+div.player div.open div.x[value="665"] {
+  display: none;
+}
+
+div.player div.open div.x[value="666"] {
+  display: none;
+}
+
+div.player div.open div.x[value="667"] {
+  display: none;
+}
+
+div.player div.open div.x[value="668"] {
+  display: none;
+}
+
+div.player div.open div.x[value="669"] {
+  display: none;
+}
+
+div.player div.open div.x[value="670"] {
+  display: none;
+}
+
+div.player div.open div.x[value="671"] {
+  display: none;
+}
+
+div.player div.open div.x[value="672"] {
+  display: none;
+}
+
+div.player div.open div.x[value="673"] {
+  display: none;
+}
+
+div.player div.open div.x[value="674"] {
+  display: none;
+}
+
+div.player div.open div.x[value="675"] {
+  display: none;
+}
+
+div.player div.open div.x[value="676"] {
+  display: none;
+}
+
+div.player div.open div.x[value="677"] {
+  display: none;
+}
+
+div.player div.open div.x[value="678"] {
+  display: none;
+}
+
+div.player div.open div.x[value="679"] {
+  display: none;
+}
+
+div.player div.open div.x[value="680"] {
+  display: none;
+}
+
+div.player div.open div.x[value="681"] {
+  display: none;
+}
+
+div.player div.open div.x[value="682"] {
+  display: none;
+}
+
+div.player div.open div.x[value="683"] {
+  display: none;
+}
+
+div.player div.open div.x[value="684"] {
+  display: none;
+}
+
+div.player div.open div.x[value="685"] {
+  display: none;
+}
+
+div.player div.open div.x[value="686"] {
+  display: none;
+}
+
+div.player div.open div.x[value="687"] {
+  display: none;
+}
+
+div.player div.open div.x[value="688"] {
+  display: none;
+}
+
+div.player div.open div.x[value="689"] {
+  display: none;
+}
+
+div.player div.open div.x[value="690"] {
+  display: none;
+}
+
+div.player div.open div.x[value="691"] {
+  display: none;
+}
+
+div.player div.open div.x[value="692"] {
+  display: none;
+}
+
+div.player div.open div.x[value="693"] {
+  display: none;
+}
+
+div.player div.open div.x[value="694"] {
+  display: none;
+}
+
+div.player div.open div.x[value="695"] {
+  display: none;
+}
+
+div.player div.open div.x[value="696"] {
+  display: none;
+}
+
+div.player div.open div.x[value="697"] {
+  display: none;
+}
+
+div.player div.open div.x[value="698"] {
+  display: none;
+}
+
+div.player div.open div.x[value="699"] {
+  display: none;
+}
+
+div.player div.open div.x[value="700"] {
+  display: none;
+}
+
+div.player div.open div.x[value="701"] {
+  display: none;
+}
+
+div.player div.open div.x[value="702"] {
+  display: none;
+}
+
+div.player div.open div.x[value="703"] {
+  display: none;
+}
+
+div.player div.open div.x[value="704"] {
+  display: none;
+}
+
+div.player div.open div.x[value="705"] {
+  display: none;
+}
+
+div.player div.open div.x[value="706"] {
+  display: none;
+}
+
+div.player div.open div.x[value="707"] {
+  display: none;
+}
+
+div.player div.open div.x[value="708"] {
+  display: none;
+}
+
+div.player div.open div.x[value="709"] {
+  display: none;
+}
+
+div.player div.open div.x[value="710"] {
+  display: none;
+}
+
+div.player div.open div.x[value="711"] {
+  display: none;
+}
+
+div.player div.open div.x[value="712"] {
+  display: none;
+}
+
+div.player div.open div.x[value="713"] {
+  display: none;
+}
+
+div.player div.open div.x[value="714"] {
+  display: none;
+}
+
+div.player div.open div.x[value="715"] {
+  display: none;
+}
+
+div.player div.open div.x[value="716"] {
+  display: none;
+}
+
+div.player div.open div.x[value="717"] {
+  display: none;
+}
+
+div.player div.open div.x[value="718"] {
+  display: none;
+}
+
+div.player div.open div.x[value="719"] {
+  display: none;
+}
+
+div.player div.open div.x[value="720"] {
+  display: none;
+}
+
+div.player div.open div.x[value="721"] {
+  display: none;
+}
+
+div.player div.open div.x[value="722"] {
+  display: none;
+}
+
+div.player div.open div.x[value="723"] {
+  display: none;
+}
+
+div.player div.open div.x[value="724"] {
+  display: none;
+}
+
+div.player div.open div.x[value="725"] {
+  display: none;
+}
+
+div.player div.open div.x[value="726"] {
+  display: none;
+}
+
+div.player div.open div.x[value="727"] {
+  display: none;
+}
+
+div.player div.open div.x[value="728"] {
+  display: none;
+}
+
+div.player div.open div.x[value="729"] {
+  display: none;
+}
+
+div.player div.open div.x[value="730"] {
+  display: none;
+}
+
+div.player div.open div.x[value="731"] {
+  display: none;
+}
+
+div.player div.open div.x[value="732"] {
+  display: none;
+}
+
+div.player div.open div.x[value="733"] {
+  display: none;
+}
+
+div.player div.open div.x[value="734"] {
+  display: none;
+}
+
+div.player div.open div.x[value="735"] {
+  display: none;
+}
+
+div.player div.open div.x[value="736"] {
+  display: none;
+}
+
+div.player div.open div.x[value="737"] {
+  display: none;
+}
+
+div.player div.open div.x[value="738"] {
+  display: none;
+}
+
+div.player div.open div.x[value="739"] {
+  display: none;
+}
+
+div.player div.open div.x[value="740"] {
+  display: none;
+}
+
+div.player div.open div.x[value="741"] {
+  display: none;
+}
+
+div.player div.open div.x[value="742"] {
+  display: none;
+}
+
+div.player div.open div.x[value="743"] {
+  display: none;
+}
+
+div.player div.open div.x[value="744"] {
+  display: none;
+}
+
+div.player div.open div.x[value="745"] {
+  display: none;
+}
+
+div.player div.open div.x[value="746"] {
+  display: none;
+}
+
+div.player div.open div.x[value="747"] {
+  display: none;
+}
+
+div.player div.open div.x[value="748"] {
+  display: none;
+}
+
+div.player div.open div.x[value="749"] {
+  display: none;
+}
+
+div.player div.open div.x[value="750"] {
+  display: none;
+}
+
+div.player div.open div.x[value="751"] {
+  display: none;
+}
+
+div.player div.open div.x[value="752"] {
+  display: none;
+}
+
+div.player div.open div.x[value="753"] {
+  display: none;
+}
+
+div.player div.open div.x[value="754"] {
+  display: none;
+}
+
+div.player div.open div.x[value="755"] {
+  display: none;
+}
+
+div.player div.open div.x[value="756"] {
+  display: none;
+}
+
+div.player div.open div.x[value="757"] {
+  display: none;
+}
+
+div.player div.open div.x[value="758"] {
+  display: none;
+}
+
+div.player div.open div.x[value="759"] {
+  display: none;
+}
+
+div.player div.open div.x[value="760"] {
+  display: none;
+}
+
+div.player div.open div.x[value="761"] {
+  display: none;
+}
+
+div.player div.open div.x[value="762"] {
+  display: none;
+}
+
+div.player div.open div.x[value="763"] {
+  display: none;
+}
+
+div.player div.open div.x[value="764"] {
+  display: none;
+}
+
+div.player div.open div.x[value="765"] {
+  display: none;
+}
+
+div.player div.open div.x[value="766"] {
+  display: none;
+}
+
+div.player div.open div.x[value="767"] {
+  display: none;
+}
+
+div.player div.open div.x[value="768"] {
+  display: none;
+}
+
+div.player div.open div.x[value="769"] {
+  display: none;
+}
+
+div.player div.open div.x[value="770"] {
+  display: none;
+}
+
+div.player div.open div.x[value="771"] {
+  display: none;
+}
+
+div.player div.open div.x[value="772"] {
+  display: none;
+}
+
+div.player div.open div.x[value="773"] {
+  display: none;
+}
+
+div.player div.open div.x[value="774"] {
+  display: none;
+}
+
+div.player div.open div.x[value="775"] {
+  display: none;
+}
+
+div.player div.open div.x[value="776"] {
+  display: none;
+}
+
+div.player div.open div.x[value="777"] {
+  display: none;
+}
+
+div.player div.open div.x[value="778"] {
+  display: none;
+}
+
+div.player div.open div.x[value="779"] {
+  display: none;
+}
+
+div.player div.open div.x[value="780"] {
+  display: none;
+}
+
+div.player div.open div.x[value="781"] {
+  display: none;
+}
+
+div.player div.open div.x[value="782"] {
+  display: none;
+}
+
+div.player div.open div.x[value="783"] {
+  display: none;
+}
+
+div.player div.open div.x[value="784"] {
+  display: none;
+}
+
+div.player div.open div.x[value="785"] {
+  display: none;
+}
+
+div.player div.open div.x[value="786"] {
+  display: none;
+}
+
+div.player div.open div.x[value="787"] {
+  display: none;
+}
+
+div.player div.open div.x[value="788"] {
+  display: none;
+}
+
+div.player div.open div.x[value="789"] {
+  display: none;
+}
+
+div.player div.open div.x[value="790"] {
+  display: none;
+}
+
+div.player div.open div.x[value="791"] {
+  display: none;
+}
+
+div.player div.open div.x[value="792"] {
+  display: none;
+}
+
+div.player div.open div.x[value="793"] {
+  display: none;
+}
+
+div.player div.open div.x[value="794"] {
+  display: none;
+}
+
+div.player div.open div.x[value="795"] {
+  display: none;
+}
+
+div.player div.open div.x[value="796"] {
+  display: none;
+}
+
+div.player div.open div.x[value="797"] {
+  display: none;
+}
+
+div.player div.open div.x[value="798"] {
+  display: none;
+}
+
+div.player div.open div.x[value="799"] {
+  display: none;
+}
+
+div.player div.open div.x[value="800"] {
+  display: none;
+}
+
+div.player div.open div.x[value="801"] {
+  display: none;
+}
+
+div.player div.open div.x[value="802"] {
+  display: none;
+}
+
+div.player div.open div.x[value="803"] {
+  display: none;
+}
+
+div.player div.open div.x[value="804"] {
+  display: none;
+}
+
+div.player div.open div.x[value="805"] {
+  display: none;
+}
+
+div.player div.open div.x[value="806"] {
+  display: none;
+}
+
+div.player div.open div.x[value="807"] {
+  display: none;
+}
+
+div.player div.open div.x[value="808"] {
+  display: none;
+}
+
+div.player div.open div.x[value="809"] {
+  display: none;
+}
+
+div.player div.open div.x[value="810"] {
+  display: none;
+}
+
+div.player div.open div.x[value="811"] {
+  display: none;
+}
+
+div.player div.open div.x[value="812"] {
+  display: none;
+}
+
+div.player div.open div.x[value="813"] {
+  display: none;
+}
+
+div.player div.open div.x[value="814"] {
+  display: none;
+}
+
+div.player div.open div.x[value="815"] {
+  display: none;
+}
+
+div.player div.open div.x[value="816"] {
+  display: none;
+}
+
+div.player div.open div.x[value="817"] {
+  display: none;
+}
+
+div.player div.open div.x[value="818"] {
+  display: none;
+}
+
+div.player div.open div.x[value="819"] {
+  display: none;
+}
+
+div.player div.open div.x[value="820"] {
+  display: none;
+}
+
+div.player div.open div.x[value="821"] {
+  display: none;
+}
+
+div.player div.open div.x[value="822"] {
+  display: none;
+}
+
+div.player div.open div.x[value="823"] {
+  display: none;
+}
+
+div.player div.open div.x[value="824"] {
+  display: none;
+}
+
+div.player div.open div.x[value="825"] {
+  display: none;
+}
+
+div.player div.open div.x[value="826"] {
+  display: none;
+}
+
+div.player div.open div.x[value="827"] {
+  display: none;
+}
+
+div.player div.open div.x[value="828"] {
+  display: none;
+}
+
+div.player div.open div.x[value="829"] {
+  display: none;
+}
+
+div.player div.open div.x[value="830"] {
+  display: none;
+}
+
+div.player div.open div.x[value="831"] {
+  display: none;
+}
+
+div.player div.open div.x[value="832"] {
+  display: none;
+}
+
+div.player div.open div.x[value="833"] {
+  display: none;
+}
+
+div.player div.open div.x[value="834"] {
+  display: none;
+}
+
+div.player div.open div.x[value="835"] {
+  display: none;
+}
+
+div.player div.open div.x[value="836"] {
+  display: none;
+}
+
+div.player div.open div.x[value="837"] {
+  display: none;
+}
+
+div.player div.open div.x[value="838"] {
+  display: none;
+}
+
+div.player div.open div.x[value="839"] {
+  display: none;
+}
+
+div.player div.open div.x[value="840"] {
+  display: none;
+}
+
+div.player div.open div.x[value="841"] {
+  display: none;
+}
+
+div.player div.open div.x[value="842"] {
+  display: none;
+}
+
+div.player div.open div.x[value="843"] {
+  display: none;
+}
+
+div.player div.open div.x[value="844"] {
+  display: none;
+}
+
+div.player div.open div.x[value="845"] {
+  display: none;
+}
+
+div.player div.open div.x[value="846"] {
+  display: none;
+}
+
+div.player div.open div.x[value="847"] {
+  display: none;
+}
+
+div.player div.open div.x[value="848"] {
+  display: none;
+}
+
+div.player div.open div.x[value="849"] {
+  display: none;
+}
+
+div.player div.open div.x[value="850"] {
+  display: none;
+}
+
+div.player div.open div.x[value="851"] {
+  display: none;
+}
+
+div.player div.open div.x[value="852"] {
+  display: none;
+}
+
+div.player div.open div.x[value="853"] {
+  display: none;
+}
+
+div.player div.open div.x[value="854"] {
+  display: none;
+}
+
+div.player div.open div.x[value="855"] {
+  display: none;
+}
+
+div.player div.open div.x[value="856"] {
+  display: none;
+}
+
+div.player div.open div.x[value="857"] {
+  display: none;
+}
+
+div.player div.open div.x[value="858"] {
+  display: none;
+}
+
+div.player div.open div.x[value="859"] {
+  display: none;
+}
+
+div.player div.open div.x[value="860"] {
+  display: none;
+}
+
+div.player div.open div.x[value="861"] {
+  display: none;
+}
+
+div.player div.open div.x[value="862"] {
+  display: none;
+}
+
+div.player div.open div.x[value="863"] {
+  display: none;
+}
+
+div.player div.open div.x[value="864"] {
+  display: none;
+}
+
+div.player div.open div.x[value="865"] {
+  display: none;
+}
+
+div.player div.open div.x[value="866"] {
+  display: none;
+}
+
+div.player div.open div.x[value="867"] {
+  display: none;
+}
+
+div.player div.open div.x[value="868"] {
+  display: none;
+}
+
+div.player div.open div.x[value="869"] {
+  display: none;
+}
+
+div.player div.open div.x[value="870"] {
+  display: none;
+}
+
+div.player div.open div.x[value="871"] {
+  display: none;
+}
+
+div.player div.open div.x[value="872"] {
+  display: none;
+}
+
+div.player div.open div.x[value="873"] {
+  display: none;
+}
+
+div.player div.open div.x[value="874"] {
+  display: none;
+}
+
+div.player div.open div.x[value="875"] {
+  display: none;
+}
+
+div.player div.open div.x[value="876"] {
+  display: none;
+}
+
+div.player div.open div.x[value="877"] {
+  display: none;
+}
+
+div.player div.open div.x[value="878"] {
+  display: none;
+}
+
+div.player div.open div.x[value="879"] {
+  display: none;
+}
+
+div.player div.open div.x[value="880"] {
+  display: none;
+}
+
+div.player div.open div.x[value="881"] {
+  display: none;
+}
+
+div.player div.open div.x[value="882"] {
+  display: none;
+}
+
+div.player div.open div.x[value="883"] {
+  display: none;
+}
+
+div.player div.open div.x[value="884"] {
+  display: none;
+}
+
+div.player div.open div.x[value="885"] {
+  display: none;
+}
+
+div.player div.open div.x[value="886"] {
+  display: none;
+}
+
+div.player div.open div.x[value="887"] {
+  display: none;
+}
+
+div.player div.open div.x[value="888"] {
+  display: none;
+}
+
+div.player div.open div.x[value="889"] {
+  display: none;
+}
+
+div.player div.open div.x[value="890"] {
+  display: none;
+}
+
+div.player div.open div.x[value="891"] {
+  display: none;
+}
+
+div.player div.open div.x[value="892"] {
+  display: none;
+}
+
+div.player div.open div.x[value="893"] {
+  display: none;
+}
+
+div.player div.open div.x[value="894"] {
+  display: none;
+}
+
+div.player div.open div.x[value="895"] {
+  display: none;
+}
+
+div.player div.open div.x[value="896"] {
+  display: none;
+}
+
+div.player div.open div.x[value="897"] {
+  display: none;
+}
+
+div.player div.open div.x[value="898"] {
+  display: none;
+}
+
+div.player div.open div.x[value="899"] {
+  display: none;
+}
+
+div.player div.open div.x[value="900"] {
+  display: none;
+}
+
+div.player div.open div.x[value="901"] {
+  display: none;
+}
+
+div.player div.open div.x[value="902"] {
+  display: none;
+}
+
+div.player div.open div.x[value="903"] {
+  display: none;
+}
+
+div.player div.open div.x[value="904"] {
+  display: none;
+}
+
+div.player div.open div.x[value="905"] {
+  display: none;
+}
+
+div.player div.open div.x[value="906"] {
+  display: none;
+}
+
+div.player div.open div.x[value="907"] {
+  display: none;
+}
+
+div.player div.open div.x[value="908"] {
+  display: none;
+}
+
+div.player div.open div.x[value="909"] {
+  display: none;
+}
+
+div.player div.open div.x[value="910"] {
+  display: none;
+}
+
+div.player div.open div.x[value="911"] {
+  display: none;
+}
+
+div.player div.open div.x[value="912"] {
+  display: none;
+}
+
+div.player div.open div.x[value="913"] {
+  display: none;
+}
+
+div.player div.open div.x[value="914"] {
+  display: none;
+}
+
+div.player div.open div.x[value="915"] {
+  display: none;
+}
+
+div.player div.open div.x[value="916"] {
+  display: none;
+}
+
+div.player div.open div.x[value="917"] {
+  display: none;
+}
+
+div.player div.open div.x[value="918"] {
+  display: none;
+}
+
+div.player div.open div.x[value="919"] {
+  display: none;
+}
+
+div.player div.open div.x[value="920"] {
+  display: none;
+}
+
+div.player div.open div.x[value="921"] {
+  display: none;
+}
+
+div.player div.open div.x[value="922"] {
+  display: none;
+}
+
+div.player div.open div.x[value="923"] {
+  display: none;
+}
+
+div.player div.open div.x[value="924"] {
+  display: none;
+}
+
+div.player div.open div.x[value="925"] {
+  display: none;
+}
+
+div.player div.open div.x[value="926"] {
+  display: none;
+}
+
+div.player div.open div.x[value="927"] {
+  display: none;
+}
+
+div.player div.open div.x[value="928"] {
+  display: none;
+}
+
+div.player div.open div.x[value="929"] {
+  display: none;
+}
+
+div.player div.open div.x[value="930"] {
+  display: none;
+}
+
+div.player div.open div.x[value="931"] {
+  display: none;
+}
+
+div.player div.open div.x[value="932"] {
+  display: none;
+}
+
+div.player div.open div.x[value="933"] {
+  display: none;
+}
+
+div.player div.open div.x[value="934"] {
+  display: none;
+}
+
+div.player div.open div.x[value="935"] {
+  display: none;
+}
+
+div.player div.open div.x[value="936"] {
+  display: none;
+}
+
+div.player div.open div.x[value="937"] {
+  display: none;
+}
+
+div.player div.open div.x[value="938"] {
+  display: none;
+}
+
+div.player div.open div.x[value="939"] {
+  display: none;
+}
+
+div.player div.open div.x[value="940"] {
+  display: none;
+}
+
+div.player div.open div.x[value="941"] {
+  display: none;
+}
+
+div.player div.open div.x[value="942"] {
+  display: none;
+}
+
+div.player div.open div.x[value="943"] {
+  display: none;
+}
+
+div.player div.open div.x[value="944"] {
+  display: none;
+}
+
+div.player div.open div.x[value="945"] {
+  display: none;
+}
+
+div.player div.open div.x[value="946"] {
+  display: none;
+}
+
+div.player div.open div.x[value="947"] {
+  display: none;
+}
+
+div.player div.open div.x[value="948"] {
+  display: none;
+}
+
+div.player div.open div.x[value="949"] {
+  display: none;
+}
+
+div.player div.open div.x[value="950"] {
+  display: none;
+}
+
+div.player div.open div.x[value="951"] {
+  display: none;
+}
+
+div.player div.open div.x[value="952"] {
+  display: none;
+}
+
+div.player div.open div.x[value="953"] {
+  display: none;
+}
+
+div.player div.open div.x[value="954"] {
+  display: none;
+}
+
+div.player div.open div.x[value="955"] {
+  display: none;
+}
+
+div.player div.open div.x[value="956"] {
+  display: none;
+}
+
+div.player div.open div.x[value="957"] {
+  display: none;
+}
+
+div.player div.open div.x[value="958"] {
+  display: none;
+}
+
+div.player div.open div.x[value="959"] {
+  display: none;
+}
+
+div.player div.open div.x[value="960"] {
+  display: none;
+}
+
+div.player div.open div.x[value="961"] {
+  display: none;
+}
+
+div.player div.open div.x[value="962"] {
+  display: none;
+}
+
+div.player div.open div.x[value="963"] {
+  display: none;
+}
+
+div.player div.open div.x[value="964"] {
+  display: none;
+}
+
+div.player div.open div.x[value="965"] {
+  display: none;
+}
+
+div.player div.open div.x[value="966"] {
+  display: none;
+}
+
+div.player div.open div.x[value="967"] {
+  display: none;
+}
+
+div.player div.open div.x[value="968"] {
+  display: none;
+}
+
+div.player div.open div.x[value="969"] {
+  display: none;
+}
+
+div.player div.open div.x[value="970"] {
+  display: none;
+}
+
+div.player div.open div.x[value="971"] {
+  display: none;
+}
+
+div.player div.open div.x[value="972"] {
+  display: none;
+}
+
+div.player div.open div.x[value="973"] {
+  display: none;
+}
+
+div.player div.open div.x[value="974"] {
+  display: none;
+}
+
+div.player div.open div.x[value="975"] {
+  display: none;
+}
+
+div.player div.open div.x[value="976"] {
+  display: none;
+}
+
+div.player div.open div.x[value="977"] {
+  display: none;
+}
+
+div.player div.open div.x[value="978"] {
+  display: none;
+}
+
+div.player div.open div.x[value="979"] {
+  display: none;
+}
+
+div.player div.open div.x[value="980"] {
+  display: none;
+}
+
+div.player div.open div.x[value="981"] {
+  display: none;
+}
+
+div.player div.open div.x[value="982"] {
+  display: none;
+}
+
+div.player div.open div.x[value="983"] {
+  display: none;
+}
+
+div.player div.open div.x[value="984"] {
+  display: none;
+}
+
+div.player div.open div.x[value="985"] {
+  display: none;
+}
+
+div.player div.open div.x[value="986"] {
+  display: none;
+}
+
+div.player div.open div.x[value="987"] {
+  display: none;
+}
+
+div.player div.open div.x[value="988"] {
+  display: none;
+}
+
+div.player div.open div.x[value="989"] {
+  display: none;
+}
+
+div.player div.open div.x[value="990"] {
+  display: none;
+}
+
+div.player div.open div.x[value="991"] {
+  display: none;
+}
+
+div.player div.open div.x[value="992"] {
+  display: none;
+}
+
+div.player div.open div.x[value="993"] {
+  display: none;
+}
+
+div.player div.open div.x[value="994"] {
+  display: none;
+}
+
+div.player div.open div.x[value="995"] {
+  display: none;
+}
+
+div.player div.open div.x[value="996"] {
+  display: none;
+}
+
+div.player div.open div.x[value="997"] {
+  display: none;
+}
+
+div.player div.open div.x[value="998"] {
+  display: none;
+}
+
+div.player div.open div.x[value="999"] {
+  display: none;
+}
+
+div.player div.open div.x.pinch {
+  color: lightpink;
+}
+
+div.player div.open div.x.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.x2 {
+  display: none;
+}
+
+div.player div.open div.x2[value="0"] {
+  display: none;
+}
+
+div.player div.open div.x2.pinch {
+  color: lightpink;
+}
+
+div.player div.open div.x2.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o2 {
+  display: none;
+}
+
+div.player div.open div.o2.chance {
+  color: lightblue;
+}
+
+div.player div.open div.o2.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.pref {
+  display: none;
+}
+
+div.player div.rank img {
+  position: absolute;
+  left: -40px;
+  top: -150px;
+  width: 90px;
+  height: 60px;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.player div.rank img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+  opacity: 0;
+  -webkit-transform: rotateX(180deg);
+}
+
+div.player div.rank img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}

@@ -1,0 +1,63 @@
+@import "_rule.scss";
+@import "kachinuke2.scss";
+div.player {
+  div.open {
+    div.o {
+      display: none;
+      font-size: 0px;
+      @include value-range(1, 1) {
+        height: 210px;
+        background-color: $combo-color;
+        z-index: -100;
+      }
+    }
+    div.x {
+      display: none;
+      @include value-range(0, 999) {
+        display: none;
+      }
+      &.pinch {
+        color: $pinch-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.x2 {
+      display: none;
+      @include value-range(0, 0) {
+        display: none;
+      }
+      &.pinch {
+        color: $pinch-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o2 {
+      display: none;
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.pref {
+      display: none;
+    }
+  }
+  div.closed {}
+  div.rank {
+    img {
+      @include player-img(-40, -150, 90, 60);
+      background-color: rgba(0, 0, 0, 0.5);
+      @include fadein(1) {
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+  }
+  div.status {}
+  div.motion {}
+}

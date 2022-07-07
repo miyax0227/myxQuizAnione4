@@ -1,0 +1,969 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+@font-face {
+  font-family: "STU XVIII";
+  src: url("../fonts/STU XVIII.ttf");
+}
+
+div.player div.name {
+  position: absolute;
+  left: -40px;
+  top: -120px;
+  width: 50px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  width: 80px;
+  height: 240px;
+  letter-spacing: -24px;
+  -webkit-writing-mode: vertical-rl;
+  -webkit-text-orientation: upright;
+  font-family: "Migmix 1M";
+}
+
+div.player div.nameLat {
+  position: absolute;
+  left: -150px;
+  top: -130px;
+  font-size: 72px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  width: 300px;
+  height: 100px;
+  font-family: "Migmix 1M";
+}
+
+div.player div.open div.paperRank {
+  position: absolute;
+  left: -30px;
+  top: -125px;
+  width: 60px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #FFFFFF;
+  transform: translate(0px, 0px);
+}
+
+div.player div.overRect div.paperRank {
+  position: absolute;
+  left: -30px;
+  top: -125px;
+  width: 60px;
+  font-size: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #FFFFFF;
+  transform: translate(0px, 0px);
+}
+
+div.player div.rank img {
+  position: absolute;
+  left: -50px;
+  top: -216px;
+  width: 100px;
+  height: 66px;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+div.player div.rank img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+  opacity: 0;
+  -webkit-transform: rotateX(180deg);
+}
+
+div.player div.rank img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -30px;
+  top: -75px;
+  width: 60px;
+  height: 166px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.win.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.status img.win.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -37px;
+  top: -80px;
+  width: 75px;
+  height: 182px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5) rotate(30deg);
+}
+
+div.player div.status img.lose.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.wait {
+  position: absolute;
+  left: -30px;
+  top: -62px;
+  width: 60px;
+  height: 146px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.wait.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.status img.wait.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.absent {
+  position: absolute;
+  left: -30px;
+  top: -100px;
+  width: 60px;
+  height: 200px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.absent.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.2, 1.2);
+}
+
+div.player div.status img.absent.ng-enter.ng-enter-active {
+  opacity: 0.3;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.motion img.o {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+div.player div.motion img.o.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+div.player div.motion img.o.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.motion img.x {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+div.player div.motion img.x.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+div.player div.motion img.x.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.o {
+  position: absolute;
+  left: -50px;
+  top: -250px;
+  width: 100px;
+  font-size: 84px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.o.chance {
+  color: lightskyblue;
+  -webkit-text-stroke: 2px white;
+}
+
+div.player div.x {
+  position: absolute;
+  left: -150px;
+  top: -175px;
+  width: 300px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  font-family: "Impact";
+}
+
+div.player div.x.pinch {
+  color: lightpink;
+  -webkit-text-stroke: 2px white;
+}
+
+div.player div.absent {
+  position: absolute;
+  left: -35px;
+  top: -95px;
+  width: 70px;
+  font-size: 30px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #FFFF22;
+  line-height: 80%;
+  z-index: 1;
+}
+
+div.player div.winningPoint {
+  position: absolute;
+  left: 15px;
+  top: -190px;
+  width: 50px;
+  font-size: 36px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player hr.hr1 {
+  position: absolute;
+  top: -140px;
+  left: -200px;
+  width: 400px;
+  border: 0;
+  height: 2px;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), white, rgba(255, 255, 255, 0.5));
+}
+
+div.player hr.hr2 {
+  position: absolute;
+  top: -40px;
+  left: -200px;
+  width: 400px;
+  border: 0;
+  height: 2px;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.5), white, rgba(255, 255, 255, 0.5));
+}
+
+div.player div.name {
+  display: none;
+}
+
+div.player div.x {
+  display: none;
+}
+
+div.player div.name1 {
+  position: absolute;
+  left: -95px;
+  top: 0px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform-origin: 0px 0px;
+  transform: translate(30px, -5px);
+  opacity: 1;
+}
+
+div.player div.torii1 {
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 180px;
+  width: 200px;
+  font-size: 28px;
+  font-family: "STU XVIII";
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  opacity: 1;
+}
+
+div.player div.oo1 {
+  position: absolute;
+  left: -50px;
+  top: 0px;
+  width: 100px;
+  font-size: 64px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.oo1.right {
+  transform: translate(-250px, 0px);
+}
+
+div.player div.oo1.left {
+  transform: translate(250px, 0px);
+}
+
+div.player div.oo1.chance1 {
+  color: lightskyblue;
+  -webkit-text-stroke: 1px white;
+}
+
+div.player div.oo1.win1 {
+  color: gold;
+}
+
+div.player div.oo1.lose1 {
+  color: gray;
+}
+
+div.player div.sl1 img {
+  display: none;
+  position: absolute;
+  left: -120px;
+  top: 5px;
+  width: 240px;
+  height: 75px;
+  -webkit-user-select: none;
+}
+
+div.player div.sl1 img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.player div.sl1 img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -60px;
+  top: -75px;
+  width: 120px;
+  height: 332px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -74px;
+  top: -80px;
+  width: 150px;
+  height: 364px;
+  -webkit-user-select: none;
+}
+
+div.player div.name2 {
+  position: absolute;
+  left: -95px;
+  top: 80px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform-origin: 0px 0px;
+  transform: translate(30px, -5px);
+  opacity: 1;
+}
+
+div.player div.torii2 {
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 260px;
+  width: 200px;
+  font-size: 28px;
+  font-family: "STU XVIII";
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  opacity: 1;
+}
+
+div.player div.oo2 {
+  position: absolute;
+  left: -50px;
+  top: 80px;
+  width: 100px;
+  font-size: 64px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.oo2.right {
+  transform: translate(-250px, 0px);
+}
+
+div.player div.oo2.left {
+  transform: translate(250px, 0px);
+}
+
+div.player div.oo2.chance2 {
+  color: lightskyblue;
+  -webkit-text-stroke: 1px white;
+}
+
+div.player div.oo2.win2 {
+  color: gold;
+}
+
+div.player div.oo2.lose2 {
+  color: gray;
+}
+
+div.player div.sl2 img {
+  display: none;
+  position: absolute;
+  left: -120px;
+  top: 85px;
+  width: 240px;
+  height: 75px;
+  -webkit-user-select: none;
+}
+
+div.player div.sl2 img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.player div.sl2 img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -60px;
+  top: -75px;
+  width: 120px;
+  height: 332px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -74px;
+  top: -80px;
+  width: 150px;
+  height: 364px;
+  -webkit-user-select: none;
+}
+
+div.player div.name3 {
+  position: absolute;
+  left: -95px;
+  top: 160px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform-origin: 0px 0px;
+  transform: translate(30px, -5px);
+  opacity: 1;
+}
+
+div.player div.torii3 {
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 340px;
+  width: 200px;
+  font-size: 28px;
+  font-family: "STU XVIII";
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  opacity: 1;
+}
+
+div.player div.oo3 {
+  position: absolute;
+  left: -50px;
+  top: 160px;
+  width: 100px;
+  font-size: 64px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.oo3.right {
+  transform: translate(-250px, 0px);
+}
+
+div.player div.oo3.left {
+  transform: translate(250px, 0px);
+}
+
+div.player div.oo3.chance3 {
+  color: lightskyblue;
+  -webkit-text-stroke: 1px white;
+}
+
+div.player div.oo3.win3 {
+  color: gold;
+}
+
+div.player div.oo3.lose3 {
+  color: gray;
+}
+
+div.player div.sl3 img {
+  display: none;
+  position: absolute;
+  left: -120px;
+  top: 165px;
+  width: 240px;
+  height: 75px;
+  -webkit-user-select: none;
+}
+
+div.player div.sl3 img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.player div.sl3 img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -60px;
+  top: -75px;
+  width: 120px;
+  height: 332px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -74px;
+  top: -80px;
+  width: 150px;
+  height: 364px;
+  -webkit-user-select: none;
+}
+
+div.player div.name4 {
+  position: absolute;
+  left: -95px;
+  top: 240px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform-origin: 0px 0px;
+  transform: translate(30px, -5px);
+  opacity: 1;
+}
+
+div.player div.torii4 {
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 420px;
+  width: 200px;
+  font-size: 28px;
+  font-family: "STU XVIII";
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  opacity: 1;
+}
+
+div.player div.oo4 {
+  position: absolute;
+  left: -50px;
+  top: 240px;
+  width: 100px;
+  font-size: 64px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.oo4.right {
+  transform: translate(-250px, 0px);
+}
+
+div.player div.oo4.left {
+  transform: translate(250px, 0px);
+}
+
+div.player div.oo4.chance4 {
+  color: lightskyblue;
+  -webkit-text-stroke: 1px white;
+}
+
+div.player div.oo4.win4 {
+  color: gold;
+}
+
+div.player div.oo4.lose4 {
+  color: gray;
+}
+
+div.player div.sl4 img {
+  display: none;
+  position: absolute;
+  left: -120px;
+  top: 245px;
+  width: 240px;
+  height: 75px;
+  -webkit-user-select: none;
+}
+
+div.player div.sl4 img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.player div.sl4 img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -60px;
+  top: -75px;
+  width: 120px;
+  height: 332px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -74px;
+  top: -80px;
+  width: 150px;
+  height: 364px;
+  -webkit-user-select: none;
+}
+
+div.player div.name5 {
+  position: absolute;
+  left: -95px;
+  top: 320px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform-origin: 0px 0px;
+  transform: translate(30px, -5px);
+  opacity: 1;
+}
+
+div.player div.torii5 {
+  display: none;
+  position: absolute;
+  left: -100px;
+  top: 500px;
+  width: 200px;
+  font-size: 28px;
+  font-family: "STU XVIII";
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  opacity: 1;
+}
+
+div.player div.oo5 {
+  position: absolute;
+  left: -50px;
+  top: 320px;
+  width: 100px;
+  font-size: 64px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.oo5.right {
+  transform: translate(-250px, 0px);
+}
+
+div.player div.oo5.left {
+  transform: translate(250px, 0px);
+}
+
+div.player div.oo5.chance5 {
+  color: lightskyblue;
+  -webkit-text-stroke: 1px white;
+}
+
+div.player div.oo5.win5 {
+  color: gold;
+}
+
+div.player div.oo5.lose5 {
+  color: gray;
+}
+
+div.player div.sl5 img {
+  display: none;
+  position: absolute;
+  left: -120px;
+  top: 325px;
+  width: 240px;
+  height: 75px;
+  -webkit-user-select: none;
+}
+
+div.player div.sl5 img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+}
+
+div.player div.sl5 img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -60px;
+  top: -75px;
+  width: 120px;
+  height: 332px;
+  -webkit-user-select: none;
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -74px;
+  top: -80px;
+  width: 150px;
+  height: 364px;
+  -webkit-user-select: none;
+}
+
+div.player div.action_o {
+  position: absolute;
+  left: -22px;
+  top: -100px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_x {
+  position: absolute;
+  left: -22px;
+  top: -140px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_win {
+  position: absolute;
+  left: -30px;
+  top: -90px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_lose {
+  position: absolute;
+  left: -10px;
+  top: -90px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_wait {
+  position: absolute;
+  left: 10px;
+  top: -90px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_sl1 {
+  position: absolute;
+  left: -22px;
+  top: 5px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_sl2 {
+  position: absolute;
+  left: -22px;
+  top: 85px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_sl3 {
+  position: absolute;
+  left: -22px;
+  top: 165px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_sl4 {
+  position: absolute;
+  left: -22px;
+  top: 245px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_sl5 {
+  position: absolute;
+  left: -22px;
+  top: 325px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.scoreboard div.vs1 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 64px;
+  -webkit-user-select: none;
+  left: calc(633px);
+  width: 100px;
+  text-align: center;
+  top: calc(315px + 0px);
+}
+
+div.scoreboard div.vs2 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 64px;
+  -webkit-user-select: none;
+  left: calc(633px);
+  width: 100px;
+  text-align: center;
+  top: calc(315px + 80px);
+}
+
+div.scoreboard div.vs3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 64px;
+  -webkit-user-select: none;
+  left: calc(633px);
+  width: 100px;
+  text-align: center;
+  top: calc(315px + 160px);
+}
+
+div.scoreboard div.vs4 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 64px;
+  -webkit-user-select: none;
+  left: calc(633px);
+  width: 100px;
+  text-align: center;
+  top: calc(315px + 240px);
+}
+
+div.scoreboard div.vs5 {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 64px;
+  -webkit-user-select: none;
+  left: calc(633px);
+  width: 100px;
+  text-align: center;
+  top: calc(315px + 320px);
+}

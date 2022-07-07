@@ -1,0 +1,11 @@
+[{
+  "source": "nameList",
+  "filter": "1<=paperRank<=10",
+  "order": ["paperRank"],
+  "profile": true
+},{
+  "source": "K03_rolling",
+  "filter": "1<=rank<=30",
+  "order": ["rank"],
+  "profile": true
+}]

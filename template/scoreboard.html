@@ -1,0 +1,15 @@
+<div class="scoreboard" ng-cloak ng-show="initialAnimation" ng-style="windowSize.style">
+  <div explain></div>
+  <img class="logo" src="../../img/transparent.png">
+  <div class="timer">
+    {{timerDisplay}}
+  </div>
+  <div class="timerEnabled" ng-if="timer.working && timer.destination">
+    <span class="timerEnabled glyphicon glyphicon-forward timerEnabled" aria-hidden="true"></span>
+  </div>
+  <hr class="hr0" />
+  <div players ng-style="current.header.playerLevelCSS"></div>
+  <div ng-transclude></div>
+  <div global-actions></div>
+  <div timer-actions></div>
+</div>

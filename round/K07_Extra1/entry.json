@@ -1,0 +1,6 @@
+[{
+  "source": "K06_1on1",
+  "filter": "lotRank==1",
+  "order": ["paperRank"],
+  "profile": true
+}]

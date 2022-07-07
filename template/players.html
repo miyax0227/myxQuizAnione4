@@ -1,0 +1,49 @@
+<div class="player" ng-repeat="player in current.players as players"
+  ng-style="getPlayerCSS(players,player, windowSize, lineProperty, property, current.header)"
+  ng-if="player.line != 'left'">
+
+  <div svg></div>
+
+  <div class="open" ng-if="! player.close">
+    <div ng-repeat="item in items" ng-class="mergeItemCSS(item.css, player)" ng-attr-value="{{getDisplayValue(item ,player[item.key])}}"
+      ng-if="item.hasOwnProperty('css') && (!item.hasOwnProperty('anonymous') || (capturing == item.anonymous))">
+      <span
+        ng-if="! item.hasOwnProperty('htrans') && ! item.hasOwnProperty('vtrans')">{{getDisplayValue(item ,player[item.key])}}</span>
+      <img ng-if="item.hasOwnProperty('htrans')"
+        ng-src="https://d3qkh1hca8hn7i.cloudfront.net/get-string-image?color=white&text={{getDisplayValue(item ,player[item.key])}}"
+        style="width:100%; height:100%;">
+      <img ng-if="item.hasOwnProperty('vtrans')"
+        ng-src="https://d3qkh1hca8hn7i.cloudfront.net/get-string-image?vertical=true&color=white&text={{getDisplayValue(item ,player[item.key])}}"
+        style="width:100%; height:100%;">
+    </div>
+  </div>
+
+  <div class="closed" ng-if="player.close">
+    <div ng-repeat="item in items" ng-class="item.css" ng-if="item.hasOwnProperty('close-css')">
+      {{getDisplayValue(item ,player[item.key])}}
+    </div>
+  </div>
+
+  <div ng-repeat="item in items" ng-class="item.css_img" ng-if="item.hasOwnProperty('css_img')">
+    <div ng-class="mergeItemCSS(item.css, player)">
+      <img ng-class="mergeItemCSS(player[item.key], player)" ng-src="../../img/{{item.css_img_file[player[item.key]]}}"
+        ng-if="item.css_img_file.hasOwnProperty(player[item.key]) && item.key != 'rank'"></img>
+      <img ng-class="rank" ng-src="../../img/{{item.css_img_file[player['rank']]}}"
+        ng-if="! player.hasOwnProperty('lotRank') && item.css_img_file.hasOwnProperty(player['rank'])    && item.key == 'rank' && player['rank']    <= property.maxRankDisplay"></img>
+      <img ng-class="rank" ng-src="../../img/{{item.css_img_file[player['lotRank']]}}"
+        ng-if="  player.hasOwnProperty('lotRank') && item.css_img_file.hasOwnProperty(player['lotRank']) && item.key == 'rank' && player['lotRank'] <= property.maxRankDisplay"></img>
+    </div>
+  </div>
+
+  <div ng-repeat="action in actions" ng-class="action.css" ng-if="globalActionVisible && ! viewMode && ! capturing">
+    <button ng-click="func_player_scope(action.action, player)" ng-class="action.button_css"
+      ng-if="func_player_scope(action.enable,player)" ng-disabled="!pushable">
+      {{action.name}}
+    </button>
+  </div>
+
+  <div ng-transclude></div>
+
+  <hr class="hr1" />
+  <hr class="hr2" />
+</div>

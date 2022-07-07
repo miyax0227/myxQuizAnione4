@@ -1,0 +1,259 @@
+@import "_rule.scss";
+$chance-color: lightblue;
+$pinch-color: lightpink;
+$win-color: gold;
+$lose-color: gray;
+$combo-color: gold;
+div.player {
+  div.open {
+    div.name {
+      @include player-item(-9, -108, 50, 56);
+      -webkit-writing-mode: vertical-rl;
+      -webkit-text-orientation: upright;
+      @include bordered;
+      font-family: "Migmix 1M";
+      letter-spacing: -24px;
+      transform-origin: 0px 12px;
+    }
+    div.nameLat {
+      display: none;
+      transform-origin: -5px 0px;
+      transform: translate(55px, 0px);
+    }
+    div.paperRank {
+      display: none;
+      border-radius: 50px;
+      background-color: black;
+      border: solid 2px white;
+    }
+    div.pref {
+      display: none;
+      border-radius: 20px;
+      background-color: black;
+      border: solid 2px white;
+    }
+    div.o {
+      @include player-item(-100, -280, 200, 130);
+      letter-spacing: -10px;
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.x {
+      @include player-item(-100, 80, 200, 130);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      &.pinch {
+        color: $pinch-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.absent {
+      @include player-item(20, -110, 70, 60);
+      @include bordered(1, #000000, #FFFF22);
+      line-height: 50%;
+      z-index: 1;
+    }
+    div.combo {
+      @include player-item(-50, -100, 100, 200);
+      font-size: 0px;
+      @include value-range(1, 1) {
+        height: 210px;
+        background-color: $combo-color;
+        z-index: -100;
+      }
+    }
+    div.select {
+      @include player-item(-50, -100, 100, 200);
+      font-size: 0px;
+      &.selected {
+        height: 210px;
+        background-color: $combo-color;
+        z-index: -100;
+      }
+    }
+    div.x2 {
+      @include player-item(-50, 202, 100, 48);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      &.pinch {
+        color: $pinch-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o2 {
+      @include player-item(-50, -278, 100, 48);
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.div {
+      @include player-item(25, -270, 100, 50);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      color: black;
+      background: url('../img/div.png');
+      background-size: 100px 60px;
+      background-position: 0px 10px;
+      background-repeat: no-repeat;
+    }
+    div.chance_img {
+      @include player-item(-50,
+      -280,
+      100,
+      50);
+      color: rgba(0, 0, 0, 0);
+      &[value="true"] {
+        background: url("../img/chance.png");
+        background-size: 100px 50px;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+      }
+    }
+    div.star_img {
+      @include player-item(-25,
+      -280,
+      50,
+      50);
+      color: rgba(0, 0, 0, 0);
+      &[value="true"] {
+        background: url("../img/star.png");
+        background-size: 50px 50px;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+      }
+    }
+    div.pinch_img {
+      @include player-item(-25,
+      -280,
+      50,
+      50);
+      color: rgba(0, 0, 0, 0);
+      &[value="true"] {
+        background: url("../img/pinch.png");
+        background-size: 50px 50px;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  div.closed {
+    div.paperRank {
+      @include player-item(-50,
+      -134,
+      100,
+      24);
+      border-radius: 50px;
+      background-color: black;
+      border: solid 2px white;
+    }
+  }
+  div.rank {
+    img {
+      @include player-img(-40,
+      -210,
+      90,
+      60);
+      background-color: rgba(0, 0, 0, 0.5);
+      @include fadein(1) {
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+  }
+  div.status {
+    img.win {
+      @include player-img(-30,
+      -75,
+      60,
+      166);
+      @include fadein(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+    }
+    img.lose {
+      @include player-img(-37,
+      -80,
+      75,
+      182);
+      @include fadein(0.5) {
+        transform: scale(1.5, 1.5) rotate(30deg);
+      }
+    }
+    img.wait {
+      @include player-img(-30,
+      -62,
+      60,
+      146);
+      @include fadein(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+    }
+    img.absent {
+      @include player-img(-30,
+      -100,
+      60,
+      205);
+      opacity: 0.7;
+    }
+  }
+  div.motion {
+    img.o {
+      @include player-img(-25,
+      -30);
+      @include fadeout(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+    }
+    img.x {
+      @include player-img(-25,
+      -30);
+      @include fadeout(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+    }
+  }
+  hr.hr1 {
+    display: none;
+    display: none;
+  }
+  hr.hr2 {
+    display: none;
+  }
+  div.action_o {
+    @include player-button(-22,
+    -100);
+  }
+  div.action_x {
+    @include player-button(-22,
+    60);
+  }
+  div.action_win {
+    @include player-button(-30,
+    110);
+  }
+  div.action_lose {
+    @include player-button(-10,
+    110);
+  }
+  div.action_wait {
+    @include player-button(10,
+    110);
+  }
+  div.action_s {
+    @include player-button(-22,
+    -20);
+  }
+}

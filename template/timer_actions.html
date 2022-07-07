@@ -1,0 +1,15 @@
+<div class="timer_actions" ng-if="! viewMode && ! anonymous && globalActionVisible && ! capturing"
+  ng-style="{zoom:windowSize.buttonZoom}">
+  <span class="label label-success">タイマー</span>
+  <span class="label label-success" ng-if="getExplainCount()>0">
+    Explain {{getExplainCount()}}/{{explain.length}}
+  </span>
+  <br>
+  <span class="btn-group">
+    <button ng-repeat="action in global_actions | group: 'timer'" ng-class="action.button_css"
+      ng-click="func_scope(action.action)" ng-disabled="! func_scope(action.enable)" tooltip-placement="bottom""
+      ng-attr-uib-tooltip="{{action.tooltip}}">
+      {{action.name()}}
+    </button>
+  </span>
+</div>

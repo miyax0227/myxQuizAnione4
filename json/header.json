@@ -1,0 +1,19 @@
+[
+	{
+		"key": "victoryNameVisible",
+		"value": true,
+		"style": "boolean"
+	}, {
+		"key": "qCount",
+		"value": 1,
+		"style": "number"
+	}, {
+		"key": "playoff",
+		"value": false,
+		"style": "boolean"
+	}, {
+		"key": "openRank",
+		"value": 0,
+		"style": "number"
+	}
+]
