@@ -1,0 +1,90 @@
+<!doctype html>
+<html ng-app="myxQuizMain">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+		<link rel="stylesheet" href="../../css/bootstrap.min.css" >
+		<link rel="stylesheet" href="../../css/style.css" >
+		<link rel="stylesheet" href="../../css/vwx.css" >
+
+		<script src="../../js/libs/angular.js"></script>
+		<script src="../../js/libs/ngStorage.min.js"></script>
+		<script src="../../js/libs/angular-animate.min.js"></script>
+		<script src="../../js/libs/angular-resource.min.js"></script>
+		<script src="../../js/libs/ui-bootstrap-tpls.js"></script>
+    <script src="../../js/libs/angular-sanitize.min.js"></script>
+		
+		<script src="../../js/controller/main.js"></script>
+		<script src="../../js/factory/qcommon.js"></script>
+		<script src="../../js/factory/round.js"></script>
+		<script src="../../js/rule/abc_course_select.js"></script>
+	</head>
+
+	<body ng-controller="main" ng-keydown="keyDown($event)">
+		<div scoreboard>
+			<div class="title">
+				3R Number 10
+			</div>
+			<div class="qCount">
+    			<span ng-if="! current.header.shuffle && current.header.entried">{{current.header.nowCourseName}}</span>
+
+<div ng-controller="slot">
+  <div ng-if="(current.header.shuffle && current.header.nowCourse == 0) || ( ! current.header.entried && current.header.nowCourse > 0)">
+    <div ng-repeat="cn in property.courseName" class = "slot-upper text-center"
+    ng-if = "$index==slot" > {{cn}}
+    </div>
+  </div>
+</div>
+
+  <style>
+    div.slot-upper {
+      position: absolute;
+      width: 1360px;
+      height: 200px;
+      top: 100px;
+      left: 0%;
+      font-size: 200px;
+    }
+
+    div.slot-upper.ng-enter {
+      transition: all 0.2s cubic-bezier(.41,.59,.51,.67);
+      opacity: 0;
+      transform: translate(0%, -200px) rotateX(-60deg);
+    }
+
+    div.slot-upper.ng-enter.ng-enter-active {
+      opacity: 1;
+      transform: translate(0%, 0%) rotateX(0deg);
+    }
+
+    div.slot-upper.ng-leave {
+      transition: all 0.2s cubic-bezier(.41,.59,.51,.67);
+      opacity: 1;
+      transform: translate(0%, 0%) rotateX(0deg);
+    }
+
+    div.slot-upper.ng-leave-active {
+      opacity: 0;
+      transform: translate(0%, 200px) rotateX(60deg);
+    }
+  </style>
+
+<script type="text/javascript">
+    app.controller('slot', ['$scope', '$interval', function ($scope, $interval) {
+      $scope.slot = 0;
+      
+      var t = $interval(function () {
+        if($scope.current.header.shuffle || $scope.slot != $scope.current.header.nowCourse - 1){
+          $scope.slot++;
+          if ($scope.slot >= 4) {
+            $scope.slot = 0;
+          }
+        }
+          
+      }, 200);
+    }]);
+</script>
+  			</div>
+  			
+		</div>
+	</body>
+</html>

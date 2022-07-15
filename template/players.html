@@ -5,21 +5,24 @@
   <div svg></div>
 
   <div class="open" ng-if="! player.close">
-    <div ng-repeat="item in items" ng-class="mergeItemCSS(item.css, player)" ng-attr-value="{{getDisplayValue(item ,player[item.key])}}"
+    <div ng-repeat="item in items" ng-class="mergeItemCSS(item.css, player)" ng-attr-value="{{player[item.key]}}"
       ng-if="item.hasOwnProperty('css') && (!item.hasOwnProperty('anonymous') || (capturing == item.anonymous))">
       <span
-        ng-if="! item.hasOwnProperty('htrans') && ! item.hasOwnProperty('vtrans')">{{getDisplayValue(item ,player[item.key])}}</span>
+        ng-if="! item.hasOwnProperty('htrans') && ! item.hasOwnProperty('vtrans') && !(item.key=='person')">{{getDisplayValue(item
+        ,player[item.key])}}</span>
       <img ng-if="item.hasOwnProperty('htrans')"
         ng-src="https://d3qkh1hca8hn7i.cloudfront.net/get-string-image?color=white&text={{getDisplayValue(item ,player[item.key])}}"
         style="width:100%; height:100%;">
       <img ng-if="item.hasOwnProperty('vtrans')"
         ng-src="https://d3qkh1hca8hn7i.cloudfront.net/get-string-image?vertical=true&color=white&text={{getDisplayValue(item ,player[item.key])}}"
         style="width:100%; height:100%;">
+      <img ng-if="item.key=='person'" ng-src="../../img/person/{{player.entryNo}}.png" style="width:100%; height:100%;">
     </div>
   </div>
 
   <div class="closed" ng-if="player.close">
-    <div ng-repeat="item in items" ng-class="item.css" ng-if="item.hasOwnProperty('close-css')">
+    <div ng-repeat="item in items" ng-class="item.css" ng-if="item.hasOwnProperty('close-css')"
+      ng-attr-value="{{player[item.key]}}">
       {{getDisplayValue(item ,player[item.key])}}
     </div>
   </div>

@@ -1,0 +1,61 @@
+@import "_rule.scss";
+@import "vwx.scss";
+div.player {
+  div.open {
+    div.name {
+      display: none;
+      -webkit-writing-mode: vertical-rl;
+      -webkit-text-orientation: upright;
+      @include bordered;
+      font-family: "Migmix 1M";
+      letter-spacing: -24px;
+      transform-origin: 0px 12px;
+    }
+    div.nameLat {
+      @include player-item(-137, -36);
+      display: inline;
+      transform-origin: -5px 0px;
+      transform: translate(55px, 0px);
+    }
+    div.paperRank {
+      @include player-item(-310, -18, 160, 36);
+      background-color: black;
+      border-radius: 0px;
+      border: solid 2px white;
+    }
+    div.pref {
+      display: none;
+      background-color: black;
+      border-radius: 0px;
+      border: solid 2px white;
+    }
+    div.paperPts {
+      @include player-item(150, -18, 160, 36);
+      background-color: black;
+      border-radius: 0px;
+      border: solid 2px white;
+    }
+    div.blaff {
+      @include player-item(140, -44, 80, 64);
+    }
+    div.course {
+      @include player-item(140, -44, 80, 64);
+      color: gold;
+    }
+  }
+  div.closed {
+    div.paperRank {
+      @include player-item(-310, -18, 620, 36);
+      font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+      border-radius: 0px;
+      font-weight: bold;
+      @include bordered;
+      background-color: black;
+      border-radius: 0px;
+      border: solid 2px white;
+    }
+  }
+  div.rank {}
+  div.status {}
+  div.motion {}
+}

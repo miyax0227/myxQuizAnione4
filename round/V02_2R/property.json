@@ -1,0 +1,28 @@
+[
+  {
+    "maxRankDisplay": 5,
+    "tweetRoundTitle": "[2R]",
+    "lots": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "winningPoint": 5,
+    "losingPoint": 3,
+    "openRankArray": [
+      4,
+      12,
+      24,
+      47,
+      48,
+      300
+    ]
+  },
+  [
+    ""
+  ],
+  [
+    ""
+  ]
+]

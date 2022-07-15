@@ -1,0 +1,5 @@
+[{
+  "source": "V03_course",
+  "filter": "course==2",
+  "profile": true
+}]

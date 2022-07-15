@@ -1,0 +1,581 @@
+@import "_rule.scss";
+$chance-color: lightblue;
+$pinch-color: lightpink;
+$win-color: gold;
+$lose-color: gray;
+$combo-color: gold;
+div.player {
+  div.open {
+    div.name {
+      @include player-item(-9, -90, 50, 56);
+      -webkit-writing-mode: vertical-rl;
+      -webkit-text-orientation: upright;
+      @include bordered;
+      font-family: "FGP丸ｺﾞｼｯｸ体Ca-U";
+      letter-spacing: -2px;
+      transform-origin: 0px 12px;
+    }
+    div.nameLat {
+      display: none;
+      transform-origin: -5px 0px;
+      transform: translate(55px, 0px);
+    }
+    div.paperRank {
+      display: none;
+      border-radius: 0px;
+      background-color: black;
+      border: solid 2px white;
+      -webkit-text-stroke: 1px black;
+      text-stroke: 1px black;
+      @include value-range( 1, 4) {
+        background-color: blue;
+      }
+      @include value-range( 5, 12) {
+        background-color: cyan;
+      }
+      @include value-range(13, 24) {
+        background-color: lightcyan;
+      }
+      @include value-range(25, 48) {
+        background-color: white;
+      }
+      @include value-range(49, 300) {
+        background-color: black;
+      }
+    }
+    div.pref {
+      @include player-item(-55, 110, 110, 56);
+    }
+    div.o {
+      @include player-item(-100, -195, 200, 80);
+      -webkit-text-stroke: 2px white;
+      text-stroke: 2px white;
+      transform: rotateY(0deg);
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+      transition: 1s;
+    }
+    div.x {
+      @include player-item(-100, 168, 200, 80);
+      -webkit-text-stroke: 2px white;
+      text-stroke: 2px white;
+      transform: rotateY(0deg);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      &.pinch {
+        color: $pinch-color;
+      }
+      &.hidepts {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+      transition: 1s;
+    }
+    div.absent {
+      @include player-item(20, -100, 70, 60);
+      @include bordered(1, #000000, #FFFF22);
+      line-height: 50%;
+      z-index: 1;
+    }
+    div.combo {
+      @include player-item(-50, -90, 100, 200);
+      font-size: 0px;
+      @include value-range(1, 1) {
+        height: 210px;
+        background-color: $combo-color;
+        z-index: -100;
+      }
+    }
+    div.select {
+      @include player-item(-50, -90, 100, 200);
+      font-size: 0px;
+      &.selected {
+        height: 210px;
+        background-color: $combo-color;
+        z-index: -100;
+      }
+    }
+    div.x2 {
+      @include player-item(-50, 208, 100, 48);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      &.pinch {
+        color: $pinch-color;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o2 {
+      @include player-item(-100, -230, 200, 40);
+      transform: rotateY(0deg);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+      transition: 1s;
+    }
+    div.div {
+      @include player-item(25, -270, 100, 50);
+      @include value-range(0, 0) {
+        display: none;
+      }
+      color: black;
+      background: url('../img/div.png');
+      background-size: 100px 60px;
+      background-position: 0px 10px;
+      background-repeat: no-repeat;
+    }
+    div.chance_img {
+      @include player-item(-50,
+      -250,
+      100,
+      50);
+      @include img-show("chance.png",
+      100px,
+      50px);
+    }
+    div.star_img {
+      @include player-item(-25,
+      -250,
+      50,
+      50);
+      color: rgba(0, 0, 0, 0);
+      &[value="true"] {
+        background: url("../img/star.png");
+        background-size: 50px 50px;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+      }
+    }
+    div.pinch_img {
+      @include player-item(-25,
+      -250,
+      50,
+      50);
+      color: rgba(0, 0, 0, 0);
+      &[value="true"] {
+        background: url("../img/pinch.png");
+        background-size: 50px 50px;
+        background-position: 0px 0px;
+        background-repeat: no-repeat;
+      }
+    }
+    div.o3 {
+      @include player-item(-25,
+      -337,
+      50,
+      40);
+      border-radius: 25px;
+      border-width: 2px;
+      border-style: solid;
+      line-height: 45px;
+      letter-spacing: 0px;
+      &.chance1 {
+        color: $chance-color;
+        border-color: $chance-color;
+      }
+      &.select1 {
+        border-color: lime;
+      }
+      &.absent1 {
+        color: black;
+        border-color: black;
+        background-color: gold;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o4 {
+      @include player-item(15,
+      -307,
+      50,
+      40);
+      border-radius: 25px;
+      border-width: 2px;
+      border-style: solid;
+      line-height: 45px;
+      letter-spacing: 0px;
+      &.chance2 {
+        color: $chance-color;
+        border-color: $chance-color;
+      }
+      &.select2 {
+        border-color: lime;
+      }
+      &.absent2 {
+        color: black;
+        border-color: black;
+        background-color: gold;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o5 {
+      @include player-item(0,
+      -260,
+      50,
+      40);
+      border-radius: 25px;
+      border-width: 2px;
+      border-style: solid;
+      line-height: 45px;
+      letter-spacing: 0px;
+      &.chance3 {
+        color: $chance-color;
+        border-color: $chance-color;
+      }
+      &.select3 {
+        border-color: lime;
+      }
+      &.absent3 {
+        color: black;
+        border-color: black;
+        background-color: gold;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o6 {
+      @include player-item(-50,
+      -260,
+      50,
+      40);
+      border-radius: 25px;
+      border-width: 2px;
+      border-style: solid;
+      line-height: 45px;
+      letter-spacing: 0px;
+      &.chance4 {
+        color: $chance-color;
+        border-color: $chance-color;
+      }
+      &.select4 {
+        border-color: lime;
+      }
+      &.absent4 {
+        color: black;
+        border-color: black;
+        background-color: gold;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o7 {
+      @include player-item(-65,
+      -307,
+      50,
+      40);
+      border-radius: 25px;
+      border-width: 2px;
+      border-style: solid;
+      line-height: 45px;
+      letter-spacing: 0px;
+      &.chance5 {
+        color: $chance-color;
+        border-color: $chance-color;
+      }
+      &.select5 {
+        border-color: lime;
+      }
+      &.absent5 {
+        color: black;
+        border-color: black;
+        background-color: gold;
+      }
+      &.hidepts {
+        opacity: 0;
+      }
+    }
+    div.o2x {
+      @include player-item(-100,
+      -310,
+      200,
+      40);
+      transform: rotateY(0deg);
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+      transition: 1s;
+    }
+    div.oFrac {
+      @include player-item(40,
+      -185,
+      40,
+      40);
+      transform: rotateY(0deg);
+      &.chance {
+        color: $chance-color;
+      }
+      &.hidepts {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+      transition: 1s;
+    }
+    div.pushed_img {
+      @include player-item(-50,
+      -100,
+      100,
+      210);
+      @include img-show("select.png",
+      100px,
+      210px);
+    }
+    div.genre1 {
+      @include player-item(50,
+      -150,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: red;
+    }
+    div.genre2 {
+      @include player-item(50,
+      -100,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: orange;
+    }
+    div.genre3 {
+      @include player-item(50,
+      -50,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: yellow;
+    }
+    div.genre4 {
+      @include player-item(50,
+      0,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: green;
+    }
+    div.genre5 {
+      @include player-item(50,
+      50,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: blue;
+    }
+    div.genre6 {
+      @include player-item(50,
+      100,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: darkblue;
+    }
+    div.genre7 {
+      @include player-item(50,
+      150,
+      50,
+      50);
+      -webkit-text-stroke: 2px white;
+      color: purple;
+    }
+  }
+  div.closed {
+    div.paperRank {
+      @include player-item(-50,
+      -134,
+      100,
+      24);
+      border-radius: 0px;
+      background-color: black;
+      border: solid 2px white;
+      -webkit-text-stroke: 1px black;
+      text-stroke: 1px black;
+      @include value-range( 1,
+      4) {
+        background-color: blue;
+      }
+      @include value-range( 5,
+      12) {
+        background-color: cyan;
+      }
+      @include value-range(13,
+      24) {
+        background-color: lightcyan;
+      }
+      @include value-range(25,
+      48) {
+        background-color: white;
+      }
+      @include value-range(49,
+      300) {
+        background-color: black;
+      }
+    }
+  }
+  div.rank {
+    img {
+      @include player-img(-40,
+      -270,
+      90,
+      60);
+      background-color: rgba(0, 0, 0, 0.5);
+      @include fadein(1) {
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+  }
+  div.status {
+    img.win {
+      @include player-img(-30,
+      -75,
+      60,
+      166);
+      opacity: 0.8;
+      @include fadein(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+    }
+    img.lose {
+      @include player-img(-37,
+      -80,
+      75,
+      182);
+      opacity: 0.8;
+      @include fadein(0.5) {
+        transform: scale(1.5, 1.5) rotate(30deg);
+      }
+    }
+    img.wait {
+      @include player-img(-30,
+      -62,
+      60,
+      146);
+      opacity: 0.8;
+      @include fadein(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+    }
+    img.absent {
+      @include player-img(-30,
+      -90,
+      60,
+      205);
+      opacity: 0.7;
+    }
+  }
+  div.motion {
+    img.o {
+      @include player-img(-25,
+      -30);
+      @include fadeout(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+      &.hidepts {
+        display: none;
+      }
+    }
+    img.x {
+      @include player-img(-25,
+      -30);
+      @include fadeout(0.5) {
+        transform: scale(1.5, 1.5);
+      }
+      &.hidepts {
+        display: none;
+      }
+    }
+  }
+  hr.hr1 {
+    @include player-hr(-50,
+    -120,
+    100,
+    4);
+  }
+  hr.hr2 {
+    @include player-hr(-50,
+    162,
+    100,
+    4);
+  }
+  div.action_o {
+    @include player-button(-22,
+    -100);
+  }
+  div.action_x {
+    @include player-button(-22,
+    60);
+  }
+  div.action_win {
+    @include player-button(-60,
+    0);
+  }
+  div.action_lose {
+    @include player-button(-20,
+    0);
+  }
+  div.action_wait {
+    @include player-button(20,
+    0);
+  }
+  div.action_s {
+    @include player-button(-22,
+    -20);
+  }
+  div.action_plus {
+    @include player-button(-30,
+    0);
+  }
+  div.action_minus {
+    @include player-button(10,
+    0);
+  }
+  div.action_x1 {
+    @include player-button(50,
+    -150);
+  }
+  div.action_x2 {
+    @include player-button(50,
+    -100);
+  }
+  div.action_x3 {
+    @include player-button(50,
+    -50);
+  }
+  div.action_x4 {
+    @include player-button(50,
+    0);
+  }
+  div.action_x5 {
+    @include player-button(50,
+    50);
+  }
+  div.action_x6 {
+    @include player-button(50,
+    100);
+  }
+  div.action_x7 {
+    @include player-button(50,
+    150);
+  }
+}

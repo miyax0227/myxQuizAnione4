@@ -636,7 +636,7 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 				property = {
 					left: 0,
 					right: 1,
-					y: 0.42,
+					y: 0.35,
 					zoom: 1,
 					orderBy: "position"
 				};
@@ -773,10 +773,18 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 							return item.repeatChar.split(',')[1];
 						}
 					} else {
-						return "";
+						if (item.hasOwnProperty("blankChar")){
+							return item.blankChar;
+						} else{
+							return "";
+						}
 					}
 				}
-				return Array(parseInt(value) + 1).join(item.repeatChar);
+				if(item.hasOwnProperty("blankChar")){
+					return Array(parseInt(value) + 1).join(item.repeatChar) + item.blankChar.substring(parseInt(value),item.blankChar.length);					
+				} else {
+					return Array(parseInt(value) + 1).join(item.repeatChar);
+				}
 
 				// DNQが指定されていて、それ以上の値の場合
 			} else if (item.hasOwnProperty('dnq') && value >= item.dnq) {
@@ -1273,6 +1281,7 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 					cssArray.push(key);
 				}
 			});
+			cssArray.push(player.status);
 
 			return cssArray;
 		}

@@ -195,12 +195,12 @@ div.player {
 
 		&.ng-enter {
 			transition: all cubic-bezier(0.6, 0, 0.6, 0) 0.5s;
-			transform: rotateX(-90deg);
+			transform: rotateY(-90deg);
 			opacity: 0;
 		}
 
 		&.ng-enter.ng-enter-active {
-			transform: rotateX(0deg);
+			transform: rotateY(0deg);
 			opacity: 1;
 		}
 	}
@@ -213,12 +213,12 @@ div.player {
 
 		&.ng-leave {
 			transition: all cubic-bezier(0.4, 1, 0.4, 1) 0.5s;
-			transform: rotateX(0deg);
+			transform: rotateY(0deg);
 			opacity: 1;
 		}
 
 		&.ng-leave.ng-leave-active {
-			transform: rotateX(90deg);
+			transform: rotateY(90deg);
 			opacity: 0;
 		}
 

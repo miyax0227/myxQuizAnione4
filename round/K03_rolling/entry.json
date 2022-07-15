@@ -1,6 +1,0 @@
-[{
-  "source": "nameList",
-  "filter": "11<=paperRank<=100",
-  "order": ["paperRank"],
-  "profile": true
-}]

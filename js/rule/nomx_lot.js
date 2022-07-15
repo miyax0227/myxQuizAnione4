@@ -47,7 +47,9 @@ app.factory('rule', ['qCommon', function(qCommon) {
       "key": "x",
       "value": 0,
       "style": "number",
-      "css": "x"
+      "css": "x",
+      "repeatChar":"×",
+      "blankChar":"・・・"
     },
     {
       "key": "priority",
@@ -94,14 +96,14 @@ app.factory('rule', ['qCommon', function(qCommon) {
     "line1": {
       "left": 0,
       "right": 1,
-      "y": 0.5,
+      "y": 0.35,
       "zoom": 1,
       "orderBy": "position"
     },
     "line2": {
       "left": 0,
       "right": 1,
-      "y": 0.5,
+      "y": 0.35,
       "zoom": 1,
       "orderBy": "priority"
     }
@@ -193,6 +195,7 @@ app.factory('rule', ['qCommon', function(qCommon) {
       "action1": function(index, players, header, property) {
         header.nowLot = index;
         header.qCount = 1;
+        header.openRank = 0;
       },
       "nowait": false
     }

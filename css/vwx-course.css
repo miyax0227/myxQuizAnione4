@@ -1,0 +1,22 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+div.scoreboard div.timer {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  top: 250px;
+  margin-left: 2%;
+  text-align: right;
+  font-size: 150px;
+}
+
+div.player div.open div.x {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-size: 60px;
+}

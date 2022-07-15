@@ -1,0 +1,46 @@
+<!doctype html>
+<html ng-app="myxQuizMain">
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link rel="stylesheet" href="../../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../../css/style.css">
+	<link rel="stylesheet" href="../../css/vwx-sf.css">
+
+	<script src="../../js/libs/angular.js"></script>
+	<script src="../../js/libs/ngStorage.min.js"></script>
+	<script src="../../js/libs/angular-animate.min.js"></script>
+	<script src="../../js/libs/angular-resource.min.js"></script>
+	<script src="../../js/libs/ui-bootstrap-tpls.js"></script>
+	<script src="../../js/libs/angular-sanitize.min.js"></script>
+
+	<script src="../../js/controller/main.js"></script>
+	<script src="../../js/factory/qcommon.js"></script>
+	<script src="../../js/factory/round.js"></script>
+	<script src="../../js/rule/n+m-_abc.js"></script>
+</head>
+
+<body ng-controller="main" ng-keydown="keyDown($event)">
+	<div scoreboard>
+		<div class="title">
+			SF Nine Hundred
+		</div>
+		<div class="qCount">
+			第{{current.header.nowSet}}セット: {{current.header.rulename}}
+		</div>
+		<div class="introduce">
+			<div class="introduce1" ng-if="current.header.introduce">
+				<img class="person" ng-src="../../img/person/{{current.header.introduce.entryNo}}.png">
+			</div>
+			<div class="introduce2" ng-if="current.header.introduce">
+				<div class="pref">{{current.header.introduce.pref}}</div>
+				<div class="name">{{current.header.introduce.name}}</div>
+			</div>
+			<div class="introduce3" ng-if="current.header.introduce">
+				<div class="phrase">{{current.header.introduce.phrase}}</div>
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+[
+  {
+    "source": [
+      {
+        "source": "V07_3RD",
+        "filter": "rank==1"
+      },
+      {
+        "source": "V06_3RC",
+        "filter": "rank==1"
+      },
+      {
+        "source": "V05_3RB",
+        "filter": "rank==1"
+      },
+      {
+        "source": "V04_3RA",
+        "filter": "rank==1"
+      }
+    ],
+    "profile": true,
+    "order": "-time",
+    "property": {
+      "phrase": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  },
+  {
+    "source": {
+      "source": "V08_ER",
+      "filter": "rank==1"
+    },
+    "profile": true,
+    "property": {
+      "phrase": [
+        ""
+      ]
+    }
+  },
+  {
+    "source": [
+      {
+        "source": "V04_3RA",
+        "filter": "rank==2"
+      },
+      {
+        "source": "V05_3RB",
+        "filter": "rank==2"
+      },
+      {
+        "source": "V06_3RC",
+        "filter": "rank==2"
+      },
+      {
+        "source": "V07_3RD",
+        "filter": "rank==2"
+      }
+    ],
+    "profile": true,
+    "order": "time",
+    "property": {
+      "phrase": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  }
+]

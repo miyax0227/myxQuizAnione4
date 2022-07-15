@@ -49,7 +49,7 @@
 		"style": "number",
 		"value": 999,
 		"profile": true,
-		"suffix": "位",
+		"suffix": "th",
 		"css": "paperRank",
 		"close-css": "paperRank",
 		"dnq": 101
@@ -116,7 +116,7 @@
 		"key": "absent",
 		"value": 0,
 		"style": "number",
-		"css": "absent",
+		"css": "absents",
 		"repeatChar": "●\n"
 	},
 	{

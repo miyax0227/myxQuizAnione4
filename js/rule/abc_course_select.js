@@ -11,6 +11,7 @@ app.factory('rule', ['qCommon', function(qCommon) {
   var rule = {};
   var win = qCommon.win;
   var lose = qCommon.lose;
+  var rolling = qCommon.rolling;
   var timerStop = qCommon.timerStop;
   var setMotion = qCommon.setMotion;
   var addQCount = qCommon.addQCount;
@@ -59,14 +60,14 @@ app.factory('rule', ['qCommon', function(qCommon) {
     "line1": {
       "left": 0,
       "right": 1,
-      "y": 0.4,
-      "zoom": 1,
+      "y": 0.3,
+      "zoom": 0.8,
       "orderBy": "position"
     },
     "line2": {
       "left": 0,
       "right": 1,
-      "y": 0.9,
+      "y": 0.75,
       "zoom": 0.5,
       "orderBy": "keyIndex"
     }
@@ -85,7 +86,8 @@ app.factory('rule', ['qCommon', function(qCommon) {
     },
     "action0": function(player, players, header, property) {
       player.selected = !player.selected;
-    }
+    },
+    "nowait": false
   }];
 
   /*****************************************************************************
@@ -101,6 +103,10 @@ app.factory('rule', ['qCommon', function(qCommon) {
       },
       "action0": function(players, header, property) {
         // そのコースがまだ決定前の場合
+        console.log(header.nowCourse);
+        console.log(players.map(function(p) {
+          return p.course;
+        }));
         if (players.filter(function(p) {
             return p.course == header.nowCourse;
           }).length === 0) {
@@ -138,6 +144,48 @@ app.factory('rule', ['qCommon', function(qCommon) {
           p.selected = false;
         });
 
+      },
+      "nowait": false
+    },
+    {
+      "name": "shuffle",
+      "enable0": function(players, header, property) {
+        return true;
+      },
+      "button_css": "btn btn-default",
+      "group": "rule",
+      "action0": function(players, header, property) {
+        header.nowCourse = 0;
+        header.shuffle = true;
+      },
+      "keyArray": "",
+      "nowait": false
+    },
+    {
+      "name": "random",
+      "button_css": "btn btn-default",
+      "group": "rule",
+      "enable0": function(players, header, property) {
+        return true;
+      },
+      "action0": function(players, header, property) {
+        var index = 0;
+        var v = property.courseName.slice();
+        players.map(function(p) {
+          if (p.course) {
+            v[p.course - 1] = "";
+          }
+        })
+        v = v.filter(function(c) {
+          return c !== "";
+        })
+        if (v.length > 0) {
+          index = v[Math.floor(v.length * Math.random())];
+        }
+
+        header.nowCourse = property.courseName.indexOf(index) + 1;
+        header.nowCourseName = index;
+        header.shuffle = false;
       }
     },
     {
@@ -145,14 +193,17 @@ app.factory('rule', ['qCommon', function(qCommon) {
       "button_css": "btn btn-default",
       "group": "rule",
       "indexes0": function(players, header, property) {
-        return property.courseArray;
+        return property.courseName;
       },
       "enable1": function(index, players, header, property) {
         return true;
       },
       "action1": function(index, players, header, property) {
-        header.nowCourse = property.courseName.indexOf(index);
-      }
+        header.nowCourse = property.courseName.indexOf(index) + 1;
+        header.nowCourseName = index;
+        header.shuffle = false;
+      },
+      "nowait": false
     }
   ];
 
@@ -180,11 +231,13 @@ app.factory('rule', ['qCommon', function(qCommon) {
    ****************************************************************************/
   function calc(players, header, items, property) {
     var key = 0;
+    header.entried = false;
     angular.forEach(players, function(player, index) {
       if (player.course === 0) {
         player.keyIndex = (key++);
         player.line = "line2";
       } else if (player.course == header.nowCourse) {
+        header.entried = true;
         player.keyIndex = 999;
         player.line = "line1";
       } else {

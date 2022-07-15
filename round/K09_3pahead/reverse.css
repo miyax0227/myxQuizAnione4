@@ -1,9 +1,0 @@
-div[players]{
-  transform: scale(-1,1);
-  transform-origin: 50% 50%;
-}
-
-div[players] div.player div.open{
-  transform: scale(-1,1);
-  transform-origin: 0% 0%;  
-}

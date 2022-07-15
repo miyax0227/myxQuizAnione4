@@ -1,0 +1,191 @@
+@import "_rule.scss";
+@import "vwx.scss";
+div.player {
+  div.open {
+    div.name {
+      display: none;
+      -webkit-writing-mode: vertical-rl;
+      -webkit-text-orientation: upright;
+      @include bordered;
+      font-family: "Migmix 1M";
+      letter-spacing: -24px;
+      transform-origin: 0px 12px;
+    }
+    div.nameLat {
+      @include player-item(-137, -36);
+      display: inline;
+      transform-origin: -5px 0px;
+      transform: translate(55px, 0px);
+    }
+    div.paperRank {
+      @include player-item(-150, -80, 150, 36);
+      font-family: NationalyzeAlp;
+      border-radius: 0px;
+      @include bordered;
+      @include value-range( 1, 1) {
+        background-color: gold;
+      }
+      @include value-range( 2, 4) {
+        background-color: silver;
+      }
+      @include value-range( 5, 10) {
+        background-color: red;
+      }
+      @include value-range(11, 22) {
+        background-color: blue;
+      }
+      @include value-range(23, 40) {
+        background-color: orange;
+      }
+      @include value-range(41, 88) {
+        background-color: green;
+      }
+      @include value-range(89, 300) {
+        background-color: purple;
+      }
+    }
+    div.pref {
+      @include player-item(0, -80, 150, 36);
+      background-color: black;
+      border-radius: 0px;
+      border: solid 2px white;
+    }
+    div.paperPts {
+      display: none;
+    }
+    div.o {
+      @include player-item(-150, -10, 150);
+      font-size: 0px;
+      color: $chance-color;
+      @include value-range(1, 1) {
+        &::before {
+          content: "○";
+          font-size: 120px;
+        }
+        transform: translate(-3px, 12px);
+      }
+      @include value-range(2, 2) {
+        &::before {
+          content: "◎";
+          vertical-align: middle;
+          font-size: 140px;
+        }
+        transform: translate(0px, 0px);
+      }
+    }
+    div.x {
+      @include player-item(0, -10, 150);
+      font-size: 0px;
+      color: $pinch-color;
+      @include value-range(1, 2) {
+        &::before {
+          content: "×";
+          font-size: 140px;
+        }
+        transform: translate(0px, -10px);
+      }
+    }
+    div.penalty {
+      @include player-item(0, -10, 150);
+      font-size: 0px;
+      color: lime;
+      @include value-range(1, 2) {
+        &::before {
+          content: "×";
+          font-size: 140px;
+        }
+        transform: translate(0px, -10px);
+      }
+    }
+    div.pts {
+      @include player-item(-150, -10, 300, 150);
+    }
+    div.upper {
+      @include player-item(-150, -150, 300, 180);
+      color: $chance-color;
+    }
+  }
+  div.closed {
+    div.paperRank {
+      @include player-item(-320, -18, 120, 36);
+      font-family: NationalyzeAlp;
+      border-radius: 0px;
+      @include bordered;
+      @include value-range( 1, 1) {
+        background-color: gold;
+      }
+      @include value-range( 2, 4) {
+        background-color: silver;
+      }
+      @include value-range( 5, 10) {
+        background-color: red;
+      }
+      @include value-range(11, 22) {
+        background-color: blue;
+      }
+      @include value-range(23, 40) {
+        background-color: orange;
+      }
+      @include value-range(41, 88) {
+        background-color: green;
+      }
+      @include value-range(89, 300) {
+        background-color: purple;
+      }
+    }
+  }
+  div.rank {
+    img {
+      @include player-img(-150, -80, 300, 200);
+      background-color: rgba(0, 0, 0, 0.8);
+      @include fadein(1) {
+        -webkit-transform: rotateX(180deg);
+      }
+    }
+  }
+  div.status {
+    img.lose {
+      @include player-img(-160, -100, 320, 300);
+      background-color: rgba(0, 0, 0, 1);
+      filter: brightness(0%) opacity(80%);
+    }
+    img.win {
+      @include player-img(-150, -80, 300, 200);
+      filter: opacity(0%);
+    }
+    img.selected {
+      @include player-img(-160, -100, 320, 320);
+      border-width: 20px;
+      border-color: rgba(255, 255, 0, 1);
+      border-style: solid;
+      @include fadein {
+        transform: translate(0px, 100px);
+      }
+    }
+  }
+  div.motion {}
+  div.action_o {
+    @include player-button(-90, -20);
+    transform: scale(2, 2);
+  }
+  div.action_x {
+    @include player-button(50, -20);
+    transform: scale(2, 2);
+  }
+  div.action_s {
+    @include player-button(-20, 50);
+    transform: scale(2, 2);
+  }
+  div.action_win {
+    @include player-button(-120, 100);
+    transform: scale(2, 2);
+  }
+  div.action_lose {
+    @include player-button(-40, 100);
+    transform: scale(2, 2);
+  }
+  div.action_wait {
+    @include player-button(40, 100);
+    transform: scale(2, 2);
+  }
+}

@@ -52,6 +52,13 @@ app.factory('round', ['qCommon', 'rule', '$filter', '$timeout',
 				}
 			});
 
+			// 横書き氏名の設定を氏名からコピーする
+			angular.forEach(players, function (player) {
+				if (!player.hasOwnProperty('nameLat')) {
+					player.nameLat = player.name;
+				}
+			});
+
 			// 優先順位の計算
 			angular.forEach(items.filter(function (item) {
 				return item.hasOwnProperty('order');
@@ -81,8 +88,14 @@ app.factory('round', ['qCommon', 'rule', '$filter', '$timeout',
 				// openRankが0以上の場合、openRank以下のpaperRankを持つプレイヤーをopen
 			} else {
 				angular.forEach(players, function (player) {
-					if (player.close && player.paperRank <= header.openRank) {
-						player.close = false;
+					if(header.hasOwnProperty('nowLot')){
+						if (player.lot == header.nowLot && player.close && player.paperRank <= header.openRank) {
+							player.close = false;
+						}	
+					} else {
+						if (player.close && player.paperRank <= header.openRank) {
+							player.close = false;
+						}	
 					}
 				});
 
@@ -496,13 +509,20 @@ app.factory('round', ['qCommon', 'rule', '$filter', '$timeout',
 					return header.openRank >= 0;
 				},
 				action0: function (players, header, property) {
-					if (players.filter(function (player) {
+					var nowPlayers = players;
+					if(header.hasOwnProperty('nowLot')){
+						nowPlayers = players.filter(function(player){
+							return player.lot == header.nowLot;
+						})
+					}
+
+					if (nowPlayers.filter(function (player) {
 							return player.close;
 						}).length == 0) {
 						header.openRank = -1;
 					} else {
 						// クローズ状態のプレイヤーの最小順位
-						var closeRank = Math.min.apply(null, players.filter(function (player) {
+						var closeRank = Math.min.apply(null, nowPlayers.filter(function (player) {
 							return player.close;
 						}).map(function (player) {
 							return player.paperRank;

@@ -1,0 +1,35 @@
+[
+  {
+    "maxRankDisplay": 3,
+    "tweetRoundTitle": "[SF]",
+    "timer": 300,
+    "playerZoom": 1.4,
+    "playerLevel": -25,
+    "ptsrule": [
+      {
+        "name": "+1/-1",
+        "plus": 1,
+        "minus": 1
+      },
+      {
+        "name": "+1/-2",
+        "plus": 1,
+        "minus": 2
+      },
+      {
+        "name": "+2/-2",
+        "plus": 2,
+        "minus": 2
+      }
+    ],
+    "openRankArray": [
+      300
+    ]
+  },
+  [
+    ""
+  ],
+  [
+    ""
+  ]
+]

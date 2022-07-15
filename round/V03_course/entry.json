@@ -1,0 +1,29 @@
+[{
+  "source": [{
+      "source": "V02_2R",
+      "filter": "lotRank==1",
+      "order": "paperRank"
+    },
+    {
+      "source": "V02_2R",
+      "filter": "lotRank==2",
+      "order": "paperRank"
+    },
+    {
+      "source": "V02_2R",
+      "filter": "lotRank==3",
+      "order": "paperRank"
+    },
+    {
+      "source": "V02_2R",
+      "filter": "lotRank==4",
+      "order": "paperRank"
+    },
+    {
+      "source": "V02_2R",
+      "filter": "lotRank==5",
+      "order": "paperRank"
+    }
+  ],
+  "profile": []
+}]
