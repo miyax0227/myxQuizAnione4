@@ -1,0 +1,2239 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'NationalizeAlp';
+  src: url("../fonts/NATIONALYZEALP.TTF");
+}
+
+div.scoreboard div.timer {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 40px;
+  -webkit-user-select: none;
+  top: -20px;
+  left: -20px;
+  width: 100%;
+  text-align: center;
+  font-size: 100px;
+}
+
+@keyframes intro1 {
+  from {
+    opacity: 0;
+  }
+  43% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+div.introduce1.ng-enter {
+  animation: intro1 7.2s linear;
+}
+
+div.introduce1.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+div.introduce1.ng-leave {
+  transition: 0s;
+}
+
+@keyframes intro2 {
+  from {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  45% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  50% {
+    opacity: 0.8;
+    transform: rotateY(15deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotateY(0deg);
+  }
+}
+
+div.introduce2.ng-enter {
+  animation: intro2 7.2s linear;
+}
+
+div.introduce2.ng-enter.ng-enter-active {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+div.introduce2.ng-leave {
+  transition: 0s;
+}
+
+@keyframes intro3 {
+  from {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+  5% {
+    opacity: 1;
+    transform: rotateY(15deg);
+  }
+  37% {
+    opacity: 1;
+    transform: rotateY(-15deg);
+  }
+  43% {
+    opacity: 0;
+    transform: rotateY(1440deg);
+  }
+  to {
+    opacity: 0;
+    transform: rotateY(1440deg);
+  }
+}
+
+div.introduce3 {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+div.introduce3.ng-enter {
+  animation: intro3 7.2s linear;
+}
+
+div.introduce3.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: rotateY(90deg);
+}
+
+div.introduce3.ng-leave {
+  transition: 0s;
+}
+
+div.introduce img.person {
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 150px;
+  right: 100px;
+}
+
+div.introduce div.name {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 180px;
+  -webkit-user-select: none;
+  position: absolute;
+  top: 450px;
+  width: 70%;
+  left: 10%;
+  -webkit-text-stroke: 2px black;
+  text-align: center;
+}
+
+div.introduce div.pref {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 90px;
+  -webkit-user-select: none;
+  position: absolute;
+  top: 330px;
+  width: 50%;
+  left: 10%;
+  -webkit-text-stroke: 2px black;
+  text-align: center;
+}
+
+div.introduce div.title {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 135px;
+  -webkit-user-select: none;
+  position: absolute;
+  top: 130px;
+  width: 50%;
+  left: 0%;
+  -webkit-text-stroke: 2px black;
+  text-align: center;
+}
+
+div.introduce div.phrase {
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  position: absolute;
+  font-size: 90px;
+  -webkit-user-select: none;
+  position: absolute;
+  top: 330px;
+  width: 100%;
+  left: 0%;
+  -webkit-text-stroke: 1px black;
+  text-align: center;
+}
+
+div.player div.open div.name {
+  display: none;
+  position: absolute;
+  left: -50px;
+  top: -100px;
+  width: 100px;
+  font-size: 56px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  width: 100px;
+  height: 400px;
+}
+
+div.player div.open div.nameLat {
+  position: absolute;
+  left: -100px;
+  top: 80px;
+  width: 200px;
+  font-size: 56px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  font-size: 0px;
+  width: 200px;
+  height: 45px;
+}
+
+div.player div.open div.person {
+  position: absolute;
+  left: -150px;
+  top: -170px;
+  width: 300px;
+  font-size: 0px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  width: 300px;
+  height: 300px;
+  z-index: -10;
+}
+
+div.player div.open div.person.win {
+  filter: brightness(120%);
+}
+
+div.player div.open div.person.lose {
+  filter: brightness(70%);
+}
+
+div.player div.open div.person img {
+  object-fit: cover;
+}
+
+div.player div.open div.name,
+div.player div.open div.nameLat {
+  background-image: linear-gradient(to right, #434343 0%, black 100%);
+  transition: 2s;
+}
+
+div.player div.open div.name.selected,
+div.player div.open div.nameLat.selected {
+  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
+div.player div.open div.name.selected img,
+div.player div.open div.nameLat.selected img {
+  filter: brightness(0) invert(0);
+}
+
+div.player div.open div.name.absent,
+div.player div.open div.nameLat.absent {
+  transform: rotateY(360deg);
+  background-image: linear-gradient(-60deg, #16a085 0%, #f4d03f 100%);
+}
+
+div.player div.open div.name.absent img,
+div.player div.open div.nameLat.absent img {
+  filter: brightness(0) invert(0);
+}
+
+div.player div.open div.name.win,
+div.player div.open div.nameLat.win {
+  transform: rotateY(360deg);
+  background-image: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+
+div.player div.open div.name.lose,
+div.player div.open div.nameLat.lose {
+  transform: rotateY(-360deg);
+  background-image: none;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+div.player div.open div.paperRank {
+  position: absolute;
+  left: -40px;
+  top: 30px;
+  width: 80px;
+  font-size: 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  border-radius: 0px;
+  color: black;
+  transition: 2s;
+}
+
+div.player div.open div.paperRank[value="1"] {
+  background-color: crimson;
+}
+
+div.player div.open div.paperRank[value="2"] {
+  background-color: crimson;
+}
+
+div.player div.open div.paperRank[value="3"] {
+  background-color: crimson;
+}
+
+div.player div.open div.paperRank[value="4"] {
+  background-color: crimson;
+}
+
+div.player div.open div.paperRank[value="5"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="6"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="7"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="8"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="9"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="10"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="11"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="12"] {
+  background-color: royalblue;
+}
+
+div.player div.open div.paperRank[value="13"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="14"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="15"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="16"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="17"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="18"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="19"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="20"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="21"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="22"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="23"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="24"] {
+  background-color: yellow;
+}
+
+div.player div.open div.paperRank[value="25"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="26"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="27"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="28"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="29"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="30"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="31"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="32"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="33"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="34"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="35"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="36"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="37"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="38"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="39"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="40"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="41"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="42"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="43"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="44"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="45"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="46"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="47"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="48"] {
+  background-color: green;
+}
+
+div.player div.open div.paperRank[value="49"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="50"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="51"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="52"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="53"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="54"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="55"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="56"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="57"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="58"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="59"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="60"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="61"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="62"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="63"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="64"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="65"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="66"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="67"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="68"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="69"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="70"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="71"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="72"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="73"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="74"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="75"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="76"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="77"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="78"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="79"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="80"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="81"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="82"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="83"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="84"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="85"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="86"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="87"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="88"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="89"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="90"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="91"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="92"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="93"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="94"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="95"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="96"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="97"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="98"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="99"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="100"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="101"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="102"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="103"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="104"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="105"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="106"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="107"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="108"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="109"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="110"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="111"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="112"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="113"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="114"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="115"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="116"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="117"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="118"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="119"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="120"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="121"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="122"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="123"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="124"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="125"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="126"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="127"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="128"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="129"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="130"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="131"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="132"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="133"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="134"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="135"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="136"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="137"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="138"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="139"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="140"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="141"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="142"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="143"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="144"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="145"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="146"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="147"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="148"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="149"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="150"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="151"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="152"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="153"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="154"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="155"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="156"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="157"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="158"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="159"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="160"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="161"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="162"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="163"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="164"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="165"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="166"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="167"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="168"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="169"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="170"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="171"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="172"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="173"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="174"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="175"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="176"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="177"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="178"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="179"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="180"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="181"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="182"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="183"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="184"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="185"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="186"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="187"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="188"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="189"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="190"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="191"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="192"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="193"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="194"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="195"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="196"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="197"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="198"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="199"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="200"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="201"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="202"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="203"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="204"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="205"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="206"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="207"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="208"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="209"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="210"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="211"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="212"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="213"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="214"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="215"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="216"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="217"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="218"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="219"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="220"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="221"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="222"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="223"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="224"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="225"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="226"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="227"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="228"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="229"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="230"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="231"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="232"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="233"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="234"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="235"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="236"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="237"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="238"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="239"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="240"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="241"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="242"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="243"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="244"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="245"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="246"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="247"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="248"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="249"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="250"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="251"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="252"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="253"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="254"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="255"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="256"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="257"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="258"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="259"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="260"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="261"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="262"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="263"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="264"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="265"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="266"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="267"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="268"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="269"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="270"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="271"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="272"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="273"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="274"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="275"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="276"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="277"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="278"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="279"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="280"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="281"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="282"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="283"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="284"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="285"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="286"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="287"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="288"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="289"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="290"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="291"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="292"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="293"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="294"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="295"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="296"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="297"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="298"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="299"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank[value="300"] {
+  background-color: gray;
+}
+
+div.player div.open div.paperRank.lose {
+  transform: rotateY(-360deg);
+  background-image: none;
+  opacity: 0.5;
+  filter: blur(2px);
+}
+
+div.player div.open div.pref {
+  position: absolute;
+  left: -50px;
+  top: 50px;
+  width: 100px;
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 0px;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotateY(0deg) scale(0.8, 1) translate(0px, 0px);
+  transition: 2s;
+}
+
+div.player div.open div.pref.lose {
+  transform: rotateY(-360deg) scale(0.8, 1) translate(0px, 0px);
+  filter: blur(2px);
+  background-image: none;
+  opacity: 0.5;
+}
+
+div.player div.open div.o {
+  position: absolute;
+  left: -100px;
+  top: 130px;
+  width: 200px;
+  font-size: 60px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  color: black;
+  background-color: aquamarine;
+  transition: 1s;
+}
+
+div.player div.open div.o.win, div.player div.open div.o.lose {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.o.hidepts {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.x {
+  position: absolute;
+  left: -100px;
+  top: 210px;
+  width: 200px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  font-family: monospace;
+  transition: 1s;
+}
+
+div.player div.open div.x.win, div.player div.open div.x.lose {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.x.hidepts {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.absents {
+  position: absolute;
+  left: 30px;
+  top: -100px;
+  width: 80px;
+  font-size: 80px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  -webkit-text-stroke-color: #000000;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-fill-color: #FFFF22;
+  line-height: 50%;
+  z-index: 1;
+}
+
+div.player div.open div.select {
+  position: absolute;
+  left: -50px;
+  top: -90px;
+  width: 100px;
+  font-size: 200px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  font-size: 0px;
+}
+
+div.player div.open div.x2 {
+  position: absolute;
+  left: -50px;
+  top: 440px;
+  width: 100px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+}
+
+div.player div.open div.x2[value="0"] {
+  display: none;
+}
+
+div.player div.open div.x2.win, div.player div.open div.x2.lose {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.x2.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.x22 {
+  position: absolute;
+  left: -75px;
+  top: 450px;
+  width: 150px;
+  font-size: 24px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  font-family: monospace;
+}
+
+div.player div.open div.x22.win, div.player div.open div.x22.lose {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.x22.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o2 {
+  position: absolute;
+  left: -100px;
+  top: -230px;
+  width: 200px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  transition: 1s;
+}
+
+div.player div.open div.o2[value="0"] {
+  display: none;
+}
+
+div.player div.open div.o2.chance {
+  color: lightblue;
+}
+
+div.player div.open div.o2.hidepts {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.div {
+  position: absolute;
+  left: 25px;
+  top: -270px;
+  width: 100px;
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  color: black;
+  background: url("../img/div.png");
+  background-size: 100px 60px;
+  background-position: 0px 10px;
+  background-repeat: no-repeat;
+}
+
+div.player div.open div.div[value="0"] {
+  display: none;
+}
+
+div.player div.open div.chance_img {
+  position: absolute;
+  left: -50px;
+  top: -250px;
+  width: 100px;
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+div.player div.open div.chance_img[value="true"] {
+  background: url("../img/chance.png");
+  background-size: 100px 50px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+div.player div.open div.star_img {
+  position: absolute;
+  left: -25px;
+  top: -250px;
+  width: 50px;
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+div.player div.open div.star_img[value="true"] {
+  background: url("../img/star.png");
+  background-size: 50px 50px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+div.player div.open div.pinch_img {
+  position: absolute;
+  left: -25px;
+  top: -250px;
+  width: 50px;
+  font-size: 50px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+div.player div.open div.pinch_img[value="true"] {
+  background: url("../img/pinch.png");
+  background-size: 50px 50px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+div.player div.open div.o3 {
+  position: absolute;
+  left: 0px;
+  top: 150px;
+  width: 100px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  color: black;
+  transition: 1s;
+}
+
+div.player div.open div.o3.win, div.player div.open div.o3.lose {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.o3.hidepts {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.o4 {
+  position: absolute;
+  left: 15px;
+  top: -307px;
+  width: 50px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 45px;
+  letter-spacing: 0px;
+}
+
+div.player div.open div.o4.chance2 {
+  color: lightblue;
+  border-color: lightblue;
+}
+
+div.player div.open div.o4.select2 {
+  border-color: lime;
+}
+
+div.player div.open div.o4.absent2 {
+  color: black;
+  border-color: black;
+  background-color: gold;
+}
+
+div.player div.open div.o4.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o5 {
+  position: absolute;
+  left: 0px;
+  top: -260px;
+  width: 50px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 45px;
+  letter-spacing: 0px;
+}
+
+div.player div.open div.o5.chance3 {
+  color: lightblue;
+  border-color: lightblue;
+}
+
+div.player div.open div.o5.select3 {
+  border-color: lime;
+}
+
+div.player div.open div.o5.absent3 {
+  color: black;
+  border-color: black;
+  background-color: gold;
+}
+
+div.player div.open div.o5.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o6 {
+  position: absolute;
+  left: -50px;
+  top: -260px;
+  width: 50px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 45px;
+  letter-spacing: 0px;
+}
+
+div.player div.open div.o6.chance4 {
+  color: lightblue;
+  border-color: lightblue;
+}
+
+div.player div.open div.o6.select4 {
+  border-color: lime;
+}
+
+div.player div.open div.o6.absent4 {
+  color: black;
+  border-color: black;
+  background-color: gold;
+}
+
+div.player div.open div.o6.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o7 {
+  position: absolute;
+  left: -65px;
+  top: -307px;
+  width: 50px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  border-radius: 25px;
+  border-width: 2px;
+  border-style: solid;
+  line-height: 45px;
+  letter-spacing: 0px;
+}
+
+div.player div.open div.o7.chance5 {
+  color: lightblue;
+  border-color: lightblue;
+}
+
+div.player div.open div.o7.select5 {
+  border-color: lime;
+}
+
+div.player div.open div.o7.absent5 {
+  color: black;
+  border-color: black;
+  background-color: gold;
+}
+
+div.player div.open div.o7.hidepts {
+  opacity: 0;
+}
+
+div.player div.open div.o2x {
+  position: absolute;
+  left: -100px;
+  top: -310px;
+  width: 200px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  transition: 1s;
+}
+
+div.player div.open div.o2x.chance {
+  color: lightblue;
+}
+
+div.player div.open div.o2x.hidepts {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.oFrac {
+  position: absolute;
+  left: 40px;
+  top: -185px;
+  width: 40px;
+  font-size: 40px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  transform: rotateY(0deg);
+  transition: 1s;
+}
+
+div.player div.open div.oFrac.chance {
+  color: lightblue;
+}
+
+div.player div.open div.oFrac.hidepts {
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.open div.pushed_img {
+  position: absolute;
+  left: -50px;
+  top: -100px;
+  width: 100px;
+  font-size: 210px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  -webkit-user-select: none;
+  color: rgba(0, 0, 0, 0);
+}
+
+div.player div.open div.pushed_img[value="true"] {
+  background: url("../img/select.png");
+  background-size: 100px 210px;
+  background-position: 0px 0px;
+  background-repeat: no-repeat;
+}
+
+div.player div.closed {
+  display: none;
+}
+
+div.player div.rank img {
+  position: absolute;
+  left: -50px;
+  top: 200px;
+  width: 100px;
+  height: 70px;
+  -webkit-user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  transform: rotateY(0deg);
+}
+
+div.player div.rank img.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 1s;
+  opacity: 0;
+  transform: rotateY(180deg);
+}
+
+div.player div.rank img.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status {
+  display: none;
+}
+
+div.player div.status img.win {
+  position: absolute;
+  left: -30px;
+  top: -75px;
+  width: 60px;
+  height: 166px;
+  -webkit-user-select: none;
+  opacity: 0.8;
+}
+
+div.player div.status img.win.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.status img.win.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.lose {
+  position: absolute;
+  left: -37px;
+  top: -80px;
+  width: 75px;
+  height: 182px;
+  -webkit-user-select: none;
+  opacity: 0.8;
+}
+
+div.player div.status img.lose.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5) rotate(30deg);
+}
+
+div.player div.status img.lose.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.wait {
+  position: absolute;
+  left: -30px;
+  top: -62px;
+  width: 60px;
+  height: 146px;
+  -webkit-user-select: none;
+  opacity: 0.8;
+}
+
+div.player div.status img.wait.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.status img.wait.ng-enter.ng-enter-active {
+  opacity: 1;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+}
+
+div.player div.status img.absent {
+  position: absolute;
+  left: -30px;
+  top: -90px;
+  width: 60px;
+  height: 205px;
+  -webkit-user-select: none;
+  opacity: 0.7;
+}
+
+div.player div.motion img.o {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+div.player div.motion img.o.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+div.player div.motion img.o.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.motion img.o.hidepts {
+  display: none;
+}
+
+div.player div.motion img.x {
+  position: absolute;
+  left: -25px;
+  top: -30px;
+  -webkit-user-select: none;
+  opacity: 0;
+}
+
+div.player div.motion img.x.ng-enter {
+  transition: all cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.5s;
+  -webkit-transform: rotateX(0deg);
+  transform: translate(0px, 0px);
+  transform: scale(1, 1);
+  opacity: 1;
+}
+
+div.player div.motion img.x.ng-enter.ng-enter-active {
+  opacity: 0;
+  transform: scale(1.5, 1.5);
+}
+
+div.player div.motion img.x.hidepts {
+  display: none;
+}
+
+div.player hr.hr1 {
+  display: none;
+  display: none;
+}
+
+div.player hr.hr2 {
+  display: none;
+}
+
+div.player div.action_o {
+  position: absolute;
+  left: -22px;
+  top: -100px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_x {
+  position: absolute;
+  left: -22px;
+  top: 60px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_win {
+  position: absolute;
+  left: -60px;
+  top: 0px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_lose {
+  position: absolute;
+  left: -20px;
+  top: 0px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_wait {
+  position: absolute;
+  left: 20px;
+  top: 0px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_s {
+  position: absolute;
+  left: -22px;
+  top: -20px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_plus {
+  position: absolute;
+  left: -30px;
+  top: 0px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_minus {
+  position: absolute;
+  left: 10px;
+  top: 0px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}
+
+div.player div.action_introduce {
+  position: absolute;
+  left: -22px;
+  top: 300px;
+  opacity: 0.8;
+  -webkit-user-select: none;
+}

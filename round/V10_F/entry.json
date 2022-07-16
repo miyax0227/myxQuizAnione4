@@ -1,6 +1,8 @@
-[{
-  "source": "V09_SF",
-  "filter":"1<=rank<=3",
-  "order":"rank",
-  "profile": true
-}]
+[
+  {
+    "source": "V09_SF",
+    "filter": "1<=rank<=3",
+    "order": "rank",
+    "profile": true
+  }
+]
