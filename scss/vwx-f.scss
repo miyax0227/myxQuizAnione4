@@ -204,11 +204,11 @@ div.player {
       height: 300px;
       z-index: -10;
 
-      &.win {
+      &.setWin {
         filter: brightness(120%);
       }
 
-      &.lose {
+      &.wait {
         filter: brightness(70%);
       }
 

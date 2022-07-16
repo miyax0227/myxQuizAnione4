@@ -226,11 +226,11 @@ div.player div.open div.person {
   z-index: -10;
 }
 
-div.player div.open div.person.win {
+div.player div.open div.person.setWin {
   filter: brightness(120%);
 }
 
-div.player div.open div.person.lose {
+div.player div.open div.person.wait {
   filter: brightness(70%);
 }
 
