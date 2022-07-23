@@ -160,6 +160,7 @@ div.introduce div.phrase {
   font-size: 90px;
   -webkit-user-select: none;
   position: absolute;
+  white-space: pre-wrap;
   top: 330px;
   width: 100%;
   left: 0%;

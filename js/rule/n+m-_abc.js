@@ -211,15 +211,32 @@ app.factory('rule', ['qCommon', function (qCommon) {
           player.close = true;
         });
         var timing = [8, 6, 4, 2, 10, 3, 5, 7, 9];
-        setTimeout(() => { players[0].close = false; }, timing[0] * 800);
-        setTimeout(() => { players[1].close = false; }, timing[1] * 800);
-        setTimeout(() => { players[2].close = false; }, timing[2] * 800);
-        setTimeout(() => { players[3].close = false; }, timing[3] * 800);
-        setTimeout(() => { players[4].close = false; }, timing[4] * 800);
-        setTimeout(() => { players[5].close = false; }, timing[5] * 800);
-        setTimeout(() => { players[6].close = false; }, timing[6] * 800);
-        setTimeout(() => { players[7].close = false; }, timing[7] * 800);
-        setTimeout(() => { players[8].close = false; }, timing[8] * 800);
+        setTimeout(() => { players[0].close = false; }, timing[0] * 1000);
+        setTimeout(() => { players[1].close = false; }, timing[1] * 1000);
+        setTimeout(() => { players[2].close = false; }, timing[2] * 1000);
+        setTimeout(() => { players[3].close = false; }, timing[3] * 1000);
+        setTimeout(() => { players[4].close = false; }, timing[4] * 1000);
+        setTimeout(() => { players[5].close = false; }, timing[5] * 1000);
+        setTimeout(() => { players[6].close = false; }, timing[6] * 1000);
+        setTimeout(() => { players[7].close = false; }, timing[7] * 1000);
+        setTimeout(() => { players[8].close = false; }, timing[8] * 1000);
+      }, 1000);
+    },
+    "keyArray": "",
+    "button_css": "btn btn-default",
+    "group": "rule"
+  },
+  {
+    "name": "player-hide",
+    "enable0": function (players, header, property) {
+      return true;
+    },
+    "action0": function (players, header, property) {
+      setTimeout(function () {
+        header.introduce = undefined;
+        players.map(player => {
+          player.close = true;
+        });
       }, 1000);
     },
     "keyArray": "",

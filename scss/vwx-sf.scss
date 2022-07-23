@@ -163,6 +163,7 @@ div.introduce {
   div.phrase {
     @include score-div(90px);
     position: absolute;
+    white-space: pre-wrap;
     top: 330px;
     width: 100%;
     left: 0%;
