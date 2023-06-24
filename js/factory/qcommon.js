@@ -13,6 +13,7 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 
 		var timer = {};
 		var TextImageH = [];
+		var textImages = {};
 
 		var qCommon = {};
 		qCommon.timer = timer;
@@ -71,8 +72,8 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 		qCommon.getTempCaptureFileName = getTempCaptureFileName;
 		qCommon.getRoundName = getRoundName;
 		qCommon.downloadStatus = downloadStatus;
-		qCommon.getTextImageH = getTextImageH;
 		qCommon.outputCurrentStatus = outputCurrentStatus;
+		qCommon.getStringImage = getStringImage;
 		return qCommon;
 
 		/** ログ文字列を生成する
@@ -1490,29 +1491,108 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 			});
 		}
 
-		function getTextImageH(text) {
-			if (TextImageH[text]) {
-				return TextImageH[text];
+		function getStringImage(params) {
+			var paramsKey = JSON.stringify(params);
+			if (textImages[paramsKey]) {
+				return textImages[paramsKey];
 			}
-			console.log("getTextImageH", text);
 
-			var font = "bold 60px sans-serif";
-			const canvas = document.createElement('canvas');
-			const ctx = canvas.getContext('2d');
+			if (params === null || params === undefined) {
+				params = {};
+			}
+
+			// 対象文字列を取得する
+			var text = params.text;
+			// 色を取得する
+			var color = params.color;
+			// 縦書きフラグを取得する
+			var vertical = params.vertical;
+			// 画像の高さを設定する
+			var height = 280;
+			// フォントサイズを指定する
+			var fontHeight = 240;
+			// フォントを設定する
+			var font = 'bold ' + fontHeight + "px 'MigMix 1M'";
+			// Canvasを初期化する
+			const canvasArray = angular.element(document.createElement('canvas'));
+			const canvas = canvasArray[0];
+			const ctx = canvas.getContext("2d");
+
+			//縦書きの場合
+			if (vertical) {
+				// 各文字の横幅
+				var widthArray = [];
+
+				// 各文字の幅を計測する
+				for (let i = 0; i < text.length; i++) {
+					let t = text.substr(i, 1);
+					canvas.width = 10;
+					canvas.height = height;
+					ctx.font = font;
+					var textMetrics = ctx.measureText(t);
+					widthArray[i] = textMetrics.width;
+					console.log(t, textMetrics.width);
+				}
+				// 描画する
+				var maxWidth = Math.max.apply(null, widthArray);
+				var maxHeight = fontHeight * text.length + height - fontHeight;
+
+				canvas.width = maxWidth;
+				canvas.height = maxWidth * 3;
+				ctx.font = font;
+				ctx.fillStyle = color;
+
+				// 縦横比３：１になるよう圧縮
+				console.log(maxWidth, maxHeight, (maxWidth / maxHeight) * 3);
+				ctx.scale(1, (maxWidth / maxHeight) * 3);
+
+				for (var i = 0; i < text.length; i++) {
+					var t = text.substr(i, 1);
+					if ("「」ー―⊂".indexOf(t) >= 0) {
+						console.log("右90度回転:", t);
+						ctx.save();
+						ctx.translate((maxWidth - widthArray[i]) / 2, i * fontHeight);
+						ctx.rotate((90 * Math.PI) / 180);
+						ctx.fillText(t, (maxWidth - widthArray[i]) / 2 + 40, -40);
+						ctx.restore();
+					} else if ("。".indexOf(t) >= 0) {
+						console.log("。");
+						ctx.fillText(t, maxWidth / 2, i * fontHeight + fontHeight);
+					} else {
+						ctx.fillText(
+							t,
+							(maxWidth - widthArray[i]) / 2,
+							i * fontHeight + fontHeight
+						);
+					}
+			}
+
+				// 横書きの場合
+			} else {
+				// 画像の幅を計測する
 			canvas.width = 10;
-			canvas.height = 70;
+				canvas.height = height;
 			ctx.font = font;
-			var textMetrics = ctx.measureText(text);
+				let textMetrics = ctx.measureText(text);
 
-			canvas.width = textMetrics.width;
-			canvas.height = 70;
+				// 描画する
+				let maxHeight = height;
+				let maxWidth = textMetrics.width;
+				canvas.height = height;
+				canvas.width = height * 3;
 			ctx.font = font;
-			ctx.fillStyle = "White";
-			ctx.fillText(text, 0, 60)
+				ctx.fillStyle = color;
 
+				// 縦横比１：３になるよう圧縮
+				console.log(maxWidth, maxHeight, (maxHeight / maxWidth) * 3);
+				ctx.scale((maxHeight / maxWidth) * 3, 1);
+
+				ctx.fillText(text, 0, fontHeight);
+			}
+
+			// 画像データ(base64)を取得する
 			var canvasBase64 = canvas.toDataURL();
-			TextImageH[text] = canvasBase64;
-			console.log(ctx.font);
+			textImages[paramsKey] = canvasBase64;
 			return canvasBase64;
 		}
 

@@ -78,6 +78,8 @@ app.controller('main', ['$scope', '$q', 'fileResource', 'qCommon', 'round', 'ser
 		};
 		/* decoration - 装飾用クラスリストを取得する */
 		$scope.decoration = round.decoration;
+		/* getStringImage - 伸縮可能な氏名画像を取得する */
+		$scope.getStringImage = qCommon.getStringImage;
 
 		/* 読み込み対象のファイルを全て読み込み終えたら実行される処理（事実上のメイン処理）*/
 		var fr = fileResource.map(function (resource) {
