@@ -49,16 +49,16 @@ div.player {
       border-radius: 0px;
       color: black;
       @include value-range( 1, 4) {
-        background-color: crimson;
+        background-color: blue;
       }
       @include value-range( 5, 12) {
-        background-color: royalblue;
+        background-color: cyan;
       }
       @include value-range(13, 24) {
-        background-color: yellow;
+        background-color: lightcyan;
       }
       @include value-range(25, 48) {
-        background-color: green;
+        background-color: white;
       }
       @include value-range(49, 300) {
         background-color: gray;
@@ -88,6 +88,7 @@ div.player {
       @include player-item(-50, 300, 100, 60);
       transform: rotateY(0deg);
       color: black;
+      padding-top: 5px;
       background-color: aquamarine;
       &.win, &.lose {
         opacity: 0;

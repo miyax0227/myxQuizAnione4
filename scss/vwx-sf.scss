@@ -142,6 +142,7 @@ div.introduce {
 
   div.name {
     @include score-div(180px);
+    font-family: "FG丸ｺﾞｼｯｸ体Ca-U";
     position: absolute;
     top: 450px;
     width: 70%;
@@ -251,19 +252,19 @@ div.player {
       color: black;
 
       @include value-range(1, 4) {
-        background-color: crimson;
+        background-color: blue;
       }
 
       @include value-range(5, 12) {
-        background-color: royalblue;
+        background-color: cyan;
       }
 
       @include value-range(13, 24) {
-        background-color: yellow;
+        background-color: lightcyan;
       }
 
       @include value-range(25, 48) {
-        background-color: green;
+        background-color: white;
       }
 
       @include value-range(49, 300) {
@@ -298,6 +299,7 @@ div.player {
 
     div.o {
       @include player-item(-50, 190, 100, 60);
+      padding-top: 5px;
       transform: rotateY(0deg);
       color: black;
       background-color: aquamarine;

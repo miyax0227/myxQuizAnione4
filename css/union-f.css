@@ -20,7 +20,7 @@ div.player div.name {
   top: -120px;
   width: 50px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -37,7 +37,7 @@ div.player div.nameLat {
   left: -150px;
   top: -130px;
   font-size: 72px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -52,7 +52,7 @@ div.player div.open div.paperRank {
   top: -125px;
   width: 60px;
   font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -68,7 +68,7 @@ div.player div.overRect div.paperRank {
   top: -125px;
   width: 60px;
   font-size: 20px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -237,7 +237,7 @@ div.player div.o {
   top: -250px;
   width: 100px;
   font-size: 84px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -254,7 +254,7 @@ div.player div.x {
   top: -175px;
   width: 300px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -272,7 +272,7 @@ div.player div.absent {
   top: -95px;
   width: 70px;
   font-size: 30px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -289,7 +289,7 @@ div.player div.winningPoint {
   top: -190px;
   width: 50px;
   font-size: 36px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -325,7 +325,7 @@ div.player div.o {
   top: -250px;
   width: 200px;
   font-size: 84px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -337,7 +337,7 @@ div.player div.winningPoint {
   top: -190px;
   width: 80px;
   font-size: 36px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -348,7 +348,7 @@ div.player div.name1 {
   left: -100px;
   top: -10px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -377,7 +377,7 @@ div.player div.oo1 {
   top: -5px;
   width: 200px;
   font-size: 64px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -429,7 +429,7 @@ div.player div.name2 {
   left: -100px;
   top: 70px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -458,7 +458,7 @@ div.player div.oo2 {
   top: 75px;
   width: 200px;
   font-size: 64px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -510,7 +510,7 @@ div.player div.name3 {
   left: -100px;
   top: 150px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -539,7 +539,7 @@ div.player div.oo3 {
   top: 155px;
   width: 200px;
   font-size: 64px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -591,7 +591,7 @@ div.player div.name4 {
   left: -100px;
   top: 230px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -620,7 +620,7 @@ div.player div.oo4 {
   top: 235px;
   width: 200px;
   font-size: 64px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -672,7 +672,7 @@ div.player div.name5 {
   left: -100px;
   top: 310px;
   font-size: 60px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -701,7 +701,7 @@ div.player div.oo5 {
   top: 315px;
   width: 200px;
   font-size: 64px;
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   text-align: center;
   -webkit-user-select: none;
@@ -836,7 +836,7 @@ div.player div.action_sl5 {
 }
 
 div.scoreboard div.vs1 {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   position: absolute;
   font-size: 64px;
@@ -848,7 +848,7 @@ div.scoreboard div.vs1 {
 }
 
 div.scoreboard div.vs2 {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   position: absolute;
   font-size: 64px;
@@ -860,7 +860,7 @@ div.scoreboard div.vs2 {
 }
 
 div.scoreboard div.vs3 {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   position: absolute;
   font-size: 64px;
@@ -872,7 +872,7 @@ div.scoreboard div.vs3 {
 }
 
 div.scoreboard div.vs4 {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   position: absolute;
   font-size: 64px;
@@ -884,7 +884,7 @@ div.scoreboard div.vs4 {
 }
 
 div.scoreboard div.vs5 {
-  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
+  font-family: "けいふぉんと", -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", "Noto Sans Japanese", "ヒラギノ角ゴ ProN W3", Meiryo, sans-serif;
   font-weight: bold;
   position: absolute;
   font-size: 64px;

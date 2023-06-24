@@ -1512,7 +1512,7 @@ app.service('qCommon', ['$uibModal', '$localStorage', '$interval', '$location', 
 			// フォントサイズを指定する
 			var fontHeight = 240;
 			// フォントを設定する
-			var font = 'bold ' + fontHeight + "px 'MigMix 1M'";
+			var font = 'bold ' + fontHeight + "px 'FG丸ｺﾞｼｯｸ体Ca-U'";
 			// Canvasを初期化する
 			const canvasArray = angular.element(document.createElement('canvas'));
 			const canvas = canvasArray[0];
